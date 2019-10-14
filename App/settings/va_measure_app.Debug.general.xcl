@@ -1,10 +1,14 @@
 "D:\IAR8_0ARM\arm\bin\armproc.dll" 
 
-"D:\IAR8_0ARM\arm\bin\armsim2.dll" 
+"D:\IAR8_0ARM\arm\bin\armjlink2.dll" 
 
 "F:\PrivateWork\stm32_va_measuring\App\Debug\Exe\va_measure_app.out" 
 
 --plugin "D:\IAR8_0ARM\arm\bin\armbat.dll" 
+
+--device_macro "D:\IAR8_0ARM\arm\config\debugger\ST\STM32F1xx_XL.dmac" 
+
+--flash_loader "D:\IAR8_0ARM\arm\config\flashloader\ST\FlashSTM32F10xx8.board" 
 
 
 

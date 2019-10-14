@@ -1,0 +1,867 @@
+###############################################################################
+#
+# IAR ELF Linker V8.22.2.15995/W32 for ARM                14/Oct/2019  19:57:16
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Exe\va_measure_app.out
+#    Map file     =  
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\List\va_measure_app.map
+#    Command line =  
+#        -f C:\Users\ADMINI~1\AppData\Local\Temp\EW2BA.tmp
+#        (F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\bsp_interface.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\bsp_sys_pwr.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\bsp_system.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\bsp_systimer.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\main.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\misc.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\startup_stm32f10x_hd.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_adc.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_bkp.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_cec.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_crc.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_dac.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_dbgmcu.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_dma.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_exti.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_flash.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_gpio.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_i2c.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_it.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_iwdg.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_pwr.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_rcc.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_rtc.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_sdio.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_spi.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_tim.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_usart.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_wwdg.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\system_stm32f10x.o -o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Exe\va_measure_app.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\List\va_measure_app.map
+#        --config F:\PrivateWork\stm32_va_measuring\App\System\stm32f103x8.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor                     = *
+__CPP_Exceptions              = Disabled
+__CPP_Language                = C++14
+__Heap_Handler                = DLMalloc
+__SystemLibrary               = DLib
+__dlib_dynamic_initialization = normal
+__dlib_version                = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The advanced heap was selected because the application calls memory
+allocation functions outside of system library functions, and there
+are calls to deallocation functions in the application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x0800ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 4K, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x20004fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section                Kind        Address    Size  Object
+  -------                ----        -------    ----  ------
+"A0":                                          0x130
+  .intvec                ro code  0x08000000   0x130  startup_stm32f10x_hd.o [1]
+                                - 0x08000130   0x130
+
+"P1":                                         0x2e34
+  .text                  ro code  0x08000130  0x14d4  dlmalloc.o [3]
+  .text                  ro code  0x08001604     0x6  abort.o [3]
+  .text                  ro code  0x0800160a     0x6  bsp_interface.o [1]
+  .text                  ro code  0x08001610    0x2c  xgetmemchunk.o [3]
+  .text                  ro code  0x0800163c    0x14  exit.o [6]
+  .text                  ro code  0x08001650   0x208  stm32f10x_rcc.o [1]
+  .text                  ro code  0x08001858   0x1e0  bsp_systimer.o [1]
+  .text                  ro code  0x08001a38    0x10  bsp_systimer.o [1]
+  .text                  ro code  0x08001a48     0xa  cxxabi.o [4]
+  .text                  ro code  0x08001a52     0x6  bsp_sys_pwr.o [1]
+  .text                  ro code  0x08001a58   0x18c  bsp_interface.o [1]
+  .text                  ro code  0x08001be4    0x1e  bsp_systimer.o [1]
+  .text                  ro code  0x08001c02    0x20  bsp_systimer.o [1]
+  .text                  ro code  0x08001c22    0x10  bsp_systimer.o [1]
+  .text                  ro code  0x08001c32     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x08001c40   0x102  bsp_systimer.o [1]
+  .text                  ro code  0x08001d42     0x2  bsp_interface.o [1]
+  .text                  ro code  0x08001d44    0x2c  stm32f10x_it.o [1]
+  .text                  ro code  0x08001d70    0x4a  bsp_systimer.o [1]
+  .text                  ro code  0x08001dba     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08001dc6     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08001dc8    0xa0  cppinit.o [3]
+  .text                  ro code  0x08001e68     0xc  bsp_interface.o [1]
+  .text                  ro code  0x08001e74    0x34  bsp_interface.o [1]
+  .text                  ro code  0x08001ea8    0xbc  bsp_sys_pwr.o [1]
+  .text                  ro code  0x08001f64    0x66  ABImemset.o [5]
+  .rodata                const    0x08001fca     0x1  unwind_debug.o [6]
+  .text                  ro code  0x08001fcc    0xe8  bsp_system.o [1]
+  .text                  ro code  0x080020b4    0x1c  bsp_interface.o [1]
+  .text                  ro code  0x080020d0     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x080020de     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x080020ea     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x080020f6     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08002102    0x16  bsp_systimer.o [1]
+  .text                  ro code  0x08002118     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08002124     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08002130     0x8  bsp_systimer.o [1]
+  .text                  ro code  0x08002138     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08002144    0x30  bsp_systimer.o [1]
+  .text                  ro code  0x08002174     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08002180     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x0800218e     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x0800219c    0x42  bsp_systimer.o [1]
+  .text                  ro code  0x080021de     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x080021e0     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x080021ec    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x08002206    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x08002220    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x0800223a    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x08002254    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x0800226e    0x14  bsp_systimer.o [1]
+  .text                  ro code  0x08002282     0x2  bsp_interface.o [1]
+  .text                  ro code  0x08002284    0x18  bsp_interface.o [1]
+  .text                  ro code  0x0800229c    0xf4  stm32f10x_gpio.o [1]
+  .text                  ro code  0x08002390    0xa8  misc.o [1]
+  .text                  ro code  0x08002438    0x5c  stm32f10x_flash.o [1]
+  .text                  ro code  0x08002494     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x080024a0     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x080024a2     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x080024ae     0x4  bsp_systimer.o [1]
+  .text                  ro code  0x080024b2     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x080024b4     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x080024b6    0x1e  bsp_systimer.o [1]
+  .text                  ro code  0x080024d4    0x12  bsp_systimer.o [1]
+  .text                  ro code  0x080024e6    0x2e  bsp_systimer.o [1]
+  .text                  ro code  0x08002514    0xba  bsp_systimer.o [1]
+  .text                  ro code  0x080025ce     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x080025d0     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x080025d2    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x080025ec     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x080025ee    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x08002608     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x0800260a    0x26  bsp_systimer.o [1]
+  .text                  ro code  0x08002630    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x0800264a    0x1e  bsp_systimer.o [1]
+  .text                  ro code  0x08002668     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x0800266a    0x16  bsp_systimer.o [1]
+  .text                  ro code  0x08002680     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x0800268e     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x0800269a     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x080026a6    0x1e  bsp_systimer.o [1]
+  .text                  ro code  0x080026c4    0x10  bsp_systimer.o [1]
+  .text                  ro code  0x080026d4    0x1e  bsp_systimer.o [1]
+  .text                  ro code  0x080026f2    0x14  bsp_systimer.o [1]
+  .text                  ro code  0x08002706    0x10  bsp_systimer.o [1]
+  .text                  ro code  0x08002716    0x2c  bsp_systimer.o [1]
+  .text                  ro code  0x08002742    0x2c  bsp_systimer.o [1]
+  .text                  ro code  0x0800276e     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08002770    0xa6  ABImemcpy.o [5]
+  .text                  ro code  0x08002816    0x20  bsp_systimer.o [1]
+  .text                  ro code  0x08002836     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08002838     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08002844     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x08002852     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08002854     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08002856     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08002862    0x12  bsp_systimer.o [1]
+  .text                  ro code  0x08002874    0x38  bsp_systimer.o [1]
+  .text                  ro code  0x080028ac    0x12  bsp_systimer.o [1]
+  .text                  ro code  0x080028be     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x080028c0     0x4  bsp_systimer.o [1]
+  .text                  ro code  0x080028c4    0x10  bsp_systimer.o [1]
+  .text                  ro code  0x080028d4     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x080028d6     0x8  bsp_systimer.o [1]
+  .text                  ro code  0x080028de    0x24  bsp_systimer.o [1]
+  .text                  ro code  0x08002902     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08002904    0x2c  bsp_systimer.o [1]
+  .text                  ro code  0x08002930     0x4  bsp_systimer.o [1]
+  .text                  ro code  0x08002934     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x08002942    0x10  bsp_systimer.o [1]
+  .text                  ro code  0x08002954    0x24  newop_0.o [4]
+  .text                  ro code  0x08002978     0x4  bsp_systimer.o [1]
+  .text                  ro code  0x0800297c    0x2e  bsp_systimer.o [1]
+  .text                  ro code  0x080029aa     0xa  delop_0.o [4]
+  .text                  ro code  0x080029b4     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x080029b6     0x4  nomemory.o [4]
+  .text                  ro code  0x080029ba    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x080029d4     0x4  heaptramp0.o [3]
+  .text                  ro code  0x080029d8     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x080029da    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x080029f4    0x2c  bsp_systimer.o [1]
+  .text                  ro code  0x08002a20   0x158  system_stm32f10x.o [1]
+  .text                  ro code  0x08002b78    0x7a  bsp_systimer.o [1]
+  .text                  ro code  0x08002bf4    0x6c  main.o [1]
+  .text                  ro code  0x08002c60    0x40  zero_init3.o [5]
+  .text                  ro code  0x08002ca0    0x2c  copy_init3.o [5]
+  .text                  ro code  0x08002ccc    0x28  data_init.o [5]
+  .iar.init_table        const    0x08002cf4    0x28  - Linker created -
+  .rodata                const    0x08002d1c    0x20  bsp_interface.o [1]
+  .rodata                const    0x08002d3c    0x20  bsp_interface.o [1]
+  .rodata                const    0x08002d5c    0x20  bsp_sys_pwr.o [1]
+  .rodata                const    0x08002d7c    0x20  bsp_systimer.o [1]
+  .text                  ro code  0x08002d9c    0x20  cmain_call_ctors.o [5]
+  .text                  ro code  0x08002dbc    0x1e  cmain.o [5]
+  .text                  ro code  0x08002dda     0x4  low_level_init.o [3]
+  .text                  ro code  0x08002de0    0x18  main.o [1]
+  .text                  ro code  0x08002df8     0x4  exit.o [3]
+  .text                  ro code  0x08002dfc     0xe  cexit.o [5]
+  .text                  ro code  0x08002e0c    0x10  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e1c     0xe  bsp_interface.o [1]
+  .text                  ro code  0x08002e2a     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x08002e38     0xc  cstartup_M.o [5]
+  SHT$$PREINIT_ARRAY              0x08002e44     0x0  <Block>
+  SHT$$INIT_ARRAY                 0x08002e44     0x8  <Block>
+    .init_array          const    0x08002e44     0x4  bsp_interface.o [1]
+    .init_array          const    0x08002e48     0x4  bsp_systimer.o [1]
+  __iar_tls$$INIT_ARRAY           0x08002e4c     0x0  <Block>
+  .text                  ro code  0x08002e4c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e50     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e54     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e58     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e5c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e60     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e64     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e68     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e6c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e70     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e74     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e78     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e7c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e80     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e84     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e88     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e8c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e90     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e94     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e98     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002e9c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ea0     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ea4     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ea8     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002eac     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002eb0     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002eb4     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002eb8     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ebc     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ec0     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ec4     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ec8     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ecc     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ed0     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ed4     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ed8     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002edc     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ee0     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ee4     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ee8     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002eec     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ef0     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ef4     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002ef8     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002efc     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f00     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f04     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f08     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f0c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f10     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f14     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f18     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f1c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f20     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f24     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f28     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f2c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f30     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f34     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f38     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f3c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f40     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f44     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f48     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f4c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f50     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f54     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f58     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08002f5c     0x4  startup_stm32f10x_hd.o [1]
+  Initializer bytes      const    0x08002f60     0x4  <for P2-1>
+  .text                  ro code  0x08002f64     0x0  cstart_call_dtors.o [5]
+  .rodata                const    0x08002f64     0x0  zero_init3.o [5]
+  .rodata                const    0x08002f64     0x0  copy_init3.o [5]
+                                - 0x08002f64  0x2e34
+
+"P2", part 1 of 3:                               0x4
+  P2-1                            0x20000000     0x1  <Init block>
+    .data                inited   0x20000000     0x1  main.o [1]
+                                - 0x20000001     0x1
+
+"P2", part 2 of 3:                             0x288
+  .bss                   zero     0x20000004   0x1d8  dlmalloc.o [3]
+  .bss                   zero     0x200001dc    0x2c  bsp_interface.o [1]
+  .bss                   zero     0x20000208    0x28  bsp_interface.o [1]
+  .bss                   zero     0x20000230    0x18  dlmalloc.o [3]
+  .bss                   zero     0x20000248     0xc  bsp_systimer.o [1]
+  .bss                   zero     0x20000254     0x4  bsp_interface.o [1]
+  .bss                   zero     0x20000258     0x4  bsp_interface.o [1]
+  .bss                   zero     0x2000025c     0x4  bsp_interface.o [1]
+  .bss                   zero     0x20000260     0x4  bsp_interface.o [1]
+  .bss                   zero     0x20000264     0x4  bsp_sys_pwr.o [1]
+  .bss                   zero     0x20000268     0x4  bsp_systimer.o [1]
+  .bss                   zero     0x2000026c     0x4  bsp_systimer.o [1]
+  .bss                   zero     0x20000270     0x4  stm32f10x_it.o [1]
+  .bss                   zero     0x20000274     0x4  cppinit.o [3]
+  .bss                   zero     0x20000278     0x4  cppinit.o [3]
+  .bss                   zero     0x2000027c     0x4  new.o [4]
+  .bss                   zero     0x20000280     0x4  xgetmemchunk.o [3]
+  .bss                   zero     0x20000284     0x1  bsp_interface.o [1]
+  .bss                   zero     0x20000285     0x1  bsp_interface.o [1]
+  .bss                   zero     0x20000286     0x1  bsp_sys_pwr.o [1]
+  .bss                   zero     0x20000287     0x1  bsp_sys_pwr.o [1]
+  .bss                   zero     0x20000288     0x1  bsp_systimer.o [1]
+                                - 0x20000289   0x285
+
+"P2", part 3 of 3:                            0x21b4
+  .iar.dynexit                    0x2000028c   0x1b0  <Block>
+    .iar.dynexit         uninit   0x2000028c     0xc  cppinit.o [3]
+    .iar.dynexit         uninit   0x20000298   0x1a4  <Block tail>
+  CSTACK                          0x20000440  0x1000  <Block>
+    CSTACK               uninit   0x20000440  0x1000  <Block tail>
+  HEAP                            0x20001440  0x1000  <Block>
+    HEAP                 uninit   0x20001440  0x1000  <Block tail>
+                                - 0x20002440  0x21b4
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x285:
+          0x20000004  0x285
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4 (400% of destination):
+          0x08002f60    0x4
+    1 destination range, total size 0x1:
+          0x20000000    0x1
+
+Extra (__iar_cstart_call_ctors)
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+F:\PrivateWork\stm32_va_measuring\App\Debug\Obj: [1]
+    bsp_interface.o             536       68      102
+    bsp_sys_pwr.o               194       32        6
+    bsp_system.o                232
+    bsp_systimer.o            2 702       36       21
+    main.o                      132        1        1
+    misc.o                      168
+    startup_stm32f10x_hd.o      596
+    stm32f10x_flash.o            92
+    stm32f10x_gpio.o            244
+    stm32f10x_it.o               44                 4
+    stm32f10x_rcc.o             520
+    system_stm32f10x.o          344
+    -------------------------------------------------
+    Total:                    5 804      137      134
+
+command line: [2]
+    -------------------------------------------------
+    Total:
+
+dl7M_tlf.a: [3]
+    abort.o                       6
+    cppinit.o                   160                20
+    dlmalloc.o                5 332               496
+    exit.o                        4
+    heaptramp0.o                  4
+    low_level_init.o              4
+    xgetmemchunk.o               44                 4
+    -------------------------------------------------
+    Total:                    5 554               520
+
+dlpp7M_tl_fc.a: [4]
+    cxxabi.o                     10
+    delop_0.o                    10
+    new.o                                           4
+    newop_0.o                    36
+    nomemory.o                    4
+    -------------------------------------------------
+    Total:                       60                 4
+
+rt7M_tl.a: [5]
+    ABImemcpy.o                 166
+    ABImemset.o                 102
+    cexit.o                      14
+    cmain.o                      30
+    cmain_call_ctors.o           32
+    copy_init3.o                 44
+    cstart_call_dtors.o
+    cstartup_M.o                 12
+    data_init.o                  40
+    zero_init3.o                 64
+    -------------------------------------------------
+    Total:                      504
+
+shb_l.a: [6]
+    exit.o                       20
+    unwind_debug.o                         1
+    -------------------------------------------------
+    Total:                       20        1
+
+    Gaps                          9
+    Linker created                        43    8 612
+-----------------------------------------------------
+    Grand Total:             11 951      181    9 270
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.dynexit$$Base      0x2000028c          --   Gb  - Linker created -
+.iar.dynexit$$Limit     0x2000043c          --   Gb  - Linker created -
+.iar.init_table$$Base   0x08002cf4          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x08002d1c          --   Gb  - Linker created -
+?main                   0x08002dbd         Code  Gb  cmain.o [5]
+BSP_SYS_TIMER_Callback()
+                        0x0800186b   0x22  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t & && std::forward<BSP_Sys_Timer_t &>(std::remove_reference<BSP_Sys_Timer_t &>::type &)
+                        0x080025d1    0x2  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t && std::forward<BSP_Sys_Timer_t>(std::remove_reference<BSP_Sys_Timer_t>::type &)
+                        0x080029d9    0x2  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t * & std::_Rechecked<BSP_Sys_Timer_t *, BSP_Sys_Timer_t *>(BSP_Sys_Timer_t * &, BSP_Sys_Timer_t *)
+                        0x08002931    0x4  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t * std::_Addressof<BSP_Sys_Timer_t>(BSP_Sys_Timer_t &, std::integral_constant<bool, (bool)0>)
+                        0x080024b5    0x2  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t * std::_Allocate<BSP_Sys_Timer_t>(unsigned int, BSP_Sys_Timer_t *, bool)
+                        0x080028df   0x24  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t * std::_Move<BSP_Sys_Timer_t *, BSP_Sys_Timer_t *>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, BSP_Sys_Timer_t *)
+                        0x08002221   0x1a  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t * std::_Move<BSP_Sys_Timer_t *, BSP_Sys_Timer_t *>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, std::_Nonscalar_ptr_iterator_tag)
+                        0x0800260b   0x26  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t * std::_Unchecked<BSP_Sys_Timer_t *>(BSP_Sys_Timer_t *)
+                        0x08002903    0x2  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t * std::_Uninit_move<BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>> &)
+                        0x08002905   0x2c  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t * std::_Uninit_move<BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, std::allocator<BSP_Sys_Timer_t>, BSP_Sys_Timer_t>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>> &, BSP_Sys_Timer_t *, std::_Nonscalar_ptr_iterator_tag)
+                        0x0800297d   0x2e  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t * std::_Uninitialized_move<BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>> &)
+                        0x08002875   0x38  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t * std::addressof<BSP_Sys_Timer_t>(BSP_Sys_Timer_t &)
+                        0x08002175    0xc  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t * std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Umove<BSP_Sys_Timer_t *>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, BSP_Sys_Timer_t *)
+                        0x080026d5   0x1e  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t const & && std::forward<BSP_Sys_Timer_t const &>(std::remove_reference<BSP_Sys_Timer_t const &>::type &)
+                        0x080025ed    0x2  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t const * std::_Addressof<BSP_Sys_Timer_t const>(BSP_Sys_Timer_t const &, std::integral_constant<bool, (bool)0>)
+                        0x080024b3    0x2  Code  Gb  bsp_systimer.o [1]
+BSP_Sys_Timer_t const * std::addressof<BSP_Sys_Timer_t const>(BSP_Sys_Timer_t const &)
+                        0x08002139    0xc  Code  Gb  bsp_systimer.o [1]
+BspDefault::BspDefault()
+                        0x08002285   0x18  Code  Gb  bsp_interface.o [1]
+BspDefault::BspDefault_registered()
+                        0x08001e75   0x34  Code  Gb  bsp_interface.o [1]
+BspDefault::BspDefault_registered()::t_ms_this
+                        0x20000254    0x4  Data  Gb  bsp_interface.o [1]
+BspDefault::bsp_events_handle(BSP_Events_Package_t const *)
+                        0x0800160b    0x6  Code  Gb  bsp_interface.o [1]
+BspDefault::init()      0x08001d43    0x2  Code  Gb  bsp_interface.o [1]
+BspDefault::~BspDefault()
+                        0x08002e1d    0xe  Code  Gb  bsp_interface.o [1]
+BspInterfaces::BspInterfaces()
+                        0x08001a7b   0x88  Code  Gb  bsp_interface.o [1]
+BspInterfaces::BspInterfaces() [subobject]
+                        0x08001a59    0xc  Code  Gb  bsp_interface.o [1]
+BspInterfaces::bsp_active()
+                        0x08001b05   0x4e  Code  Gb  bsp_interface.o [1]
+BspInterfaces::bsp_events_handle(BSP_Events_Package_t const *)
+                        0x08001bbb   0x10  Code  Gb  bsp_interface.o [1]
+BspInterfaces::bsp_mian()
+                        0x08001b6f   0x1a  Code  Gb  bsp_interface.o [1]
+BspInterfaces::bsp_sleep()
+                        0x08001b53   0x1c  Code  Gb  bsp_interface.o [1]
+BspInterfaces::init()   0x08001b89   0x32  Code  Gb  bsp_interface.o [1]
+BspInterfaces::m_pdrv   0x200001dc   0x2c  Data  Gb  bsp_interface.o [1]
+BspInterfaces::~BspInterfaces()
+                        0x08001b03    0x2  Code  Gb  bsp_interface.o [1]
+BspInterfaces::~BspInterfaces() [subobject]
+                        0x08001a65    0xc  Code  Gb  bsp_interface.o [1]
+BspSysPwr::BspSysPwr()  0x08001ec3   0x12  Code  Gb  bsp_sys_pwr.o [1]
+BspSysPwr::BspSysPwr_registered()
+                        0x08001ee3   0x22  Code  Gb  bsp_sys_pwr.o [1]
+BspSysPwr::BspSysPwr_registered()::static guard for t_ms_this
+                        0x20000287    0x1  Data  Lc  bsp_sys_pwr.o [1]
+BspSysPwr::BspSysPwr_registered()::t_ms_this
+                        0x20000264    0x4  Data  Lc  bsp_sys_pwr.o [1]
+BspSysPwr::bsp_events_handle(BSP_Events_Package_t const *)
+                        0x08001a53    0x6  Code  Gb  bsp_sys_pwr.o [1]
+BspSysPwr::init()       0x08001f05   0x3e  Code  Gb  bsp_sys_pwr.o [1]
+BspSysPwr::~BspSysPwr()
+                        0x08001ed5    0xe  Code  Gb  bsp_sys_pwr.o [1]
+BspSysTimer::BspSysTimer()
+                        0x0800188d   0x12  Code  Gb  bsp_systimer.o [1]
+BspSysTimer::BspSysTimer_AddFun(void (*)(), unsigned int)
+                        0x080018cf   0x6e  Code  Gb  bsp_systimer.o [1]
+BspSysTimer::BspSysTimer_registered()
+                        0x080018ad   0x22  Code  Gb  bsp_systimer.o [1]
+BspSysTimer::BspSysTimer_registered()::static guard for t_ms_this
+                        0x20000288    0x1  Data  Lc  bsp_systimer.o [1]
+BspSysTimer::BspSysTimer_registered()::t_ms_this
+                        0x2000026c    0x4  Data  Lc  bsp_systimer.o [1]
+BspSysTimer::bsp_events_handle(BSP_Events_Package_t const *)
+                        0x0800193d   0xcc  Code  Gb  bsp_systimer.o [1]
+BspSysTimer::init()     0x08001dc7    0x2  Code  Gb  bsp_systimer.o [1]
+BspSysTimer::m_fun_timer
+                        0x20000248    0xc  Data  Gb  bsp_systimer.o [1]
+BspSysTimer::~BspSysTimer()
+                        0x0800189f    0xe  Code  Gb  bsp_systimer.o [1]
+BusFault_Handler        0x08001d4b    0x2  Code  Gb  stm32f10x_it.o [1]
+CSTACK$$Base            0x20000440          --   Gb  - Linker created -
+CSTACK$$Limit           0x20001440          --   Gb  - Linker created -
+DebugMon_Handler        0x08001d51    0x2  Code  Gb  stm32f10x_it.o [1]
+DtorRecArray            0x2000028c    0xc  Data  Lc  cppinit.o [3]
+FLASH_HalfCycleAccessCmd
+                        0x0800244f   0x20  Code  Gb  stm32f10x_flash.o [1]
+FLASH_PrefetchBufferCmd
+                        0x0800246f   0x20  Code  Gb  stm32f10x_flash.o [1]
+FLASH_SetLatency        0x08002439   0x16  Code  Gb  stm32f10x_flash.o [1]
+GPIO_Init               0x0800229d   0xec  Code  Gb  stm32f10x_gpio.o [1]
+GPIO_SetBits            0x08002389    0x8  Code  Gb  stm32f10x_gpio.o [1]
+HAL_GetTick             0x08001d55    0x6  Code  Gb  stm32f10x_it.o [1]
+HEAP$$Base              0x20001440          --   Gb  - Linker created -
+HEAP$$Limit             0x20002440          --   Gb  - Linker created -
+HardFault_Handler       0x08001d47    0x2  Code  Gb  stm32f10x_it.o [1]
+Initialization guard variable for BspDefault::BspDefault_registered()::t_ms_this
+                        0x20000284    0x1  Data  Gb  bsp_interface.o [1]
+MemManage_Handler       0x08001d49    0x2  Code  Gb  stm32f10x_it.o [1]
+NMI_Handler             0x08001d45    0x2  Code  Gb  stm32f10x_it.o [1]
+NVIC_Init               0x0800239b   0x66  Code  Gb  misc.o [1]
+NVIC_PriorityGroupConfig
+                        0x08002391    0xa  Code  Gb  misc.o [1]
+PendSV_Handler          0x08001d53    0x2  Code  Gb  stm32f10x_it.o [1]
+RCC_ADCCLKConfig        0x080017bb   0x12  Code  Gb  stm32f10x_rcc.o [1]
+RCC_APB2PeriphClockCmd  0x080017cd   0x20  Code  Gb  stm32f10x_rcc.o [1]
+RCC_DeInit              0x08001651   0x60  Code  Gb  stm32f10x_rcc.o [1]
+RCC_GetFlagStatus       0x080017ed   0x46  Code  Gb  stm32f10x_rcc.o [1]
+RCC_HCLKConfig          0x08001783   0x12  Code  Gb  stm32f10x_rcc.o [1]
+RCC_HSEConfig           0x080016b1   0x56  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PCLK1Config         0x08001795   0x12  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PCLK2Config         0x080017a7   0x14  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PLLCmd              0x08001761    0xc  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PLLConfig           0x08001743   0x1e  Code  Gb  stm32f10x_rcc.o [1]
+RCC_SYSCLKConfig        0x0800176d   0x16  Code  Gb  stm32f10x_rcc.o [1]
+RCC_WaitForHSEStartUp   0x08001707   0x3c  Code  Gb  stm32f10x_rcc.o [1]
+Region$$Table$$Base     0x08002cf4          --   Gb  - Linker created -
+Region$$Table$$Limit    0x08002d1c          --   Gb  - Linker created -
+SHT$$INIT_ARRAY$$Base   0x08002e44          --   Gb  - Linker created -
+SHT$$INIT_ARRAY$$Limit  0x08002e4c          --   Gb  - Linker created -
+SHT$$PREINIT_ARRAY$$Base
+                        0x08002e44          --   Gb  - Linker created -
+SHT$$PREINIT_ARRAY$$Limit
+                        0x08002e44          --   Gb  - Linker created -
+SVC_Handler             0x08001d4f    0x2  Code  Gb  stm32f10x_it.o [1]
+SuperInerfaces::SuperInerfaces()
+                        0x08002283    0x2  Code  Gb  bsp_interface.o [1]
+SuperInerfaces::SuperInerfaces() [subobject]
+                        0x08001e69    0xc  Code  Gb  bsp_interface.o [1]
+SuperInerfaces::SuperInerfaces_init(SuperInerfaces*, unsigned char)
+                        0x08002bf5   0x6c  Code  Gb  main.o [1]
+SuperInerfaces::SuperInerfaces_init(SuperInerfaces*, unsigned char)::once_fg
+                        0x20000000    0x1  Data  Gb  main.o [1]
+SuperInerfaces::bsp_events_handle(BSP_Events_Package_t const *)
+                        0x080020b5   0x1c  Code  Gb  bsp_interface.o [1]
+SuperInerfaces::t_pApp  0x2000025c    0x4  Data  Gb  bsp_interface.o [1]
+SuperInerfaces::t_pBsp  0x20000258    0x4  Data  Gb  bsp_interface.o [1]
+SysTick_CLKSourceConfig
+                        0x08002401   0x20  Code  Gb  misc.o [1]
+SysTick_Handler         0x08001d5b   0x12  Code  Gb  stm32f10x_it.o [1]
+SystemClock_Config()    0x08002021   0x8c  Code  Gb  bsp_system.o [1]
+SystemInit              0x08002a21   0x54  Code  Gb  system_stm32f10x.o [1]
+System_init_hw()        0x08001fcd   0x48  Code  Gb  bsp_system.o [1]
+UsageFault_Handler      0x08001d4d    0x2  Code  Gb  stm32f10x_it.o [1]
+Virtual function table for BspDefault
+                        0x08002d3c   0x20  Data  Gb  bsp_interface.o [1]
+Virtual function table for BspInterfaces
+                        0x08002d1c   0x20  Data  Gb  bsp_interface.o [1]
+Virtual function table for BspSysPwr
+                        0x08002d5c   0x20  Data  Gb  bsp_sys_pwr.o [1]
+Virtual function table for BspSysTimer
+                        0x08002d7c   0x20  Data  Gb  bsp_systimer.o [1]
+[local to bsp_sys_pwr_cpp]::bsp_sleep_stop()
+                        0x08001ea9   0x1a  Code  Lc  bsp_sys_pwr.o [1]
+[local to system_stm32f10x_c]::SetSysClock()
+                        0x08002a75    0x8  Code  Lc  system_stm32f10x.o [1]
+[local to system_stm32f10x_c]::SetSysClockTo72()
+                        0x08002a7d   0xe0  Code  Lc  system_stm32f10x.o [1]
+__aeabi_atexit          0x08001a49    0xa  Code  Gb  cxxabi.o [4]
+__aeabi_memcpy          0x08002771         Code  Gb  ABImemcpy.o [5]
+__aeabi_memcpy4         0x08002791         Code  Gb  ABImemcpy.o [5]
+__aeabi_memcpy8         0x08002791         Code  Gb  ABImemcpy.o [5]
+__aeabi_memset          0x08001f65         Code  Gb  ABImemset.o [5]
+__call_ctors            0x08001dc9   0x18  Code  Gb  cppinit.o [3]
+__call_dtors            0x08001e17    0xc  Code  Gb  cppinit.o [3]
+__call_dtors0           0x08001e23   0x36  Code  Gb  cppinit.o [3]
+__cexit_call_dtors      0x08002dff         Code  Gb  cexit.o [5]
+__cmain                 0x08002dbd         Code  Gb  cmain.o [5]
+__cstart_call_dtors     0x08002f64         Data  Gb  cstart_call_dtors.o [5]
+__cxa_atexit            0x08001de1   0x36  Code  Gb  cppinit.o [3]
+__data_GetMemChunk      0x08001611   0x2c  Code  Gb  xgetmemchunk.o [3]
+__data_GetMemChunk::start
+                        0x20000280    0x4  Data  Lc  xgetmemchunk.o [3]
+__dso_handle            0x20000278    0x4  Data  Gb  cppinit.o [3]
+__exit                  0x0800163d   0x14  Code  Gb  exit.o [6]
+__iar_Memset            0x08001f65         Code  Gb  ABImemset.o [5]
+__iar_Memset_word       0x08001f6d         Code  Gb  ABImemset.o [5]
+__iar_copy_init3        0x08002ca1   0x2c  Code  Gb  copy_init3.o [5]
+__iar_cstart_call_ctors
+                        0x08002d9d   0x20  Code  Gb  cmain_call_ctors.o [5]
+__iar_data_init3        0x08002ccd   0x28  Code  Gb  data_init.o [5]
+__iar_debug_exceptions  0x08001fca    0x1  Data  Gb  unwind_debug.o [6]
+__iar_dlfree            0x0800110b  0x4f6  Code  Gb  dlmalloc.o [3]
+__iar_dlmalloc          0x08000e55  0x2b6  Code  Gb  dlmalloc.o [3]
+__iar_program_start     0x08002e39         Code  Gb  cstartup_M.o [5]
+__iar_systems$$module {Abs}
+                        0x00000001         Data  Gb  command line/config [2]
+__iar_tls$$INIT_ARRAY$$Base
+                        0x08002e4c          --   Gb  - Linker created -
+__iar_tls$$INIT_ARRAY$$Limit
+                        0x08002e4c          --   Gb  - Linker created -
+__iar_zero_init3        0x08002c61   0x40  Code  Gb  zero_init3.o [5]
+__low_level_init        0x08002ddb    0x4  Code  Gb  low_level_init.o [3]
+__sti__routine          0x08001a71    0xa  Code  Lc  bsp_interface.o [1]
+__sti__routine          0x08001859   0x12  Code  Lc  bsp_systimer.o [1]
+__vector_table          0x08000000         Data  Gb  startup_stm32f10x_hd.o [1]
+_call_main              0x08002dc9         Code  Gb  cmain.o [5]
+_exit                   0x08002dfd         Code  Gb  cexit.o [5]
+_gm_                    0x20000004  0x1d8  Data  Lc  dlmalloc.o [3]
+_main                   0x08002dd7         Code  Gb  cmain.o [5]
+abort                   0x08001605    0x6  Code  Gb  abort.o [3]
+add_segment             0x080004f5  0x1f2  Code  Lc  dlmalloc.o [3]
+bsp_active_drv()        0x080020b1    0x2  Code  Gb  bsp_system.o [1]
+bsp_clear_dog()         0x080020af    0x2  Code  Gb  bsp_system.o [1]
+bsp_drv_type            0x20000285    0x1  Data  Gb  bsp_interface.o [1]
+bsp_events_dat          0x20000208   0x28  Data  Gb  bsp_interface.o [1]
+bsp_init_dog()          0x080020ad    0x2  Code  Gb  bsp_system.o [1]
+bsp_sleep_drv()         0x080020b3    0x2  Code  Gb  bsp_system.o [1]
+const std::allocator<BSP_Sys_Timer_t>& && std::forward<const std::allocator<BSP_Sys_Timer_t>&>(std::remove_reference<const std::allocator<BSP_Sys_Timer_t>&>::type &)
+                        0x08002837    0x2  Code  Gb  bsp_systimer.o [1]
+exit                    0x08002df9    0x4  Code  Gb  exit.o [3]
+free                    0x080029d5    0x4  Code  Gb  heaptramp0.o [3]
+g_bsp                   0x20000260    0x4  Data  Gb  bsp_interface.o [1]
+init_mparams            0x0800014f   0x32  Code  Lc  dlmalloc.o [3]
+init_top                0x08000181   0x32  Code  Lc  dlmalloc.o [3]
+main                    0x08002de1   0x18  Code  Gb  main.o [1]
+mparams                 0x20000230   0x18  Data  Lc  dlmalloc.o [3]
+next_abi_dtor_rec       0x20000274    0x4  Data  Lc  cppinit.o [3]
+operator delete (void *)
+                        0x080029ab    0xa  Code  Gb  delop_0.o [4]
+operator new (unsigned int)
+                        0x08002955   0x24  Code  Gb  newop_0.o [4]
+operator new (unsigned int, void *)
+                        0x080028c1    0x4  Code  Gb  bsp_systimer.o [1]
+pre_sys_tick            0x20000268    0x4  Data  Lc  bsp_systimer.o [1]
+prepend_alloc           0x080001b3  0x342  Code  Lc  dlmalloc.o [3]
+segment_holding         0x08000131   0x1e  Code  Lc  dlmalloc.o [3]
+std::_Compressed_pair<std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>, std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>, (bool)1>::_Compressed_pair<const std::allocator<BSP_Sys_Timer_t>&, >(std::_One_then_variadic_args_t, const std::allocator<BSP_Sys_Timer_t>& &&,  &&...)
+                        0x0800264b   0x1e  Code  Gb  bsp_systimer.o [1]
+std::_Compressed_pair<std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>, std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>, (bool)1>::_Get_first()
+                        0x080025cf    0x2  Code  Gb  bsp_systimer.o [1]
+std::_Compressed_pair<std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>, std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>, (bool)1>::_Get_first() const
+                        0x08002855    0x2  Code  Gb  bsp_systimer.o [1]
+std::_Compressed_pair<std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>, std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>, (bool)1>::_Get_second()
+                        0x080024a1    0x2  Code  Gb  bsp_systimer.o [1]
+std::_Compressed_pair<std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>, std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>, (bool)1>::_Get_second() const
+                        0x08002669    0x2  Code  Gb  bsp_systimer.o [1]
+std::_Container_base0::_Orphan_all()
+                        0x080028bf    0x2  Code  Gb  bsp_systimer.o [1]
+std::_Iterator_base0::_Adopt(void const *)
+                        0x08002853    0x2  Code  Gb  bsp_systimer.o [1]
+std::_NomemoryNothrow()
+                        0x080029b7    0x4  Code  Gb  nomemory.o [4]
+std::_Nonscalar_ptr_iterator_tag std::_Ptr_cat<BSP_Sys_Timer_t *, BSP_Sys_Timer_t *>(BSP_Sys_Timer_t * &, BSP_Sys_Timer_t * &)
+                        0x08002609    0x2  Code  Gb  bsp_systimer.o [1]
+std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Get_data()
+                        0x080020eb    0xc  Code  Gb  bsp_systimer.o [1]
+std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Get_data() const
+                        0x08002495    0xc  Code  Gb  bsp_systimer.o [1]
+std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Getal()
+                        0x080021e1    0xc  Code  Gb  bsp_systimer.o [1]
+std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Getal() const
+                        0x0800268f    0xc  Code  Gb  bsp_systimer.o [1]
+std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Myend()
+                        0x0800218f    0xe  Code  Gb  bsp_systimer.o [1]
+std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Myend() const
+                        0x08002681    0xe  Code  Gb  bsp_systimer.o [1]
+std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Myfirst()
+                        0x080020f7    0xc  Code  Gb  bsp_systimer.o [1]
+std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Myfirst() const
+                        0x080020df    0xc  Code  Gb  bsp_systimer.o [1]
+std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Mylast()
+                        0x08002181    0xe  Code  Gb  bsp_systimer.o [1]
+std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Mylast() const
+                        0x080020d1    0xe  Code  Gb  bsp_systimer.o [1]
+std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Orphan_all()
+                        0x08002707   0x10  Code  Gb  bsp_systimer.o [1]
+std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Vector_alloc(const std::allocator<BSP_Sys_Timer_t>&)
+                        0x0800226f   0x14  Code  Gb  bsp_systimer.o [1]
+std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Vector_alloc(const std::allocator<BSP_Sys_Timer_t>&) [subobject]
+                        0x08001dbb    0xc  Code  Gb  bsp_systimer.o [1]
+std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::_Vector_const_iterator(BSP_Sys_Timer_t *, std::_Container_base0 const *)
+                        0x0800266b   0x16  Code  Gb  bsp_systimer.o [1]
+std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::_Vector_const_iterator(BSP_Sys_Timer_t *, std::_Container_base0 const *) [subobject]
+                        0x080024a3    0xc  Code  Gb  bsp_systimer.o [1]
+std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::operator *() const
+                        0x080024af    0x4  Code  Gb  bsp_systimer.o [1]
+std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::operator ++()
+                        0x08002131    0x8  Code  Gb  bsp_systimer.o [1]
+std::_Vector_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::_Vector_iterator(BSP_Sys_Timer_t *, std::_Container_base0 const *)
+                        0x08002103   0x16  Code  Gb  bsp_systimer.o [1]
+std::_Vector_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::operator *() const
+                        0x08002119    0xc  Code  Gb  bsp_systimer.o [1]
+std::_Vector_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::operator ++()
+                        0x08001c33    0xe  Code  Gb  bsp_systimer.o [1]
+std::_Vector_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::operator ->() const
+                        0x08001c23   0x10  Code  Gb  bsp_systimer.o [1]
+std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>::_Vector_val()
+                        0x08002845    0xe  Code  Gb  bsp_systimer.o [1]
+std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::_Wrap_alloc(const std::allocator<BSP_Sys_Timer_t>&)
+                        0x080028d5    0x2  Code  Gb  bsp_systimer.o [1]
+std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::_Wrap_alloc(const std::allocator<BSP_Sys_Timer_t>&) [subobject]
+                        0x08002839    0xc  Code  Gb  bsp_systimer.o [1]
+std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::allocate(unsigned int)
+                        0x080026c5   0x10  Code  Gb  bsp_systimer.o [1]
+std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::deallocate(BSP_Sys_Timer_t *, unsigned int)
+                        0x080026f3   0x14  Code  Gb  bsp_systimer.o [1]
+std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::max_size(std::_Nil) const
+                        0x0800269b    0xc  Code  Gb  bsp_systimer.o [1]
+std::__iar_New_hand     0x2000027c    0x4  Data  Gb  new.o [4]
+std::allocator<BSP_Sys_Timer_t>::allocate(unsigned int)
+                        0x08002863   0x12  Code  Gb  bsp_systimer.o [1]
+std::allocator<BSP_Sys_Timer_t>::deallocate(BSP_Sys_Timer_t *, unsigned int)
+                        0x080028ad   0x12  Code  Gb  bsp_systimer.o [1]
+std::allocator<BSP_Sys_Timer_t>::max_size() const
+                        0x080028d7    0x8  Code  Gb  bsp_systimer.o [1]
+std::allocator_traits<std::allocator<BSP_Sys_Timer_t>>::max_size(const std::allocator<BSP_Sys_Timer_t>&)
+                        0x08002857    0xc  Code  Gb  bsp_systimer.o [1]
+std::iterator_traits<BSP_Sys_Timer_t *>::value_type * std::_Val_type<BSP_Sys_Timer_t *>(BSP_Sys_Timer_t *)
+                        0x08002979    0x4  Code  Gb  bsp_systimer.o [1]
+std::pointer_traits<BSP_Sys_Timer_t *>::pointer_to(BSP_Sys_Timer_t &)
+                        0x08002125    0xc  Code  Gb  bsp_systimer.o [1]
+std::remove_reference<BSP_Sys_Timer_t &>::type && std::move<BSP_Sys_Timer_t &>(BSP_Sys_Timer_t & &&)
+                        0x0800276f    0x2  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Destroy(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *)
+                        0x0800223b   0x1a  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Grow_to(unsigned int) const
+                        0x080024e7   0x2e  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Inside(BSP_Sys_Timer_t const *) const
+                        0x08002145   0x30  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Make_iter(std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>) const
+                        0x08002255   0x1a  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Orphan_range(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *) const
+                        0x080021df    0x2  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Reallocate(unsigned int)
+                        0x08002515   0xba  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Reserve(unsigned int)
+                        0x0800219d   0x42  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Tidy()
+                        0x08002b79   0x7a  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Unused_capacity() const
+                        0x080024b7   0x1e  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::begin()
+                        0x08001c03   0x20  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::capacity() const
+                        0x080026a7   0x1e  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::erase(std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>)
+                        0x08001d71   0x4a  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::max_size() const
+                        0x080024d5   0x12  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::push_back(BSP_Sys_Timer_t const &)
+                        0x08001c41  0x102  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::size() const
+                        0x08001be5   0x1e  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::vector()
+                        0x08001a39   0x10  Code  Gb  bsp_systimer.o [1]
+std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::~vector()
+                        0x08002e2b    0xe  Code  Gb  bsp_systimer.o [1]
+sys_alloc               0x080006ed  0x164  Code  Lc  dlmalloc.o [3]
+sys_sleep_fg            0x20000286    0x1  Data  Gb  bsp_sys_pwr.o [1]
+sys_trim                0x08000851   0x66  Code  Lc  dlmalloc.o [3]
+time_count              0x20000270    0x4  Data  Lc  stm32f10x_it.o [1]
+tmalloc_large           0x080008c5  0x384  Code  Lc  dlmalloc.o [3]
+tmalloc_small           0x08000c49  0x1fe  Code  Lc  dlmalloc.o [3]
+void std::_Deallocate<BSP_Sys_Timer_t>(BSP_Sys_Timer_t *, unsigned int)
+                        0x08002935    0xe  Code  Gb  bsp_systimer.o [1]
+void std::_Destroy_range<std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>>(std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::pointer, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::pointer, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>&)
+                        0x08002631   0x1a  Code  Gb  bsp_systimer.o [1]
+void std::_Destroy_range<std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>>(std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::pointer, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::pointer, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>&, std::_Nonscalar_ptr_iterator_tag)
+                        0x08002817   0x20  Code  Gb  bsp_systimer.o [1]
+void std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t &>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t & &&...)
+                        0x080021ed   0x1a  Code  Gb  bsp_systimer.o [1]
+void std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t const &>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t const & &&...)
+                        0x08002207   0x1a  Code  Gb  bsp_systimer.o [1]
+void std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t &&...)
+                        0x080029bb   0x1a  Code  Gb  bsp_systimer.o [1]
+void std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::destroy<BSP_Sys_Timer_t>(BSP_Sys_Timer_t *)
+                        0x080028c5   0x10  Code  Gb  bsp_systimer.o [1]
+void std::allocator<BSP_Sys_Timer_t>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t &>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t & &&...)
+                        0x08002717   0x2c  Code  Gb  bsp_systimer.o [1]
+void std::allocator<BSP_Sys_Timer_t>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t const &>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t const & &&...)
+                        0x08002743   0x2c  Code  Gb  bsp_systimer.o [1]
+void std::allocator<BSP_Sys_Timer_t>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t &&...)
+                        0x080029f5   0x2c  Code  Gb  bsp_systimer.o [1]
+void std::allocator<BSP_Sys_Timer_t>::destroy<BSP_Sys_Timer_t>(BSP_Sys_Timer_t *)
+                        0x080029b5    0x2  Code  Gb  bsp_systimer.o [1]
+void std::allocator_traits<std::allocator<BSP_Sys_Timer_t>>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t &>(std::allocator<BSP_Sys_Timer_t>&, BSP_Sys_Timer_t *, BSP_Sys_Timer_t & &&...)
+                        0x080025d3   0x1a  Code  Gb  bsp_systimer.o [1]
+void std::allocator_traits<std::allocator<BSP_Sys_Timer_t>>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t const &>(std::allocator<BSP_Sys_Timer_t>&, BSP_Sys_Timer_t *, BSP_Sys_Timer_t const & &&...)
+                        0x080025ef   0x1a  Code  Gb  bsp_systimer.o [1]
+void std::allocator_traits<std::allocator<BSP_Sys_Timer_t>>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t>(std::allocator<BSP_Sys_Timer_t>&, BSP_Sys_Timer_t *, BSP_Sys_Timer_t &&...)
+                        0x080029db   0x1a  Code  Gb  bsp_systimer.o [1]
+void std::allocator_traits<std::allocator<BSP_Sys_Timer_t>>::destroy<BSP_Sys_Timer_t>(std::allocator<BSP_Sys_Timer_t>&, BSP_Sys_Timer_t *)
+                        0x08002943   0x10  Code  Gb  bsp_systimer.o [1]
+
+
+[1] = F:\PrivateWork\stm32_va_measuring\App\Debug\Obj
+[2] = command line
+[3] = dl7M_tlf.a
+[4] = dlpp7M_tl_fc.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  11 951 bytes of readonly  code memory
+     181 bytes of readonly  data memory
+   9 270 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

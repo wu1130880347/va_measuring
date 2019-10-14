@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "stm32f10x_it.h": "c",
+        "vector": "cpp",
+        "bsp_interface.h": "c",
+        "stm32f10x.h": "c",
+        "system_stm32f10x.h": "c",
+        "stm32f10x_conf.h": "c",
+        "stm32f10x_gpio.h": "c",
+        "bsp_super_interface.h": "c",
+        "bsp_system.h": "c",
+        "bsp_head.h": "c",
+        "stdint.h": "c",
+        "bsp_hw_config.h": "c",
+        "dbg_log.h": "c"
+    }
+}

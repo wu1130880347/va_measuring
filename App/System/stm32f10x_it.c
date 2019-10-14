@@ -131,8 +131,16 @@ void PendSV_Handler(void)
   * @param  None
   * @retval None
   */
+ static uint32_t time_count = 0;
+ uint32_t HAL_GetTick(void)
+ {
+   return time_count;
+ }
 void SysTick_Handler(void)
 {
+  time_count += 10;
+  extern void BSP_SYS_TIMER_Callback(void);
+  BSP_SYS_TIMER_Callback();
 }
 
 /******************************************************************************/
