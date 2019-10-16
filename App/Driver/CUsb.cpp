@@ -3,22 +3,21 @@ CUsb::CUsb()
 {}
 CUsb::~CUsb()
 {}
-BOOL CUsb::ReceiveCheck(RECEIVE_FRAME *frame)
+bool CUsb::ReceiveCheck(uint8_t *frame)
 {
     Usb_read(usb_recData,&usb_reclen);
-    return FALSE;
+    return false;
 }
 void CUsb::Init(void)
 {
     
 }
-void CUsb::TimerEvent(u32 ulTimeNum)
+void CUsb::TimerEvent(uint32_t ulTimeNum)
 {
     switch (ulTimeNum)
 	{
 		case 1:
 		{
-            KillTimer(this,1);
             break;
 		}
 		default:

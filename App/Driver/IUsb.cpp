@@ -1,13 +1,9 @@
 #include "IUsb.h"
-#include "driver.h"
-extern "C"
-{
 #include "hw_config.h"
 #include "usb_init.h"
 #include "main.h"
 #include "usbio.h"
  extern uint8_t USB_Received_Flag;
-}
 #if ((defined USART_DEBUG) && (USART_DEBUG == __ON__))
 extern "C"
 {

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userOverrides>
+    <override>
+        <path>D:\QT\My_Qt_design\va_measuring\App\Driver\usb\Custom_HID\src\stm32f10x_it.c</path>
+        <encoding>System</encoding>
+    </override>
+</userOverrides>

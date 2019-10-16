@@ -22,7 +22,10 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
-
+#include "stm32f10x.h"
+#include "usb_lib.h"
+#include "usb_istr.h"
+#include "usb_pwr.h"
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
   */
@@ -143,6 +146,47 @@ void SysTick_Handler(void)
   BSP_SYS_TIMER_Callback();
 }
 
+/******************************************************************************/
+/*                 STM32F10x 外设 中断 服务函数                               */
+/*  增加需要的外设中断函数在下面。中断的函数名字都已经在startup_stm32f10x_xx.s*/
+/*  的文件中定义好了，请参照它来写。                                          */
+/******************************************************************************/
+/**
+  * @brief  USB中断处理函数
+  * @note	该中断函数只有STM32F105和STM32F107系列芯片才有这个中断
+  * @param  None
+  * @retval None
+  */
+#ifndef STM32F10X_CL
+void USB_LP_CAN1_RX0_IRQHandler(void)
+{
+  USB_Istr();
+}
+#endif /* STM32F10X_CL */
+/**
+  * @brief  This function handles OTG WakeUp interrupt request.
+  * @note	None
+  * @param  None
+  * @retval None
+  */
+void OTG_FS_WKUP_IRQHandler(void)
+{
+  /* Initiate external resume sequence (1 step) */
+  Resume(RESUME_EXTERNAL);  
+
+}
+/**
+  * @brief  This function handles USB-On-The-Go FS global interrupt request.
+  * @note	None
+  * @param  None
+  * @retval None
+  */
+#ifdef STM32F10X_CL
+void OTG_FS_IRQHandler(void)
+{
+  STM32_PCD_OTG_ISR_Handler(); 
+}
+#endif /* STM32F10X_CL */
 /******************************************************************************/
 /*                 STM32F10x Peripherals Interrupt Handlers                   */
 /*  Add here the Interrupt Handler for the used peripheral(s) (PPP), for the  */

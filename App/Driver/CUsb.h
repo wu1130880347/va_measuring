@@ -1,10 +1,8 @@
 #ifndef __CUSB_H__
 #define __CUSB_H__
-#include "head.h"
-#include "CUdpProtocol.h"
 #include "IUsb.h"
-
-class CUsb : public IUsb,public CUdpProtocol
+#include "bsp_head.h"
+class CUsb : public IUsb
 {
     private:
     public:
@@ -13,7 +11,7 @@ class CUsb : public IUsb,public CUdpProtocol
     CUsb();
     ~CUsb();
     void Init(void);
-    virtual BOOL ReceiveCheck(RECEIVE_FRAME *frame);
-    virtual void TimerEvent(u32 ulTimeNum);
+    virtual bool ReceiveCheck(uint8_t *frame);
+    virtual void TimerEvent(uint32_t ulTimeNum);
 };
 #endif

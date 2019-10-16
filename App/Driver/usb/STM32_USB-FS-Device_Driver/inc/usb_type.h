@@ -23,7 +23,7 @@
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 #ifndef NULL
-#define NULL ((void *)0)
+#define NULL 0//((void *)0)
 #endif
 
 #if !defined (__STM32F10x_H) && !defined(__STM32L1XX_H)
@@ -59,13 +59,12 @@ typedef enum { DISABLE = 0, ENABLE  = !DISABLE} FunctionalState;
 typedef enum { ERROR = 0, SUCCESS  = !ERROR} ErrorStatus;
 #endif /* __STM32F10x_H && __STM32L15x_H */
 
-#include "integer.h"
-#define bool BOOL
-//typedef enum
-//{
-//  FALSE = 0, TRUE  = !FALSE
-//}
-//bool;
+#include "stdbool.h"
+typedef enum
+{
+  FALSE = 0, TRUE  = !FALSE
+}
+BOOL;
 
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */

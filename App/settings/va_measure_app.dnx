@@ -153,8 +153,8 @@
         <mode>0</mode>
     </DisassembleMode>
     <Breakpoints2>
-        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\System\stm32f10x_it.c}.97.1" 0 0 1 "" 0 "" 0</Bp0>
-        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\System\stm32f10x_it.c}.58.1" 0 0 1 "" 0 "" 0</Bp1>
+        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\System\stm32f10x_it.c}.100.1" 0 0 1 "" 0 "" 0</Bp0>
+        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\System\stm32f10x_it.c}.61.1" 0 0 1 "" 0 "" 0</Bp1>
         <Count>2</Count>
     </Breakpoints2>
     <Aliases>

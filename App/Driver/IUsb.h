@@ -1,8 +1,7 @@
 #ifndef __IUSB_H__
 #define __IUSB_H__
-#include "head.h"
-#include "CSuperTimer.h"
-class IUsb : public CSuperTimer
+#include "bsp_head.h"
+class IUsb
 {
     private:
     public:
