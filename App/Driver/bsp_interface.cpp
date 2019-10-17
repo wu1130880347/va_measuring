@@ -2,6 +2,7 @@
 #include "bsp_connect.h"
 #include "bsp_systimer.h"
 #include "bsp_sys_pwr.h"
+#include "bsp_usbhid.h"
 extern "C"
 {
 #include "bsp_system.h"
@@ -30,14 +31,14 @@ BspInterfaces* BspInterfaces::m_pdrv[(uint8_t)BSP_DRV_COUNTS] = {NULL};
 BspInterfaces::BspInterfaces()
 {
     // drivers registered
-    m_pdrv[(uint8_t)BSP_DRV_SW] = BspDefault::BspDefault_registered();
+    m_pdrv[(uint8_t)BSP_DRV_USBHID] = BspDefault::BspDefault_registered();
     m_pdrv[(uint8_t)BSP_DRV_LED] = BspDefault::BspDefault_registered();
     m_pdrv[(uint8_t)BSP_DRV_BEEP] = BspDefault::BspDefault_registered();
     m_pdrv[(uint8_t)BSP_DRV_FLASH] = BspDefault::BspDefault_registered();
     m_pdrv[(uint8_t)BSP_DRV_LORA] = BspDefault::BspDefault_registered();
     m_pdrv[(uint8_t)BSP_DRV_CARD] = BspDefault::BspDefault_registered();
     m_pdrv[(uint8_t)BSP_DRV_RTC] = BspDefault::BspDefault_registered();
-    m_pdrv[(uint8_t)BSP_DRV_UART] = BspDefault::BspDefault_registered();
+    m_pdrv[(uint8_t)BSP_DRV_UART] = BspUart::BspUart_registered();
     m_pdrv[(uint8_t)BSP_DRV_KEY] = BspDefault::BspDefault_registered();
     m_pdrv[(uint8_t)BSP_DRV_SYS_PWR] = BspSysPwr::BspSysPwr_registered();
     m_pdrv[(uint8_t)BSP_DRV_NoEvents] = BspSysTimer::BspSysTimer_registered();
@@ -98,9 +99,9 @@ void BspInterfaces::init(void)
 #if ((defined USART_DEBUG) && (USART_DEBUG == __ON__))
     m_pdrv[(uint8_t)BSP_DRV_UART]->init();//初始化调试串口
 #endif
-    while( (t_drv++) < ((uint8_t)BSP_DRV_COUNTS)-1)
+    while( t_drv < ((uint8_t)BSP_DRV_COUNTS)-1)
     {
-        m_pdrv[t_drv]->init();//初始化各个硬件
+        m_pdrv[t_drv++]->init();//初始化各个硬件
     }
     Dprintf(EN_LOG,TAG,"驱动配置完成 \r\n");
 #if ((defined UNIT_TEST) && (UNIT_TEST == __ON__))

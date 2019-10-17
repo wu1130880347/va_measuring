@@ -1,63 +1,65 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.22.2.15995/W32 for ARM                16/Oct/2019  21:39:45
+# IAR ELF Linker V8.22.2.15995/W32 for ARM                17/Oct/2019  18:50:18
 # Copyright 2007-2018 IAR Systems AB.
 #
 #    Output file  =  
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Exe\va_measure_app.out
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Exe\va_measure_app.out
 #    Map file     =  
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\List\va_measure_app.map
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\List\va_measure_app.map
 #    Command line =  
-#        -f C:\Users\admin\AppData\Local\Temp\EW5BEB.tmp
-#        (D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\bsp_interface.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\bsp_sys_pwr.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\bsp_system.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\bsp_systimer.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\CUsb.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\hw_config.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\IUsb.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\main.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\misc.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\startup_stm32f10x_hd.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_adc.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_bkp.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_cec.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_crc.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_dac.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_dbgmcu.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_dma.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_exti.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_flash.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_gpio.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_i2c.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_it.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_iwdg.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_pwr.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_rcc.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_rtc.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_sdio.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_spi.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_tim.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_usart.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\stm32f10x_wwdg.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\system_stm32f10x.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\usb_core.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\usb_desc.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\usb_endp.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\usb_init.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\usb_int.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\usb_istr.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\usb_mem.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\usb_prop.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\usb_pwr.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\usb_regs.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\usb_sil.o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Obj\usbio.o -o
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\Exe\va_measure_app.out
+#        -f C:\Users\ADMINI~1\AppData\Local\Temp\EWC6FA.tmp
+#        (F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\bsp_interface.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\bsp_sys_pwr.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\bsp_system.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\bsp_systimer.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\bsp_tm7705.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\bsp_uart.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\bsp_usbhid.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\dbg_log.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\hw_config.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\main.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\misc.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\startup_stm32f10x_hd.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_adc.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_bkp.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_cec.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_crc.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_dac.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_dbgmcu.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_dma.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_exti.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_flash.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_gpio.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_i2c.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_it.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_iwdg.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_pwr.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_rcc.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_rtc.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_sdio.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_spi.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_tim.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_usart.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\stm32f10x_wwdg.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\system_stm32f10x.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\usb_core.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\usb_desc.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\usb_endp.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\usb_init.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\usb_int.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\usb_istr.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\usb_mem.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\usb_prop.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\usb_pwr.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\usb_regs.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\usb_sil.o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Obj\usbio.o -o
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\Exe\va_measure_app.out
 #        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
 #        --map
-#        D:\QT\My_Qt_design\va_measuring\App\Debug\List\va_measure_app.map
-#        --config D:\QT\My_Qt_design\va_measuring\App\System\stm32f103x8.icf
+#        F:\PrivateWork\stm32_va_measuring\App\Debug\List\va_measure_app.map
+#        --config F:\PrivateWork\stm32_va_measuring\App\System\stm32f103x8.icf
 #        --semihosting --entry __iar_program_start --vfe --text_out locale)
 #
 ###############################################################################
@@ -102,291 +104,353 @@ initialize by copy { rw };
   .intvec                ro code  0x08000000   0x130  startup_stm32f10x_hd.o [1]
                                 - 0x08000130   0x130
 
-"P1":                                         0x3632
+"P1":                                         0x671c
   .text                  ro code  0x08000130  0x14d4  dlmalloc.o [3]
   .text                  ro code  0x08001604     0x6  abort.o [3]
-  .text                  ro code  0x0800160a    0x7a  lz77_init_single.o [5]
+  .text                  ro code  0x0800160a    0x7a  lz77_init_single.o [6]
   .text                  ro code  0x08001684    0x2c  xgetmemchunk.o [3]
-  .text                  ro code  0x080016b0    0x14  exit.o [6]
-  .text                  ro code  0x080016c4   0x280  usb_prop.o [1]
-  .text                  ro code  0x08001944    0xca  hw_config.o [1]
-  .text                  ro code  0x08001a0e     0x6  bsp_interface.o [1]
-  .text                  ro code  0x08001a14     0x4  usb_pwr.o [1]
-  .text                  ro code  0x08001a18    0x28  usb_sil.o [1]
-  .text                  ro code  0x08001a40   0x1e8  usb_regs.o [1]
-  .text                  ro code  0x08001c28    0x86  usb_core.o [1]
-  .text                  ro code  0x08001cae     0x6  bsp_sys_pwr.o [1]
-  .text                  ro code  0x08001cb4   0x234  stm32f10x_rcc.o [1]
-  .text                  ro code  0x08001ee8    0xa8  misc.o [1]
-  .text                  ro code  0x08001f90   0x1e0  bsp_systimer.o [1]
-  .text                  ro code  0x08002170    0x10  bsp_systimer.o [1]
-  .text                  ro code  0x08002180     0xa  cxxabi.o [4]
-  .text                  ro code  0x0800218a     0x2  bsp_interface.o [1]
-  .text                  ro code  0x0800218c   0x18c  bsp_interface.o [1]
-  .text                  ro code  0x08002318    0x1e  bsp_systimer.o [1]
-  .text                  ro code  0x08002336    0x20  bsp_systimer.o [1]
-  .text                  ro code  0x08002356    0x10  bsp_systimer.o [1]
-  .text                  ro code  0x08002366     0xe  bsp_systimer.o [1]
-  .text                  ro code  0x08002374   0x102  bsp_systimer.o [1]
-  .text                  ro code  0x08002476     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002478    0x2c  stm32f10x_it.o [1]
-  .text                  ro code  0x080024a4    0x4a  bsp_systimer.o [1]
-  .text                  ro code  0x080024ee     0xc  bsp_systimer.o [1]
-  .rodata                const    0x080024fa     0x1  unwind_debug.o [6]
-  .text                  ro code  0x080024fc    0xa0  cppinit.o [3]
-  .text                  ro code  0x0800259c     0xc  bsp_interface.o [1]
-  .text                  ro code  0x080025a8    0x34  bsp_interface.o [1]
-  .text                  ro code  0x080025dc    0xbc  bsp_sys_pwr.o [1]
-  .text                  ro code  0x08002698    0x66  ABImemset.o [5]
-  .text                  ro code  0x08002700    0xe8  bsp_system.o [1]
-  .text                  ro code  0x080027e8    0x1c  bsp_interface.o [1]
-  .text                  ro code  0x08002804     0xe  bsp_systimer.o [1]
-  .text                  ro code  0x08002812     0xc  bsp_systimer.o [1]
-  .text                  ro code  0x0800281e     0xc  bsp_systimer.o [1]
-  .text                  ro code  0x0800282a     0xc  bsp_systimer.o [1]
-  .text                  ro code  0x08002836    0x16  bsp_systimer.o [1]
-  .text                  ro code  0x0800284c     0xc  bsp_systimer.o [1]
-  .text                  ro code  0x08002858     0xc  bsp_systimer.o [1]
-  .text                  ro code  0x08002864     0x8  bsp_systimer.o [1]
-  .text                  ro code  0x0800286c     0xc  bsp_systimer.o [1]
-  .text                  ro code  0x08002878    0x30  bsp_systimer.o [1]
-  .text                  ro code  0x080028a8     0xc  bsp_systimer.o [1]
-  .text                  ro code  0x080028b4     0xe  bsp_systimer.o [1]
-  .text                  ro code  0x080028c2     0xe  bsp_systimer.o [1]
-  .text                  ro code  0x080028d0    0x42  bsp_systimer.o [1]
-  .text                  ro code  0x08002912     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002914     0xc  bsp_systimer.o [1]
-  .text                  ro code  0x08002920    0x1a  bsp_systimer.o [1]
-  .text                  ro code  0x0800293a    0x1a  bsp_systimer.o [1]
-  .text                  ro code  0x08002954    0x1a  bsp_systimer.o [1]
-  .text                  ro code  0x0800296e    0x1a  bsp_systimer.o [1]
-  .text                  ro code  0x08002988    0x1a  bsp_systimer.o [1]
-  .text                  ro code  0x080029a2    0x14  bsp_systimer.o [1]
-  .text                  ro code  0x080029b6     0x2  bsp_interface.o [1]
-  .text                  ro code  0x080029b8    0x18  bsp_interface.o [1]
-  .text                  ro code  0x080029d0    0xf4  stm32f10x_gpio.o [1]
-  .text                  ro code  0x08002ac4    0x5c  stm32f10x_flash.o [1]
-  .text                  ro code  0x08002b20     0xc  bsp_systimer.o [1]
-  .text                  ro code  0x08002b2c     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002b2e     0xc  bsp_systimer.o [1]
-  .text                  ro code  0x08002b3a     0x4  bsp_systimer.o [1]
-  .text                  ro code  0x08002b3e     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002b40     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002b42    0x1e  bsp_systimer.o [1]
-  .text                  ro code  0x08002b60    0x12  bsp_systimer.o [1]
-  .text                  ro code  0x08002b72    0x2e  bsp_systimer.o [1]
-  .text                  ro code  0x08002ba0    0xba  bsp_systimer.o [1]
-  .text                  ro code  0x08002c5a     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002c5c     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002c5e    0x1a  bsp_systimer.o [1]
-  .text                  ro code  0x08002c78     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002c7a    0x1a  bsp_systimer.o [1]
-  .text                  ro code  0x08002c94     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002c96    0x26  bsp_systimer.o [1]
-  .text                  ro code  0x08002cbc    0x1a  bsp_systimer.o [1]
-  .text                  ro code  0x08002cd6    0x1e  bsp_systimer.o [1]
-  .text                  ro code  0x08002cf4     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002cf6    0x16  bsp_systimer.o [1]
-  .text                  ro code  0x08002d0c     0xe  bsp_systimer.o [1]
-  .text                  ro code  0x08002d1a     0xc  bsp_systimer.o [1]
-  .text                  ro code  0x08002d26     0xc  bsp_systimer.o [1]
-  .text                  ro code  0x08002d32    0x1e  bsp_systimer.o [1]
-  .text                  ro code  0x08002d50    0x10  bsp_systimer.o [1]
-  .text                  ro code  0x08002d60    0x1e  bsp_systimer.o [1]
-  .text                  ro code  0x08002d7e    0x14  bsp_systimer.o [1]
-  .text                  ro code  0x08002d92    0x10  bsp_systimer.o [1]
-  .text                  ro code  0x08002da2    0x2c  bsp_systimer.o [1]
-  .text                  ro code  0x08002dce    0x2c  bsp_systimer.o [1]
-  .text                  ro code  0x08002dfa     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002dfc    0xa6  ABImemcpy.o [5]
-  .text                  ro code  0x08002ea2    0x20  bsp_systimer.o [1]
-  .text                  ro code  0x08002ec2     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002ec4     0xc  bsp_systimer.o [1]
-  .text                  ro code  0x08002ed0     0xe  bsp_systimer.o [1]
-  .text                  ro code  0x08002ede     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002ee0     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002ee2     0xc  bsp_systimer.o [1]
-  .text                  ro code  0x08002eee    0x12  bsp_systimer.o [1]
-  .text                  ro code  0x08002f00    0x38  bsp_systimer.o [1]
-  .text                  ro code  0x08002f38    0x12  bsp_systimer.o [1]
-  .text                  ro code  0x08002f4a     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002f4c     0x4  bsp_systimer.o [1]
-  .text                  ro code  0x08002f50    0x10  bsp_systimer.o [1]
-  .text                  ro code  0x08002f60     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002f62     0x8  bsp_systimer.o [1]
-  .text                  ro code  0x08002f6a    0x24  bsp_systimer.o [1]
-  .text                  ro code  0x08002f8e     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08002f90    0x2c  bsp_systimer.o [1]
-  .text                  ro code  0x08002fbc     0x4  bsp_systimer.o [1]
-  .text                  ro code  0x08002fc0     0xe  bsp_systimer.o [1]
-  .text                  ro code  0x08002fce    0x10  bsp_systimer.o [1]
-  .text                  ro code  0x08002fe0    0x24  newop_0.o [4]
-  .text                  ro code  0x08003004     0x4  bsp_systimer.o [1]
-  .text                  ro code  0x08003008    0x2e  bsp_systimer.o [1]
-  .text                  ro code  0x08003036     0xa  delop_0.o [4]
-  .text                  ro code  0x08003040     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08003042     0x4  nomemory.o [4]
-  .text                  ro code  0x08003046    0x1a  bsp_systimer.o [1]
-  .text                  ro code  0x08003060     0x4  heaptramp0.o [3]
-  .text                  ro code  0x08003064     0x2  bsp_systimer.o [1]
-  .text                  ro code  0x08003066    0x1a  bsp_systimer.o [1]
-  .text                  ro code  0x08003080    0x2c  bsp_systimer.o [1]
-  .text                  ro code  0x080030ac   0x158  system_stm32f10x.o [1]
-  .text                  ro code  0x08003204    0x7a  bsp_systimer.o [1]
-  .text                  ro code  0x08003280    0x6c  main.o [1]
-  .text                  ro code  0x080032ec    0x40  usb_init.o [1]
-  .text                  ro code  0x0800332c    0x40  zero_init3.o [5]
-  .text                  ro code  0x0800336c    0x2e  IUsb.o [1]
-  .rodata                const    0x0800339c    0x2c  usb_desc.o [1]
-  .text                  ro code  0x080033c8    0x2c  main.o [1]
-  .text                  ro code  0x080033f4    0x26  CUsb.o [1]
-  .text                  ro code  0x0800341c    0x28  data_init.o [5]
-  .rodata                const    0x08003444    0x24  usb_desc.o [1]
-  .iar.init_table        const    0x08003468    0x24  - Linker created -
-  .rodata                const    0x0800348c    0x20  bsp_interface.o [1]
-  .rodata                const    0x080034ac    0x20  bsp_interface.o [1]
-  .rodata                const    0x080034cc    0x20  bsp_sys_pwr.o [1]
-  .rodata                const    0x080034ec    0x20  bsp_systimer.o [1]
-  .text                  ro code  0x0800350c    0x20  cmain_call_ctors.o [5]
-  .text                  ro code  0x0800352c    0x1e  cmain.o [5]
-  .text                  ro code  0x0800354a     0x4  low_level_init.o [3]
-  .text                  ro code  0x0800354e     0x4  exit.o [3]
-  .text                  ro code  0x08003554     0xe  cexit.o [5]
-  .rodata                const    0x08003564    0x18  usb_desc.o [1]
-  .rodata                const    0x0800357c    0x14  usb_desc.o [1]
-  .rodata                const    0x08003590    0x14  usb_desc.o [1]
-  .rodata                const    0x080035a4    0x10  CUsb.o [1]
-  .text                  ro code  0x080035b4    0x10  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080035c4     0xe  bsp_interface.o [1]
-  .text                  ro code  0x080035d2     0xe  bsp_systimer.o [1]
-  .text                  ro code  0x080035e0     0xc  cstartup_M.o [5]
-  SHT$$PREINIT_ARRAY              0x080035ec     0x0  <Block>
-  SHT$$INIT_ARRAY                 0x080035ec     0x8  <Block>
-    .init_array          const    0x080035ec     0x4  bsp_interface.o [1]
-    .init_array          const    0x080035f0     0x4  bsp_systimer.o [1]
-  __iar_tls$$INIT_ARRAY           0x080035f4     0x0  <Block>
-  .rodata                const    0x080035f4     0x4  usb_desc.o [1]
-  .text                  ro code  0x080035f8     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080035fc     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003600     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003604     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003608     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x0800360c     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003610     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003614     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003618     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x0800361c     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003620     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003624     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003628     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x0800362c     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003630     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003634     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003638     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x0800363c     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003640     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003644     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003648     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x0800364c     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003650     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003654     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003658     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x0800365c     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003660     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003664     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003668     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x0800366c     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003670     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003674     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003678     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x0800367c     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003680     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003684     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003688     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x0800368c     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003690     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003694     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x08003698     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x0800369c     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036a0     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036a4     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036a8     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036ac     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036b0     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036b4     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036b8     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036bc     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036c0     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036c4     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036c8     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036cc     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036d0     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036d4     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036d8     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036dc     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036e0     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036e4     0x4  startup_stm32f10x_hd.o [1]
-  .text                  ro code  0x080036e8     0x0  cstart_call_dtors.o [5]
-  .rodata                const    0x080036e8     0x0  zero_init3.o [5]
-  .rodata                const    0x080036e8     0x0  lz77_init_single.o [5]
-  Initializer bytes      const    0x080036e8    0x7a  <for P2-1>
-                                - 0x08003762  0x3632
+  .text                  ro code  0x080016b0    0x14  exit.o [7]
+  .text                  ro code  0x080016c4   0xe22  xprintffull_nomb.o [3]
+  .text                  ro code  0x080024e6     0x6  bsp_interface.o [1]
+  .text                  ro code  0x080024ec    0x16  strchr.o [6]
+  .text                  ro code  0x08002502     0x6  bsp_sys_pwr.o [1]
+  .text                  ro code  0x08002508    0x40  xfail_s.o [3]
+  .text                  ro code  0x08002548    0x36  strlen.o [6]
+  .text                  ro code  0x0800257e     0x6  bsp_uart.o [1]
+  .text                  ro code  0x08002584    0x58  memchr.o [6]
+  .text                  ro code  0x080025dc   0x22e  I64DivMod.o [6]
+  .text                  ro code  0x0800280a     0x2  bsp_interface.o [1]
+  .text                  ro code  0x0800280c   0x1a2  DblMul.o [5]
+  .text                  ro code  0x080029ae     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x080029b0    0xa6  ABImemcpy.o [6]
+  .rodata                const    0x08002a56     0x1  unwind_debug.o [7]
+  .text                  ro code  0x08002a58    0x70  frexp.o [5]
+  .text                  ro code  0x08002ac8    0x2e  DblCmpLe.o [5]
+  .text                  ro code  0x08002af8    0x2e  DblCmpGe.o [5]
+  .text                  ro code  0x08002b28   0x13a  ldexp.o [5]
+  .text                  ro code  0x08002c64    0x3a  DblToS32.o [5]
+  .text                  ro code  0x08002ca0    0x22  S32ToDbl.o [5]
+  .text                  ro code  0x08002cc4    0xe2  DblSub.o [5]
+  .text                  ro code  0x08002da8   0x246  DblDiv.o [5]
+  .text                  ro code  0x08002ff0    0x28  DblToU32.o [5]
+  .text                  ro code  0x08003018    0x1a  U32ToDbl.o [5]
+  .text                  ro code  0x08003034     0x8  xlocale_c.o [3]
+  .text                  ro code  0x0800303c     0x2  I64DivZer.o [6]
+  .text                  ro code  0x08003040   0x168  DblAdd.o [5]
+  .text                  ro code  0x080031a8   0xc92  usb_core.o [1]
+  .text                  ro code  0x08003e3c   0x2a6  usb_regs.o [1]
+  .text                  ro code  0x080040e4    0x70  usb_mem.o [1]
+  .text                  ro code  0x08004154   0x30c  stm32f10x_rcc.o [1]
+  .text                  ro code  0x08004460   0x264  usb_prop.o [1]
+  .text                  ro code  0x080046c4    0x92  hw_config.o [1]
+  .text                  ro code  0x08004758   0x118  usb_pwr.o [1]
+  .text                  ro code  0x08004870    0x28  usb_sil.o [1]
+  .text                  ro code  0x08004898   0x248  usb_int.o [1]
+  .text                  ro code  0x08004ae0   0x1e0  bsp_systimer.o [1]
+  .text                  ro code  0x08004cc0    0x10  bsp_systimer.o [1]
+  .text                  ro code  0x08004cd0     0xa  cxxabi.o [4]
+  .text                  ro code  0x08004cdc   0x1c8  bsp_interface.o [1]
+  .text                  ro code  0x08004ea4    0x1e  bsp_systimer.o [1]
+  .text                  ro code  0x08004ec2    0x20  bsp_systimer.o [1]
+  .text                  ro code  0x08004ee2    0x10  bsp_systimer.o [1]
+  .text                  ro code  0x08004ef2     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x08004f00   0x102  bsp_systimer.o [1]
+  .text                  ro code  0x08005004    0x34  stm32f10x_it.o [1]
+  .text                  ro code  0x08005038    0x4a  bsp_systimer.o [1]
+  .text                  ro code  0x08005082     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08005090    0xa0  cppinit.o [3]
+  .text                  ro code  0x08005130     0xc  bsp_interface.o [1]
+  .text                  ro code  0x0800513c    0x34  bsp_interface.o [1]
+  .text                  ro code  0x08005170   0x12c  bsp_uart.o [1]
+  .text                  ro code  0x0800529c    0xbc  bsp_sys_pwr.o [1]
+  .text                  ro code  0x08005358    0x66  ABImemset.o [6]
+  .text                  ro code  0x080053c0   0x100  bsp_system.o [1]
+  .text                  ro code  0x080054c0    0xe0  dbg_log.o [1]
+  .text                  ro code  0x080055a0    0x1c  bsp_interface.o [1]
+  .text                  ro code  0x080055bc     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x080055ca     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x080055d6     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x080055e2     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x080055ee    0x16  bsp_systimer.o [1]
+  .text                  ro code  0x08005604     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08005610     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x0800561c     0x8  bsp_systimer.o [1]
+  .text                  ro code  0x08005624     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08005630    0x30  bsp_systimer.o [1]
+  .text                  ro code  0x08005660     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x0800566c     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x0800567a     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x08005688    0x42  bsp_systimer.o [1]
+  .text                  ro code  0x080056ca     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x080056cc     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x080056d8    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x080056f2    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x0800570c    0xec  usb_istr.o [1]
+  .text                  ro code  0x080057f8    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x08005812    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x0800582c    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x08005846    0x14  bsp_systimer.o [1]
+  .text                  ro code  0x0800585a     0x2  bsp_interface.o [1]
+  .text                  ro code  0x0800585c    0x18  bsp_interface.o [1]
+  .text                  ro code  0x08005874    0xf4  stm32f10x_gpio.o [1]
+  .text                  ro code  0x08005968   0x18a  stm32f10x_usart.o [1]
+  .text                  ro code  0x08005af4    0xa8  misc.o [1]
+  .text                  ro code  0x08005b9c    0x5c  stm32f10x_flash.o [1]
+  .text                  ro code  0x08005bf8    0x20  vprintf.o [3]
+  .text                  ro code  0x08005c18     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08005c24     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005c26     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08005c32     0x4  bsp_systimer.o [1]
+  .text                  ro code  0x08005c36     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005c38     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005c3a    0x1e  bsp_systimer.o [1]
+  .text                  ro code  0x08005c58    0x12  bsp_systimer.o [1]
+  .text                  ro code  0x08005c6a    0x2e  bsp_systimer.o [1]
+  .text                  ro code  0x08005c98    0xba  bsp_systimer.o [1]
+  .text                  ro code  0x08005d52     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005d54     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005d56    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x08005d70     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005d72    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x08005d8c     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005d8e    0x26  bsp_systimer.o [1]
+  .text                  ro code  0x08005db4    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x08005dce    0x1e  bsp_systimer.o [1]
+  .text                  ro code  0x08005dec     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005dee    0x16  bsp_systimer.o [1]
+  .text                  ro code  0x08005e04     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x08005e12     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08005e1e     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08005e2a    0x1e  bsp_systimer.o [1]
+  .text                  ro code  0x08005e48    0x10  bsp_systimer.o [1]
+  .text                  ro code  0x08005e58    0x1e  bsp_systimer.o [1]
+  .text                  ro code  0x08005e76    0x14  bsp_systimer.o [1]
+  .text                  ro code  0x08005e8a    0x10  bsp_systimer.o [1]
+  .text                  ro code  0x08005e9a    0x2c  bsp_systimer.o [1]
+  .text                  ro code  0x08005ec6    0x2c  bsp_systimer.o [1]
+  .text                  ro code  0x08005ef2     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005ef4    0x20  bsp_systimer.o [1]
+  .text                  ro code  0x08005f14     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005f16     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08005f22     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x08005f30     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005f32     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005f34     0xc  bsp_systimer.o [1]
+  .text                  ro code  0x08005f40    0x12  bsp_systimer.o [1]
+  .text                  ro code  0x08005f52    0x38  bsp_systimer.o [1]
+  .text                  ro code  0x08005f8a    0x12  bsp_systimer.o [1]
+  .text                  ro code  0x08005f9c     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005f9e     0x4  bsp_systimer.o [1]
+  .text                  ro code  0x08005fa2    0x10  bsp_systimer.o [1]
+  .text                  ro code  0x08005fb2     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005fb4     0x8  bsp_systimer.o [1]
+  .text                  ro code  0x08005fbc    0x24  bsp_systimer.o [1]
+  .text                  ro code  0x08005fe0     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08005fe2    0x2c  bsp_systimer.o [1]
+  .text                  ro code  0x0800600e     0x4  bsp_systimer.o [1]
+  .text                  ro code  0x08006012     0xe  bsp_systimer.o [1]
+  .text                  ro code  0x08006020    0x10  bsp_systimer.o [1]
+  .text                  ro code  0x08006030    0x24  newop_0.o [4]
+  .text                  ro code  0x08006054     0x4  bsp_systimer.o [1]
+  .text                  ro code  0x08006058    0x2e  bsp_systimer.o [1]
+  .text                  ro code  0x08006086     0xa  delop_0.o [4]
+  .text                  ro code  0x08006090     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x08006092     0x4  nomemory.o [4]
+  .text                  ro code  0x08006096    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x080060b0     0x4  heaptramp0.o [3]
+  .text                  ro code  0x080060b4     0x2  bsp_systimer.o [1]
+  .text                  ro code  0x080060b6    0x1a  bsp_systimer.o [1]
+  .text                  ro code  0x080060d0    0x2c  bsp_systimer.o [1]
+  .text                  ro code  0x080060fc   0x158  system_stm32f10x.o [1]
+  .text                  ro code  0x08006254    0x7a  bsp_systimer.o [1]
+  .text                  ro code  0x080062d0    0x6c  main.o [1]
+  .text                  ro code  0x0800633c    0x40  zero_init3.o [6]
+  .rodata                const    0x0800637c    0x2c  usb_desc.o [1]
+  .text                  ro code  0x080063a8    0x2a  usb_endp.o [1]
+  .text                  ro code  0x080063d4    0x28  data_init.o [6]
+  .rodata                const    0x080063fc    0x24  usb_desc.o [1]
+  .iar.init_table        const    0x08006420    0x24  - Linker created -
+  .rodata                const    0x08006444    0x20  bsp_interface.o [1]
+  .rodata                const    0x08006464    0x20  bsp_interface.o [1]
+  .rodata                const    0x08006484    0x20  bsp_sys_pwr.o [1]
+  .rodata                const    0x080064a4    0x20  bsp_systimer.o [1]
+  .rodata                const    0x080064c4    0x20  bsp_uart.o [1]
+  .text                  ro code  0x080064e4    0x20  cmain_call_ctors.o [6]
+  .text                  ro code  0x08006504    0x1e  cmain.o [6]
+  .text                  ro code  0x08006522     0x4  low_level_init.o [3]
+  .text                  ro code  0x08006528    0x18  main.o [1]
+  .text                  ro code  0x08006540     0x4  exit.o [3]
+  .text                  ro code  0x08006544     0xe  cexit.o [6]
+  .rodata                const    0x08006554    0x1c  bsp_uart.o [1]
+  .rodata                const    0x08006570    0x18  usb_desc.o [1]
+  .text                  ro code  0x08006588    0x16  xprout.o [3]
+  .text                  ro code  0x080065a0     0xc  putchar.o [3]
+  .rodata                const    0x080065ac    0x14  usb_desc.o [1]
+  .rodata                const    0x080065c0    0x14  usb_desc.o [1]
+  .rodata                const    0x080065d4    0x10  bsp_interface.o [1]
+  .rodata                const    0x080065e4    0x10  bsp_interface.o [1]
+  .rodata                const    0x080065f4    0x10  bsp_interface.o [1]
+  .text                  ro code  0x08006604    0x10  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006614     0xe  bsp_interface.o [1]
+  .text                  ro code  0x08006622     0xe  bsp_systimer.o [1]
+  .rodata                const    0x08006630     0xc  bsp_uart.o [1]
+  .text                  ro code  0x0800663c     0xc  cstartup_M.o [6]
+  .rodata                const    0x08006648     0x8  dbg_log.o [1]
+  .rodata                const    0x08006650     0x8  dbg_log.o [1]
+  .rodata                const    0x08006658     0x8  dbg_log.o [1]
+  .rodata                const    0x08006660     0x8  dbg_log.o [1]
+  .rodata                const    0x08006668     0x8  dbg_log.o [1]
+  .rodata                const    0x08006670     0x8  dbg_log.o [1]
+  .rodata                const    0x08006678     0x8  dbg_log.o [1]
+  .rodata                const    0x08006680     0x8  dbg_log.o [1]
+  .rodata                const    0x08006688     0x8  dbg_log.o [1]
+  SHT$$PREINIT_ARRAY              0x08006690     0x0  <Block>
+  SHT$$INIT_ARRAY                 0x08006690     0x8  <Block>
+    .init_array          const    0x08006690     0x4  bsp_interface.o [1]
+    .init_array          const    0x08006694     0x4  bsp_systimer.o [1]
+  __iar_tls$$INIT_ARRAY           0x08006698     0x0  <Block>
+  .rodata                const    0x08006698     0x4  usb_desc.o [1]
+  .rodata                const    0x0800669c     0x4  xlocale_c.o [3]
+  .text                  ro code  0x080066a0     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066a4     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066a8     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066ac     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066b0     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066b4     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066b8     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066bc     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066c0     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066c4     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066c8     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066cc     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066d0     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066d4     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066d8     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066dc     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066e0     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066e4     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066e8     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066ec     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066f0     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066f4     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066f8     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x080066fc     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006700     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006704     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006708     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x0800670c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006710     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006714     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006718     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x0800671c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006720     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006724     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006728     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x0800672c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006730     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006734     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006738     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x0800673c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006740     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006744     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006748     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x0800674c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006750     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006754     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006758     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x0800675c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006760     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006764     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006768     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x0800676c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006770     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006774     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006778     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x0800677c     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006780     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006784     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x08006788     0x4  startup_stm32f10x_hd.o [1]
+  .text                  ro code  0x0800678c     0x0  cstart_call_dtors.o [6]
+  .rodata                const    0x0800678c     0x0  zero_init3.o [6]
+  .rodata                const    0x0800678c     0x0  lz77_init_single.o [6]
+  Initializer bytes      const    0x0800678c    0xc0  <for P2-1>
+                                - 0x0800684c  0x671c
 
-"P2", part 1 of 3:                              0xb3
-  P2-1                            0x20000000    0xb3  <Init block>
-    .data                inited   0x20000000    0x1c  usb_desc.o [1]
-    .data                inited   0x2000001c    0x30  usb_prop.o [1]
-    .data                inited   0x2000004c    0x24  usb_prop.o [1]
-    .data                inited   0x20000070     0x8  usb_prop.o [1]
-    .data                inited   0x20000078     0x8  usb_prop.o [1]
-    .data                inited   0x20000080     0x8  usb_prop.o [1]
-    .data                inited   0x20000088     0x8  usb_prop.o [1]
-    .data                inited   0x20000090    0x20  usb_prop.o [1]
-    .data                inited   0x200000b0     0x2  usb_prop.o [1]
-    .data                inited   0x200000b2     0x1  main.o [1]
-                                - 0x200000b3    0xb3
+"P2", part 1 of 3:                             0x15c
+  P2-1                            0x20000000   0x15c  <Init block>
+    .data                inited   0x20000000    0x10  stm32f10x_rcc.o [1]
+    .data                inited   0x20000010     0x4  stm32f10x_rcc.o [1]
+    .data                inited   0x20000014    0x1c  usb_desc.o [1]
+    .data                inited   0x20000030    0x1c  usb_istr.o [1]
+    .data                inited   0x2000004c    0x1c  usb_istr.o [1]
+    .data                inited   0x20000068    0x30  usb_prop.o [1]
+    .data                inited   0x20000098     0x8  usb_prop.o [1]
+    .data                inited   0x200000a0     0x8  usb_prop.o [1]
+    .data                inited   0x200000a8     0x8  usb_prop.o [1]
+    .data                inited   0x200000b0     0x8  usb_prop.o [1]
+    .data                inited   0x200000b8    0x20  usb_prop.o [1]
+    .data                inited   0x200000d8    0x38  xlocale_c.o [3]
+    .data                inited   0x20000110    0x48  xfiles.o [3]
+    .data                inited   0x20000158     0x2  usb_prop.o [1]
+    .data                inited   0x2000015a     0x1  main.o [1]
+    .data                inited   0x2000015b     0x1  usb_pwr.o [1]
+                                - 0x2000015c   0x15c
 
-"P2", part 2 of 3:                             0x2b8
-  .bss                   zero     0x200000b4   0x1d8  dlmalloc.o [3]
-  .bss                   zero     0x2000028c    0x2c  bsp_interface.o [1]
-  .bss                   zero     0x200002b8    0x28  bsp_interface.o [1]
-  .bss                   zero     0x200002e0    0x1c  usb_init.o [1]
-  .bss                   zero     0x200002fc    0x18  dlmalloc.o [3]
-  .bss                   zero     0x20000314     0xc  bsp_systimer.o [1]
-  .bss                   zero     0x20000320     0x4  bsp_interface.o [1]
-  .bss                   zero     0x20000324     0x4  bsp_interface.o [1]
-  .bss                   zero     0x20000328     0x4  bsp_interface.o [1]
-  .bss                   zero     0x2000032c     0x4  bsp_interface.o [1]
-  .bss                   zero     0x20000330     0x4  bsp_sys_pwr.o [1]
-  .bss                   zero     0x20000334     0x4  bsp_systimer.o [1]
-  .bss                   zero     0x20000338     0x4  bsp_systimer.o [1]
-  .bss                   zero     0x2000033c     0x4  stm32f10x_it.o [1]
-  .bss                   zero     0x20000340     0x4  usb_init.o [1]
-  .bss                   zero     0x20000344     0x4  usb_init.o [1]
-  .bss                   zero     0x20000348     0x4  usb_init.o [1]
-  .bss                   zero     0x2000034c     0x4  usb_prop.o [1]
-  .bss                   zero     0x20000350     0x4  usb_pwr.o [1]
-  .bss                   zero     0x20000354     0x4  cppinit.o [3]
-  .bss                   zero     0x20000358     0x4  cppinit.o [3]
-  .bss                   zero     0x2000035c     0x4  new.o [4]
-  .bss                   zero     0x20000360     0x4  xgetmemchunk.o [3]
-  .bss                   zero     0x20000364     0x2  usb_init.o [1]
-  .bss                   zero     0x20000366     0x1  bsp_interface.o [1]
-  .bss                   zero     0x20000367     0x1  bsp_interface.o [1]
-  .bss                   zero     0x20000368     0x1  bsp_sys_pwr.o [1]
-  .bss                   zero     0x20000369     0x1  bsp_sys_pwr.o [1]
-  .bss                   zero     0x2000036a     0x1  bsp_systimer.o [1]
-                                - 0x2000036b   0x2b7
+"P2", part 2 of 3:                             0x348
+  .bss                   zero     0x2000015c   0x1d8  dlmalloc.o [3]
+  .bss                   zero     0x20000334    0x50  xfiles.o [3]
+  .bss                   zero     0x20000384    0x40  usb_endp.o [1]
+  .bss                   zero     0x200003c4    0x2c  bsp_interface.o [1]
+  .bss                   zero     0x200003f0    0x28  bsp_interface.o [1]
+  .bss                   zero     0x20000418    0x18  dlmalloc.o [3]
+  .bss                   zero     0x20000430     0xc  bsp_systimer.o [1]
+  .bss                   zero     0x2000043c     0x4  bsp_interface.o [1]
+  .bss                   zero     0x20000440     0x4  bsp_interface.o [1]
+  .bss                   zero     0x20000444     0x4  bsp_interface.o [1]
+  .bss                   zero     0x20000448     0x4  bsp_interface.o [1]
+  .bss                   zero     0x2000044c     0x4  bsp_sys_pwr.o [1]
+  .bss                   zero     0x20000450     0x4  bsp_systimer.o [1]
+  .bss                   zero     0x20000454     0x4  bsp_systimer.o [1]
+  .bss                   zero     0x20000458     0x4  bsp_uart.o [1]
+  .bss                   zero     0x2000045c     0x4  bsp_uart.o [1]
+  .bss                   zero     0x20000460     0x4  stm32f10x_it.o [1]
+  .bss                   zero     0x20000464     0x4  usb_init.o [1]
+  .bss                   zero     0x20000468     0x4  usb_init.o [1]
+  .bss                   zero     0x2000046c     0x4  usb_init.o [1]
+  .bss                   zero     0x20000470     0x4  usb_prop.o [1]
+  .bss                   zero     0x20000474     0x4  usb_pwr.o [1]
+  .bss                   zero     0x20000478     0x4  cppinit.o [3]
+  .bss                   zero     0x2000047c     0x4  cppinit.o [3]
+  .bss                   zero     0x20000480     0x4  new.o [4]
+  .bss                   zero     0x20000484     0x4  xfail_s.o [3]
+  .bss                   zero     0x20000488     0x4  xgetmemchunk.o [3]
+  .bss                   zero     0x2000048c     0x2  usb_core.o [1]
+  .bss                   zero     0x2000048e     0x2  usb_init.o [1]
+  .bss                   zero     0x20000490     0x2  usb_int.o [1]
+  .bss                   zero     0x20000492     0x2  usb_int.o [1]
+  .bss                   zero     0x20000494     0x2  usb_istr.o [1]
+  .bss                   zero     0x20000496     0x2  usb_pwr.o [1]
+  .bss                   zero     0x20000498     0x1  bsp_interface.o [1]
+  .bss                   zero     0x20000499     0x1  bsp_interface.o [1]
+  .bss                   zero     0x2000049a     0x1  bsp_sys_pwr.o [1]
+  .bss                   zero     0x2000049b     0x1  bsp_sys_pwr.o [1]
+  .bss                   zero     0x2000049c     0x1  bsp_systimer.o [1]
+  .bss                   zero     0x2000049d     0x1  bsp_uart.o [1]
+  .bss                   zero     0x2000049e     0x1  usb_core.o [1]
+  .bss                   zero     0x2000049f     0x1  usb_endp.o [1]
+  .bss                   zero     0x200004a0     0x1  usb_init.o [1]
+  .bss                   zero     0x200004a1     0x1  usb_istr.o [1]
+                                - 0x200004a2   0x346
 
-"P2", part 3 of 3:                            0x21b4
-  .iar.dynexit                    0x2000036c   0x1b0  <Block>
-    .iar.dynexit         uninit   0x2000036c     0xc  cppinit.o [3]
-    .iar.dynexit         uninit   0x20000378   0x1a4  <Block tail>
-  CSTACK                          0x20000520  0x1000  <Block>
-    CSTACK               uninit   0x20000520  0x1000  <Block tail>
-  HEAP                            0x20001520  0x1000  <Block>
-    HEAP                 uninit   0x20001520  0x1000  <Block tail>
-                                - 0x20002520  0x21b4
+"P2", part 3 of 3:                            0x21bc
+  .iar.dynexit                    0x200004a4   0x1bc  <Block>
+    .iar.dynexit         uninit   0x200004a4     0xc  cppinit.o [3]
+    .iar.dynexit         uninit   0x200004b0   0x1b0  <Block tail>
+  CSTACK                          0x20000660  0x1000  <Block>
+    CSTACK               uninit   0x20000660  0x1000  <Block tail>
+  HEAP                            0x20001660  0x1000  <Block>
+    HEAP                 uninit   0x20001660  0x1000  <Block tail>
+                                - 0x20002660  0x21bc
 
 
 *******************************************************************************
@@ -396,14 +460,14 @@ initialize by copy { rw };
           Address     Size
           -------     ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x2b7:
-          0x200000b4  0x2b7
+    1 destination range, total size 0x346:
+          0x2000015c  0x346
 
 Copy/lz77 (__iar_lz77_init_single3)
-    1 source range, total size 0x7a (68% of destination):
-          0x080036e8   0x7a
-    1 destination range, total size 0xb3:
-          0x20000000   0xb3
+    1 source range, total size 0xc0 (55% of destination):
+          0x0800678c   0xc0
+    1 destination range, total size 0x15c:
+          0x20000000  0x15c
 
 Extra (__iar_cstart_call_ctors)
 
@@ -415,31 +479,36 @@ Extra (__iar_cstart_call_ctors)
 
     Module                  ro code  ro data  rw data
     ------                  -------  -------  -------
-D:\QT\My_Qt_design\va_measuring\App\Debug\Obj: [1]
-    CUsb.o                       38       16
-    IUsb.o                       46
-    bsp_interface.o             536       68      102
+F:\PrivateWork\stm32_va_measuring\App\Debug\Obj: [1]
+    bsp_interface.o             596      116      102
     bsp_sys_pwr.o               194       32        6
-    bsp_system.o                232
+    bsp_system.o                256
     bsp_systimer.o            2 702       36       21
-    hw_config.o                 202
-    main.o                      152                 1
+    bsp_uart.o                  306       72        9
+    dbg_log.o                   224       72
+    hw_config.o                 146
+    main.o                      132        1        1
     misc.o                      168
-    startup_stm32f10x_hd.o      560
+    startup_stm32f10x_hd.o      556
     stm32f10x_flash.o            92
     stm32f10x_gpio.o            244
-    stm32f10x_it.o               44                 4
-    stm32f10x_rcc.o             564
+    stm32f10x_it.o               52                 4
+    stm32f10x_rcc.o             780       11       20
+    stm32f10x_usart.o           394
     system_stm32f10x.o          344
-    usb_core.o                  134
-    usb_desc.o                           167       28
-    usb_init.o                   64                42
-    usb_prop.o                  640      102      154
-    usb_pwr.o                     4                 4
-    usb_regs.o                  488
+    usb_core.o                3 218                 3
+    usb_desc.o                           163       28
+    usb_endp.o                   42                65
+    usb_init.o                                     15
+    usb_int.o                   584                 4
+    usb_istr.o                  236       31       59
+    usb_mem.o                   112
+    usb_prop.o                  612       63      118
+    usb_pwr.o                   280        1        7
+    usb_regs.o                  678
     usb_sil.o                    40
     -------------------------------------------------
-    Total:                    7 488      421      362
+    Total:                   12 988      598      462
 
 command line: [2]
     -------------------------------------------------
@@ -452,9 +521,16 @@ dl7M_tlf.a: [3]
     exit.o                        4
     heaptramp0.o                  4
     low_level_init.o              4
+    putchar.o                    12
+    vprintf.o                    32
+    xfail_s.o                    64                 4
+    xfiles.o                              39      152
     xgetmemchunk.o               44                 4
+    xlocale_c.o                   8       35       56
+    xprintffull_nomb.o        3 618
+    xprout.o                     22
     -------------------------------------------------
-    Total:                    5 554               520
+    Total:                    9 310       74      732
 
 dlpp7M_tl_fc.a: [4]
     cxxabi.o                     10
@@ -465,9 +541,27 @@ dlpp7M_tl_fc.a: [4]
     -------------------------------------------------
     Total:                       60                 4
 
-rt7M_tl.a: [5]
+m7M_tl.a: [5]
+    DblAdd.o                    360
+    DblCmpGe.o                   46
+    DblCmpLe.o                   46
+    DblDiv.o                    582
+    DblMul.o                    418
+    DblSub.o                    226
+    DblToS32.o                   58
+    DblToU32.o                   40
+    S32ToDbl.o                   34
+    U32ToDbl.o                   26
+    frexp.o                     112
+    ldexp.o                     314
+    -------------------------------------------------
+    Total:                    2 262
+
+rt7M_tl.a: [6]
     ABImemcpy.o                 166
     ABImemset.o                 102
+    I64DivMod.o                 558
+    I64DivZer.o                   2
     cexit.o                      14
     cmain.o                      30
     cmain_call_ctors.o           32
@@ -475,20 +569,23 @@ rt7M_tl.a: [5]
     cstartup_M.o                 12
     data_init.o                  40
     lz77_init_single.o          122
+    memchr.o                     88
+    strchr.o                     22
+    strlen.o                     54
     zero_init3.o                 64
     -------------------------------------------------
-    Total:                      582
+    Total:                    1 306
 
-shb_l.a: [6]
+shb_l.a: [7]
     exit.o                       20
     unwind_debug.o                         1
     -------------------------------------------------
     Total:                       20        1
 
-    Gaps                         11        4
-    Linker created                        37    8 612
+    Gaps                         43        2
+    Linker created                        36    8 624
 -----------------------------------------------------
-    Grand Total:             13 715      463    9 498
+    Grand Total:             25 989      711    9 822
 
 
 *******************************************************************************
@@ -497,523 +594,648 @@ shb_l.a: [6]
 
 Entry                      Address   Size  Type      Object
 -----                      -------   ----  ----      ------
-.iar.dynexit$$Base      0x2000036c          --   Gb  - Linker created -
-.iar.dynexit$$Limit     0x2000051c          --   Gb  - Linker created -
-.iar.init_table$$Base   0x08003468          --   Gb  - Linker created -
-.iar.init_table$$Limit  0x0800348c          --   Gb  - Linker created -
-?main                   0x0800352d         Code  Gb  cmain.o [5]
+.iar.dynexit$$Base      0x200004a4          --   Gb  - Linker created -
+.iar.dynexit$$Limit     0x20000660          --   Gb  - Linker created -
+.iar.init_table$$Base   0x08006420          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x08006444          --   Gb  - Linker created -
+?main                   0x08006505         Code  Gb  cmain.o [6]
+ADCPrescTable           0x20000010    0x4  Data  Lc  stm32f10x_rcc.o [1]
+APBAHBPrescTable        0x20000000   0x10  Data  Lc  stm32f10x_rcc.o [1]
 BSP_SYS_TIMER_Callback()
-                        0x08001fa3   0x22  Code  Gb  bsp_systimer.o [1]
+                        0x08004af3   0x22  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t & && std::forward<BSP_Sys_Timer_t &>(std::remove_reference<BSP_Sys_Timer_t &>::type &)
-                        0x08002c5d    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08005d55    0x2  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t && std::forward<BSP_Sys_Timer_t>(std::remove_reference<BSP_Sys_Timer_t>::type &)
-                        0x08003065    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x080060b5    0x2  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t * & std::_Rechecked<BSP_Sys_Timer_t *, BSP_Sys_Timer_t *>(BSP_Sys_Timer_t * &, BSP_Sys_Timer_t *)
-                        0x08002fbd    0x4  Code  Gb  bsp_systimer.o [1]
+                        0x0800600f    0x4  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t * std::_Addressof<BSP_Sys_Timer_t>(BSP_Sys_Timer_t &, std::integral_constant<bool, (bool)0>)
-                        0x08002b41    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08005c39    0x2  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t * std::_Allocate<BSP_Sys_Timer_t>(unsigned int, BSP_Sys_Timer_t *, bool)
-                        0x08002f6b   0x24  Code  Gb  bsp_systimer.o [1]
+                        0x08005fbd   0x24  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t * std::_Move<BSP_Sys_Timer_t *, BSP_Sys_Timer_t *>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, BSP_Sys_Timer_t *)
-                        0x08002955   0x1a  Code  Gb  bsp_systimer.o [1]
+                        0x080057f9   0x1a  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t * std::_Move<BSP_Sys_Timer_t *, BSP_Sys_Timer_t *>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, std::_Nonscalar_ptr_iterator_tag)
-                        0x08002c97   0x26  Code  Gb  bsp_systimer.o [1]
+                        0x08005d8f   0x26  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t * std::_Unchecked<BSP_Sys_Timer_t *>(BSP_Sys_Timer_t *)
-                        0x08002f8f    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08005fe1    0x2  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t * std::_Uninit_move<BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>> &)
-                        0x08002f91   0x2c  Code  Gb  bsp_systimer.o [1]
+                        0x08005fe3   0x2c  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t * std::_Uninit_move<BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, std::allocator<BSP_Sys_Timer_t>, BSP_Sys_Timer_t>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>> &, BSP_Sys_Timer_t *, std::_Nonscalar_ptr_iterator_tag)
-                        0x08003009   0x2e  Code  Gb  bsp_systimer.o [1]
+                        0x08006059   0x2e  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t * std::_Uninitialized_move<BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>> &)
-                        0x08002f01   0x38  Code  Gb  bsp_systimer.o [1]
+                        0x08005f53   0x38  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t * std::addressof<BSP_Sys_Timer_t>(BSP_Sys_Timer_t &)
-                        0x080028a9    0xc  Code  Gb  bsp_systimer.o [1]
+                        0x08005661    0xc  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t * std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Umove<BSP_Sys_Timer_t *>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *, BSP_Sys_Timer_t *)
-                        0x08002d61   0x1e  Code  Gb  bsp_systimer.o [1]
+                        0x08005e59   0x1e  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t const & && std::forward<BSP_Sys_Timer_t const &>(std::remove_reference<BSP_Sys_Timer_t const &>::type &)
-                        0x08002c79    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08005d71    0x2  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t const * std::_Addressof<BSP_Sys_Timer_t const>(BSP_Sys_Timer_t const &, std::integral_constant<bool, (bool)0>)
-                        0x08002b3f    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08005c37    0x2  Code  Gb  bsp_systimer.o [1]
 BSP_Sys_Timer_t const * std::addressof<BSP_Sys_Timer_t const>(BSP_Sys_Timer_t const &)
-                        0x0800286d    0xc  Code  Gb  bsp_systimer.o [1]
+                        0x08005625    0xc  Code  Gb  bsp_systimer.o [1]
 BspDefault::BspDefault()
-                        0x080029b9   0x18  Code  Gb  bsp_interface.o [1]
+                        0x0800585d   0x18  Code  Gb  bsp_interface.o [1]
 BspDefault::BspDefault_registered()
-                        0x080025a9   0x34  Code  Gb  bsp_interface.o [1]
+                        0x0800513d   0x34  Code  Gb  bsp_interface.o [1]
 BspDefault::BspDefault_registered()::t_ms_this
-                        0x20000320    0x4  Data  Gb  bsp_interface.o [1]
+                        0x2000043c    0x4  Data  Gb  bsp_interface.o [1]
 BspDefault::bsp_events_handle(BSP_Events_Package_t const *)
-                        0x08001a0f    0x6  Code  Gb  bsp_interface.o [1]
-BspDefault::init()      0x0800218b    0x2  Code  Gb  bsp_interface.o [1]
+                        0x080024e7    0x6  Code  Gb  bsp_interface.o [1]
+BspDefault::init()      0x0800280b    0x2  Code  Gb  bsp_interface.o [1]
 BspDefault::~BspDefault()
-                        0x080035c5    0xe  Code  Gb  bsp_interface.o [1]
+                        0x08006615    0xe  Code  Gb  bsp_interface.o [1]
 BspInterfaces::BspInterfaces()
-                        0x080021af   0x88  Code  Gb  bsp_interface.o [1]
+                        0x08004cff   0x88  Code  Gb  bsp_interface.o [1]
 BspInterfaces::BspInterfaces() [subobject]
-                        0x0800218d    0xc  Code  Gb  bsp_interface.o [1]
+                        0x08004cdd    0xc  Code  Gb  bsp_interface.o [1]
 BspInterfaces::bsp_active()
-                        0x08002239   0x4e  Code  Gb  bsp_interface.o [1]
+                        0x08004d89   0x64  Code  Gb  bsp_interface.o [1]
 BspInterfaces::bsp_events_handle(BSP_Events_Package_t const *)
-                        0x080022ef   0x10  Code  Gb  bsp_interface.o [1]
+                        0x08004e71   0x10  Code  Gb  bsp_interface.o [1]
 BspInterfaces::bsp_mian()
-                        0x080022a3   0x1a  Code  Gb  bsp_interface.o [1]
+                        0x08004e17   0x1a  Code  Gb  bsp_interface.o [1]
 BspInterfaces::bsp_sleep()
-                        0x08002287   0x1c  Code  Gb  bsp_interface.o [1]
-BspInterfaces::init()   0x080022bd   0x32  Code  Gb  bsp_interface.o [1]
-BspInterfaces::m_pdrv   0x2000028c   0x2c  Data  Gb  bsp_interface.o [1]
+                        0x08004ded   0x2a  Code  Gb  bsp_interface.o [1]
+BspInterfaces::init()   0x08004e31   0x40  Code  Gb  bsp_interface.o [1]
+BspInterfaces::m_pdrv   0x200003c4   0x2c  Data  Gb  bsp_interface.o [1]
 BspInterfaces::~BspInterfaces()
-                        0x08002237    0x2  Code  Gb  bsp_interface.o [1]
+                        0x08004d87    0x2  Code  Gb  bsp_interface.o [1]
 BspInterfaces::~BspInterfaces() [subobject]
-                        0x08002199    0xc  Code  Gb  bsp_interface.o [1]
-BspSysPwr::BspSysPwr()  0x080025f7   0x12  Code  Gb  bsp_sys_pwr.o [1]
+                        0x08004ce9    0xc  Code  Gb  bsp_interface.o [1]
+BspSysPwr::BspSysPwr()  0x080052b7   0x12  Code  Gb  bsp_sys_pwr.o [1]
 BspSysPwr::BspSysPwr_registered()
-                        0x08002617   0x22  Code  Gb  bsp_sys_pwr.o [1]
+                        0x080052d7   0x22  Code  Gb  bsp_sys_pwr.o [1]
 BspSysPwr::BspSysPwr_registered()::static guard for t_ms_this
-                        0x20000369    0x1  Data  Lc  bsp_sys_pwr.o [1]
+                        0x2000049b    0x1  Data  Lc  bsp_sys_pwr.o [1]
 BspSysPwr::BspSysPwr_registered()::t_ms_this
-                        0x20000330    0x4  Data  Lc  bsp_sys_pwr.o [1]
+                        0x2000044c    0x4  Data  Lc  bsp_sys_pwr.o [1]
 BspSysPwr::bsp_events_handle(BSP_Events_Package_t const *)
-                        0x08001caf    0x6  Code  Gb  bsp_sys_pwr.o [1]
-BspSysPwr::init()       0x08002639   0x3e  Code  Gb  bsp_sys_pwr.o [1]
+                        0x08002503    0x6  Code  Gb  bsp_sys_pwr.o [1]
+BspSysPwr::init()       0x080052f9   0x3e  Code  Gb  bsp_sys_pwr.o [1]
 BspSysPwr::~BspSysPwr()
-                        0x08002609    0xe  Code  Gb  bsp_sys_pwr.o [1]
+                        0x080052c9    0xe  Code  Gb  bsp_sys_pwr.o [1]
 BspSysTimer::BspSysTimer()
-                        0x08001fc5   0x12  Code  Gb  bsp_systimer.o [1]
+                        0x08004b15   0x12  Code  Gb  bsp_systimer.o [1]
 BspSysTimer::BspSysTimer_AddFun(void (*)(), unsigned int)
-                        0x08002007   0x6e  Code  Gb  bsp_systimer.o [1]
+                        0x08004b57   0x6e  Code  Gb  bsp_systimer.o [1]
 BspSysTimer::BspSysTimer_registered()
-                        0x08001fe5   0x22  Code  Gb  bsp_systimer.o [1]
+                        0x08004b35   0x22  Code  Gb  bsp_systimer.o [1]
 BspSysTimer::BspSysTimer_registered()::static guard for t_ms_this
-                        0x2000036a    0x1  Data  Lc  bsp_systimer.o [1]
+                        0x2000049c    0x1  Data  Lc  bsp_systimer.o [1]
 BspSysTimer::BspSysTimer_registered()::t_ms_this
-                        0x20000338    0x4  Data  Lc  bsp_systimer.o [1]
+                        0x20000454    0x4  Data  Lc  bsp_systimer.o [1]
 BspSysTimer::bsp_events_handle(BSP_Events_Package_t const *)
-                        0x08002075   0xcc  Code  Gb  bsp_systimer.o [1]
-BspSysTimer::init()     0x08002477    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08004bc5   0xcc  Code  Gb  bsp_systimer.o [1]
+BspSysTimer::init()     0x080029af    0x2  Code  Gb  bsp_systimer.o [1]
 BspSysTimer::m_fun_timer
-                        0x20000314    0xc  Data  Gb  bsp_systimer.o [1]
+                        0x20000430    0xc  Data  Gb  bsp_systimer.o [1]
 BspSysTimer::~BspSysTimer()
-                        0x08001fd7    0xe  Code  Gb  bsp_systimer.o [1]
-BusFault_Handler        0x0800247f    0x2  Code  Gb  stm32f10x_it.o [1]
-CSTACK$$Base            0x20000520          --   Gb  - Linker created -
-CSTACK$$Limit           0x20001520          --   Gb  - Linker created -
-CUsb::CUsb()            0x080033f5   0x12  Code  Gb  CUsb.o [1]
-CUsb::~CUsb()           0x0800340d    0xe  Code  Gb  CUsb.o [1]
+                        0x08004b27    0xe  Code  Gb  bsp_systimer.o [1]
+BspUart::BspUart()      0x0800520d   0x12  Code  Gb  bsp_uart.o [1]
+BspUart::BspUart_registered()
+                        0x0800524f   0x22  Code  Gb  bsp_uart.o [1]
+BspUart::BspUart_registered()::static guard for t_ms_this
+                        0x2000049d    0x1  Data  Lc  bsp_uart.o [1]
+BspUart::BspUart_registered()::t_ms_this
+                        0x2000045c    0x4  Data  Lc  bsp_uart.o [1]
+BspUart::bsp_events_handle(BSP_Events_Package_t const *)
+                        0x0800257f    0x6  Code  Gb  bsp_uart.o [1]
+BspUart::init()         0x0800522d   0x22  Code  Gb  bsp_uart.o [1]
+BspUart::init()::count_wake
+                        0x20000458    0x4  Data  Lc  bsp_uart.o [1]
+BspUart::~BspUart()     0x0800521f    0xe  Code  Gb  bsp_uart.o [1]
+BusFault_Handler        0x0800500b    0x2  Code  Gb  stm32f10x_it.o [1]
+ByteSwap(unsigned short)
+                        0x080040cd   0x16  Code  Gb  usb_regs.o [1]
+CSTACK$$Base            0x20000660          --   Gb  - Linker created -
+CSTACK$$Limit           0x20001660          --   Gb  - Linker created -
+CTR_LP()                0x08004899  0x226  Code  Gb  usb_int.o [1]
+ClearDTOG_RX(unsigned char)
+                        0x08003f4b   0x38  Code  Gb  usb_regs.o [1]
+ClearDTOG_TX(unsigned char)
+                        0x08003f83   0x38  Code  Gb  usb_regs.o [1]
 Clear_Status_Out(unsigned char)
-                        0x08001b25   0x2a  Code  Gb  usb_regs.o [1]
-Config_Descriptor       0x20000078    0x8  Data  Gb  usb_prop.o [1]
+                        0x08003f21   0x2a  Code  Gb  usb_regs.o [1]
+Config_Descriptor       0x200000a0    0x8  Data  Gb  usb_prop.o [1]
 CustomHID_ConfigDescriptor
-                        0x0800339c   0x2c  Data  Gb  usb_desc.o [1]
+                        0x0800637c   0x2c  Data  Gb  usb_desc.o [1]
 CustomHID_Data_Setup(unsigned char)
-                        0x080017b9   0x86  Code  Gb  usb_prop.o [1]
-CustomHID_Descriptor    0x20000088    0x8  Data  Gb  usb_prop.o [1]
+                        0x0800453d   0x86  Code  Gb  usb_prop.o [1]
+CustomHID_Descriptor    0x200000b0    0x8  Data  Gb  usb_prop.o [1]
 CustomHID_DeviceDescriptor
-                        0x0800357c   0x14  Data  Gb  usb_desc.o [1]
+                        0x080065ac   0x14  Data  Gb  usb_desc.o [1]
 CustomHID_GetConfigDescriptor(unsigned short)
-                        0x08001873   0x10  Code  Gb  usb_prop.o [1]
+                        0x080045f7   0x10  Code  Gb  usb_prop.o [1]
 CustomHID_GetDeviceDescriptor(unsigned short)
-                        0x08001863   0x10  Code  Gb  usb_prop.o [1]
+                        0x080045e7   0x10  Code  Gb  usb_prop.o [1]
 CustomHID_GetHIDDescriptor(unsigned short)
-                        0x080018bd   0x10  Code  Gb  usb_prop.o [1]
+                        0x08004641   0x10  Code  Gb  usb_prop.o [1]
 CustomHID_GetProtocolValue(unsigned short)
-                        0x080018fd   0x1a  Code  Gb  usb_prop.o [1]
+                        0x08004681   0x1a  Code  Gb  usb_prop.o [1]
 CustomHID_GetReportDescriptor(unsigned short)
-                        0x080018ad   0x10  Code  Gb  usb_prop.o [1]
+                        0x08004631   0x10  Code  Gb  usb_prop.o [1]
 CustomHID_GetStringDescriptor(unsigned short)
-                        0x08001883   0x2a  Code  Gb  usb_prop.o [1]
+                        0x08004607   0x2a  Code  Gb  usb_prop.o [1]
 CustomHID_Get_Interface_Setting(unsigned char, unsigned char)
-                        0x080018cd   0x1e  Code  Gb  usb_prop.o [1]
+                        0x08004651   0x1e  Code  Gb  usb_prop.o [1]
 CustomHID_NoData_Setup(unsigned char)
-                        0x0800183f   0x24  Code  Gb  usb_prop.o [1]
+                        0x080045c3   0x24  Code  Gb  usb_prop.o [1]
 CustomHID_ReportDescriptor
-                        0x08003444   0x24  Data  Gb  usb_desc.o [1]
+                        0x080063fc   0x24  Data  Gb  usb_desc.o [1]
 CustomHID_Report_Descriptor
-                        0x20000080    0x8  Data  Gb  usb_prop.o [1]
-CustomHID_Reset()       0x080016e3   0xba  Code  Gb  usb_prop.o [1]
-CustomHID_SetConfiguration()
-                        0x0800179d   0x10  Code  Gb  usb_prop.o [1]
-CustomHID_SetDeviceAddress()
-                        0x080017ad    0x8  Code  Gb  usb_prop.o [1]
+                        0x200000a8    0x8  Data  Gb  usb_prop.o [1]
+CustomHID_Reset()       0x0800447f   0xba  Code  Gb  usb_prop.o [1]
 CustomHID_SetProtocol()
-                        0x080018eb   0x12  Code  Gb  usb_prop.o [1]
-CustomHID_Status_In()   0x080017b5    0x2  Code  Gb  usb_prop.o [1]
-CustomHID_Status_Out()  0x080017b7    0x2  Code  Gb  usb_prop.o [1]
-CustomHID_StringLangID  0x080035f4    0x4  Data  Gb  usb_desc.o [1]
+                        0x0800466f   0x12  Code  Gb  usb_prop.o [1]
+CustomHID_Status_In()   0x08004539    0x2  Code  Gb  usb_prop.o [1]
+CustomHID_Status_Out()  0x0800453b    0x2  Code  Gb  usb_prop.o [1]
+CustomHID_StringLangID  0x08006698    0x4  Data  Gb  usb_desc.o [1]
 CustomHID_StringProduct
-                        0x08003564   0x18  Data  Gb  usb_desc.o [1]
-CustomHID_StringSerial  0x20000000   0x1c  Data  Gb  usb_desc.o [1]
-CustomHID_StringVendor  0x08003590   0x14  Data  Gb  usb_desc.o [1]
-CustomHID_init()        0x080016c5   0x1e  Code  Gb  usb_prop.o [1]
-DebugMon_Handler        0x08002485    0x2  Code  Gb  stm32f10x_it.o [1]
-Device_Descriptor       0x20000070    0x8  Data  Gb  usb_prop.o [1]
-Device_Info             0x200002e0   0x1c  Data  Gb  usb_init.o [1]
-Device_Property         0x2000001c   0x30  Data  Gb  usb_prop.o [1]
-Device_Table            0x200000b0    0x2  Data  Gb  usb_prop.o [1]
-DtorRecArray            0x2000036c    0xc  Data  Lc  cppinit.o [3]
+                        0x08006570   0x18  Data  Gb  usb_desc.o [1]
+CustomHID_StringSerial  0x20000014   0x1c  Data  Gb  usb_desc.o [1]
+CustomHID_StringVendor  0x080065c0   0x14  Data  Gb  usb_desc.o [1]
+CustomHID_init()        0x08004461   0x1e  Code  Gb  usb_prop.o [1]
+Data_Mul_MaxPacketSize  0x2000049e    0x1  Data  Gb  usb_core.o [1]
+DebugMon_Handler        0x08005011    0x2  Code  Gb  stm32f10x_it.o [1]
+Device_Descriptor       0x20000098    0x8  Data  Gb  usb_prop.o [1]
+Device_Property         0x20000068   0x30  Data  Gb  usb_prop.o [1]
+Device_Table            0x20000158    0x2  Data  Gb  usb_prop.o [1]
+Dprintf(unsigned char, char const *, char const *, ...)
+                        0x080054d9   0x9e  Code  Gb  dbg_log.o [1]
+DtorRecArray            0x200004a4    0xc  Data  Lc  cppinit.o [3]
+EP1_IN_Callback()       0x080063a9    0x2  Code  Gb  usb_endp.o [1]
+EP1_OUT_Callback()      0x080063ab   0x1e  Code  Gb  usb_endp.o [1]
+EP2_IN_Callback()       0x080063d1    0x2  Code  Gb  usb_endp.o [1]
+EPindex                 0x200004a0    0x1  Data  Gb  usb_init.o [1]
+Enter_LowPowerMode()    0x080046c5    0x2  Code  Gb  hw_config.o [1]
 FLASH_HalfCycleAccessCmd
-                        0x08002adb   0x20  Code  Gb  stm32f10x_flash.o [1]
+                        0x08005bb3   0x20  Code  Gb  stm32f10x_flash.o [1]
 FLASH_PrefetchBufferCmd
-                        0x08002afb   0x20  Code  Gb  stm32f10x_flash.o [1]
-FLASH_SetLatency        0x08002ac5   0x16  Code  Gb  stm32f10x_flash.o [1]
-GPIO_Init               0x080029d1   0xec  Code  Gb  stm32f10x_gpio.o [1]
-GPIO_SetBits            0x08002abd    0x8  Code  Gb  stm32f10x_gpio.o [1]
-Get_SerialNum()         0x08001983   0x2a  Code  Gb  hw_config.o [1]
-HAL_GetTick             0x08002489    0x6  Code  Gb  stm32f10x_it.o [1]
-HEAP$$Base              0x20001520          --   Gb  - Linker created -
-HEAP$$Limit             0x20002520          --   Gb  - Linker created -
-HardFault_Handler       0x0800247b    0x2  Code  Gb  stm32f10x_it.o [1]
-IUsb::IUsb()            0x08003397    0x2  Code  Gb  IUsb.o [1]
-IUsb::IUsb() [subobject]
-                        0x0800336d    0xc  Code  Gb  IUsb.o [1]
-IUsb::Init()            0x08003385   0x12  Code  Gb  IUsb.o [1]
-IUsb::~IUsb()           0x08003399    0x2  Code  Gb  IUsb.o [1]
-IUsb::~IUsb() [subobject]
-                        0x08003379    0xc  Code  Gb  IUsb.o [1]
+                        0x08005bd3   0x20  Code  Gb  stm32f10x_flash.o [1]
+FLASH_SetLatency        0x08005b9d   0x16  Code  Gb  stm32f10x_flash.o [1]
+GPIO_Init               0x08005875   0xec  Code  Gb  stm32f10x_gpio.o [1]
+GPIO_SetBits            0x08005961    0x8  Code  Gb  stm32f10x_gpio.o [1]
+GetEPRxAddr(unsigned char)
+                        0x08004023   0x1c  Code  Gb  usb_regs.o [1]
+GetEPTxAddr(unsigned char)
+                        0x08004007   0x1c  Code  Gb  usb_regs.o [1]
+Get_SerialNum()         0x080046c9   0x2a  Code  Gb  hw_config.o [1]
+HAL_GetTick             0x08005015    0x6  Code  Gb  stm32f10x_it.o [1]
+HEAP$$Base              0x20001660          --   Gb  - Linker created -
+HEAP$$Limit             0x20002660          --   Gb  - Linker created -
+HardFault_Handler       0x08005007    0x2  Code  Gb  stm32f10x_it.o [1]
+In0_Process()           0x08003cc5   0x62  Code  Gb  usb_core.o [1]
 Initialization guard variable for BspDefault::BspDefault_registered()::t_ms_this
-                        0x20000366    0x1  Data  Gb  bsp_interface.o [1]
-MemManage_Handler       0x0800247d    0x2  Code  Gb  stm32f10x_it.o [1]
-NMI_Handler             0x08002479    0x2  Code  Gb  stm32f10x_it.o [1]
-NOP_Process()           0x08001cad    0x2  Code  Gb  usb_core.o [1]
-NVIC_Init               0x08001ef3   0x66  Code  Gb  misc.o [1]
+                        0x20000498    0x1  Data  Gb  bsp_interface.o [1]
+Leave_LowPowerMode()    0x080046c7    0x2  Code  Gb  hw_config.o [1]
+LoadInt                 0x08001877   0x7a  Code  Lc  xprintffull_nomb.o [3]
+MemManage_Handler       0x08005009    0x2  Code  Gb  stm32f10x_it.o [1]
+NMI_Handler             0x08005005    0x2  Code  Gb  stm32f10x_it.o [1]
+NOP_Process()           0x08003e39    0x2  Code  Gb  usb_core.o [1]
+NVIC_Init               0x08005aff   0x66  Code  Gb  misc.o [1]
 NVIC_PriorityGroupConfig
-                        0x08001ee9    0xa  Code  Gb  misc.o [1]
-PendSV_Handler          0x08002487    0x2  Code  Gb  stm32f10x_it.o [1]
-PowerOn()               0x08001a15    0x4  Code  Gb  usb_pwr.o [1]
-ProtocolValue           0x2000034c    0x4  Data  Gb  usb_prop.o [1]
-RCC_ADCCLKConfig        0x08001e25   0x12  Code  Gb  stm32f10x_rcc.o [1]
-RCC_APB1PeriphClockCmd  0x08001e57   0x20  Code  Gb  stm32f10x_rcc.o [1]
-RCC_APB2PeriphClockCmd  0x08001e37   0x20  Code  Gb  stm32f10x_rcc.o [1]
-RCC_DeInit              0x08001cb5   0x60  Code  Gb  stm32f10x_rcc.o [1]
-RCC_GetFlagStatus       0x08001e77   0x46  Code  Gb  stm32f10x_rcc.o [1]
-RCC_HCLKConfig          0x08001de7   0x12  Code  Gb  stm32f10x_rcc.o [1]
-RCC_HSEConfig           0x08001d15   0x56  Code  Gb  stm32f10x_rcc.o [1]
-RCC_PCLK1Config         0x08001df9   0x12  Code  Gb  stm32f10x_rcc.o [1]
-RCC_PCLK2Config         0x08001e0b   0x14  Code  Gb  stm32f10x_rcc.o [1]
-RCC_PLLCmd              0x08001dc5    0xc  Code  Gb  stm32f10x_rcc.o [1]
-RCC_PLLConfig           0x08001da7   0x1e  Code  Gb  stm32f10x_rcc.o [1]
-RCC_SYSCLKConfig        0x08001dd1   0x16  Code  Gb  stm32f10x_rcc.o [1]
-RCC_USBCLKConfig        0x08001e1f    0x6  Code  Gb  stm32f10x_rcc.o [1]
-RCC_WaitForHSEStartUp   0x08001d6b   0x3c  Code  Gb  stm32f10x_rcc.o [1]
-Region$$Table$$Base     0x08003468          --   Gb  - Linker created -
-Region$$Table$$Limit    0x0800348c          --   Gb  - Linker created -
-SHT$$INIT_ARRAY$$Base   0x080035ec          --   Gb  - Linker created -
-SHT$$INIT_ARRAY$$Limit  0x080035f4          --   Gb  - Linker created -
+                        0x08005af5    0xa  Code  Gb  misc.o [1]
+Out0_Process()          0x08003d27   0x46  Code  Gb  usb_core.o [1]
+PMAToUserBufferCopy(unsigned char *, unsigned short, unsigned short)
+                        0x08004123   0x2c  Code  Gb  usb_mem.o [1]
+PendSV_Handler          0x08005013    0x2  Code  Gb  stm32f10x_it.o [1]
+Post0_Process()         0x08003d71   0x3c  Code  Gb  usb_core.o [1]
+PowerOn()               0x08004759    0x4  Code  Gb  usb_pwr.o [1]
+ProtocolValue           0x20000470    0x4  Data  Gb  usb_prop.o [1]
+RCC_ADCCLKConfig        0x080042bf   0x12  Code  Gb  stm32f10x_rcc.o [1]
+RCC_APB2PeriphClockCmd  0x080043c5   0x20  Code  Gb  stm32f10x_rcc.o [1]
+RCC_DeInit              0x08004155   0x60  Code  Gb  stm32f10x_rcc.o [1]
+RCC_GetClocksFreq       0x080042d1   0xf4  Code  Gb  stm32f10x_rcc.o [1]
+RCC_GetFlagStatus       0x080043e5   0x46  Code  Gb  stm32f10x_rcc.o [1]
+RCC_HCLKConfig          0x08004287   0x12  Code  Gb  stm32f10x_rcc.o [1]
+RCC_HSEConfig           0x080041b5   0x56  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PCLK1Config         0x08004299   0x12  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PCLK2Config         0x080042ab   0x14  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PLLCmd              0x08004265    0xc  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PLLConfig           0x08004247   0x1e  Code  Gb  stm32f10x_rcc.o [1]
+RCC_SYSCLKConfig        0x08004271   0x16  Code  Gb  stm32f10x_rcc.o [1]
+RCC_WaitForHSEStartUp   0x0800420b   0x3c  Code  Gb  stm32f10x_rcc.o [1]
+Region$$Table$$Base     0x08006420          --   Gb  - Linker created -
+Region$$Table$$Limit    0x08006444          --   Gb  - Linker created -
+Resume(_RESUME_STATE)   0x080047a7   0xc0  Code  Gb  usb_pwr.o [1]
+ResumeS                 0x20000496    0x2  Data  Gb  usb_pwr.o [1]
+Resume_Init()           0x08004785   0x22  Code  Gb  usb_pwr.o [1]
+SHT$$INIT_ARRAY$$Base   0x08006690          --   Gb  - Linker created -
+SHT$$INIT_ARRAY$$Limit  0x08006698          --   Gb  - Linker created -
 SHT$$PREINIT_ARRAY$$Base
-                        0x080035ec          --   Gb  - Linker created -
+                        0x08006690          --   Gb  - Linker created -
 SHT$$PREINIT_ARRAY$$Limit
-                        0x080035ec          --   Gb  - Linker created -
-SVC_Handler             0x08002483    0x2  Code  Gb  stm32f10x_it.o [1]
+                        0x08006690          --   Gb  - Linker created -
+SVC_Handler             0x0800500f    0x2  Code  Gb  stm32f10x_it.o [1]
+SaveRState              0x20000490    0x2  Data  Gb  usb_int.o [1]
+SaveTState              0x20000492    0x2  Data  Gb  usb_int.o [1]
 SetBTABLE(unsigned short)
-                        0x08001a41    0xe  Code  Gb  usb_regs.o [1]
+                        0x08003e3d    0xe  Code  Gb  usb_regs.o [1]
 SetDeviceAddress(unsigned char)
-                        0x08001c59   0x48  Code  Gb  usb_core.o [1]
+                        0x08003dad   0x48  Code  Gb  usb_core.o [1]
 SetEPRxAddr(unsigned char, unsigned short)
-                        0x08001b75   0x26  Code  Gb  usb_regs.o [1]
+                        0x08003fe1   0x26  Code  Gb  usb_regs.o [1]
 SetEPRxCount(unsigned char, unsigned short)
-                        0x08001bbb   0x54  Code  Gb  usb_regs.o [1]
+                        0x0800405f   0x54  Code  Gb  usb_regs.o [1]
 SetEPRxStatus(unsigned char, unsigned short)
-                        0x08001ab5   0x3e  Code  Gb  usb_regs.o [1]
+                        0x08003eb1   0x3e  Code  Gb  usb_regs.o [1]
 SetEPRxValid(unsigned char)
-                        0x08001af3   0x32  Code  Gb  usb_regs.o [1]
+                        0x08003eef   0x32  Code  Gb  usb_regs.o [1]
 SetEPTxAddr(unsigned char, unsigned short)
-                        0x08001b4f   0x26  Code  Gb  usb_regs.o [1]
+                        0x08003fbb   0x26  Code  Gb  usb_regs.o [1]
 SetEPTxCount(unsigned char, unsigned short)
-                        0x08001b9b   0x20  Code  Gb  usb_regs.o [1]
+                        0x0800403f   0x20  Code  Gb  usb_regs.o [1]
 SetEPTxStatus(unsigned char, unsigned short)
-                        0x08001a77   0x3e  Code  Gb  usb_regs.o [1]
+                        0x08003e73   0x3e  Code  Gb  usb_regs.o [1]
 SetEPType(unsigned char, unsigned short)
-                        0x08001a4f   0x28  Code  Gb  usb_regs.o [1]
-Set_USBClock()          0x08001945   0x14  Code  Gb  hw_config.o [1]
+                        0x08003e4b   0x28  Code  Gb  usb_regs.o [1]
+Setup0_Process()        0x08003c23   0x96  Code  Gb  usb_core.o [1]
+Standard_ClearFeature()
+                        0x080033f9  0x162  Code  Gb  usb_core.o [1]
+Standard_GetConfiguration(unsigned short)
+                        0x080031a9   0x2e  Code  Gb  usb_core.o [1]
 Standard_GetDescriptorData(unsigned short, OneDescriptor *)
-                        0x08001c29   0x2c  Code  Gb  usb_core.o [1]
-String_Descriptor       0x20000090   0x20  Data  Gb  usb_prop.o [1]
+                        0x0800363b   0x2c  Code  Gb  usb_core.o [1]
+Standard_GetInterface(unsigned short)
+                        0x08003225   0x2e  Code  Gb  usb_core.o [1]
+Standard_GetStatus(unsigned short)
+                        0x080032db  0x11e  Code  Gb  usb_core.o [1]
+Standard_SetConfiguration()
+                        0x080031d7   0x4e  Code  Gb  usb_core.o [1]
+Standard_SetDeviceFeature()
+                        0x08003617   0x24  Code  Gb  usb_core.o [1]
+Standard_SetEndPointFeature()
+                        0x0800355b   0xbc  Code  Gb  usb_core.o [1]
+Standard_SetInterface()
+                        0x08003253   0x88  Code  Gb  usb_core.o [1]
+StatusInfo              0x2000048c    0x2  Data  Gb  usb_core.o [1]
+String_Descriptor       0x200000b8   0x20  Data  Gb  usb_prop.o [1]
 SuperInerfaces::SuperInerfaces()
-                        0x080029b7    0x2  Code  Gb  bsp_interface.o [1]
+                        0x0800585b    0x2  Code  Gb  bsp_interface.o [1]
 SuperInerfaces::SuperInerfaces() [subobject]
-                        0x0800259d    0xc  Code  Gb  bsp_interface.o [1]
+                        0x08005131    0xc  Code  Gb  bsp_interface.o [1]
 SuperInerfaces::SuperInerfaces_init(SuperInerfaces*, unsigned char)
-                        0x08003281   0x6c  Code  Gb  main.o [1]
+                        0x080062d1   0x6c  Code  Gb  main.o [1]
 SuperInerfaces::SuperInerfaces_init(SuperInerfaces*, unsigned char)::once_fg
-                        0x200000b2    0x1  Data  Gb  main.o [1]
+                        0x2000015a    0x1  Data  Gb  main.o [1]
 SuperInerfaces::bsp_events_handle(BSP_Events_Package_t const *)
-                        0x080027e9   0x1c  Code  Gb  bsp_interface.o [1]
-SuperInerfaces::t_pApp  0x20000328    0x4  Data  Gb  bsp_interface.o [1]
-SuperInerfaces::t_pBsp  0x20000324    0x4  Data  Gb  bsp_interface.o [1]
+                        0x080055a1   0x1c  Code  Gb  bsp_interface.o [1]
+SuperInerfaces::t_pApp  0x20000444    0x4  Data  Gb  bsp_interface.o [1]
+SuperInerfaces::t_pBsp  0x20000440    0x4  Data  Gb  bsp_interface.o [1]
+Suspend()               0x0800475d   0x28  Code  Gb  usb_pwr.o [1]
 SysTick_CLKSourceConfig
-                        0x08001f59   0x20  Code  Gb  misc.o [1]
-SysTick_Handler         0x0800248f   0x12  Code  Gb  stm32f10x_it.o [1]
-SystemClock_Config()    0x08002755   0x8c  Code  Gb  bsp_system.o [1]
-SystemInit              0x080030ad   0x54  Code  Gb  system_stm32f10x.o [1]
-System_init_hw()        0x08002701   0x48  Code  Gb  bsp_system.o [1]
-USB_Init()              0x080032ed   0x40  Code  Gb  usb_init.o [1]
-USB_Interrupts_Config()
-                        0x08001959   0x2a  Code  Gb  hw_config.o [1]
-USB_SIL_Init()          0x08001a19   0x1a  Code  Gb  usb_sil.o [1]
-UsageFault_Handler      0x08002481    0x2  Code  Gb  stm32f10x_it.o [1]
-User_Standard_Requests  0x2000004c   0x24  Data  Gb  usb_prop.o [1]
+                        0x08005b65   0x20  Code  Gb  misc.o [1]
+SysTick_Handler         0x0800501b   0x12  Code  Gb  stm32f10x_it.o [1]
+SystemClock_Config()    0x08005415   0x8c  Code  Gb  bsp_system.o [1]
+SystemInit              0x080060fd   0x54  Code  Gb  system_stm32f10x.o [1]
+System_init_hw()        0x080053c1   0x48  Code  Gb  bsp_system.o [1]
+USART_ClearFlag         0x08005ae3   0x10  Code  Gb  stm32f10x_usart.o [1]
+USART_Cmd               0x08005a55   0x1e  Code  Gb  stm32f10x_usart.o [1]
+USART_ITConfig          0x08005a73   0x70  Code  Gb  stm32f10x_usart.o [1]
+USART_Init              0x08005969   0xe6  Code  Gb  stm32f10x_usart.o [1]
+USB_Istr()              0x0800570d   0xec  Code  Gb  usb_istr.o [1]
+USB_LP_CAN1_RX0_IRQHandler
+                        0x08005031    0x8  Code  Gb  stm32f10x_it.o [1]
+USB_Receive_Buffer      0x20000384   0x40  Data  Gb  usb_endp.o [1]
+USB_Received_Flag       0x2000049f    0x1  Data  Gb  usb_endp.o [1]
+USB_SIL_Init()          0x08004871   0x1a  Code  Gb  usb_sil.o [1]
+UsageFault_Handler      0x0800500d    0x2  Code  Gb  stm32f10x_it.o [1]
+UserToPMABufferCopy(unsigned char *, unsigned short, unsigned short)
+                        0x080040e5   0x3e  Code  Gb  usb_mem.o [1]
 Virtual function table for BspDefault
-                        0x080034ac   0x20  Data  Gb  bsp_interface.o [1]
+                        0x08006464   0x20  Data  Gb  bsp_interface.o [1]
 Virtual function table for BspInterfaces
-                        0x0800348c   0x20  Data  Gb  bsp_interface.o [1]
+                        0x08006444   0x20  Data  Gb  bsp_interface.o [1]
 Virtual function table for BspSysPwr
-                        0x080034cc   0x20  Data  Gb  bsp_sys_pwr.o [1]
+                        0x08006484   0x20  Data  Gb  bsp_sys_pwr.o [1]
 Virtual function table for BspSysTimer
-                        0x080034ec   0x20  Data  Gb  bsp_systimer.o [1]
-Virtual function table for CUsb
-                        0x080035a4   0x10  Data  Gb  CUsb.o [1]
+                        0x080064a4   0x20  Data  Gb  bsp_systimer.o [1]
+Virtual function table for BspUart
+                        0x080064c4   0x20  Data  Gb  bsp_uart.o [1]
 [local to bsp_sys_pwr_cpp]::bsp_sleep_stop()
-                        0x080025dd   0x1a  Code  Lc  bsp_sys_pwr.o [1]
+                        0x0800529d   0x1a  Code  Lc  bsp_sys_pwr.o [1]
+[local to bsp_uart_cpp]::USART_Config(unsigned int)
+                        0x08005171   0x9c  Code  Lc  bsp_uart.o [1]
 [local to hw_config_c]::IntToUnicode(unsigned int, unsigned char *, unsigned char)
-                        0x080019c1   0x4e  Code  Lc  hw_config.o [1]
+                        0x08004709   0x4e  Code  Lc  hw_config.o [1]
 [local to system_stm32f10x_c]::SetSysClock()
-                        0x08003101    0x8  Code  Lc  system_stm32f10x.o [1]
+                        0x08006151    0x8  Code  Lc  system_stm32f10x.o [1]
 [local to system_stm32f10x_c]::SetSysClockTo72()
-                        0x08003109   0xe0  Code  Lc  system_stm32f10x.o [1]
-__aeabi_atexit          0x08002181    0xa  Code  Gb  cxxabi.o [4]
-__aeabi_memcpy          0x08002dfd         Code  Gb  ABImemcpy.o [5]
-__aeabi_memcpy4         0x08002e1d         Code  Gb  ABImemcpy.o [5]
-__aeabi_memcpy8         0x08002e1d         Code  Gb  ABImemcpy.o [5]
-__aeabi_memset          0x08002699         Code  Gb  ABImemset.o [5]
-__call_ctors            0x080024fd   0x18  Code  Gb  cppinit.o [3]
-__call_dtors            0x0800254b    0xc  Code  Gb  cppinit.o [3]
-__call_dtors0           0x08002557   0x36  Code  Gb  cppinit.o [3]
-__cexit_call_dtors      0x08003557         Code  Gb  cexit.o [5]
-__cmain                 0x0800352d         Code  Gb  cmain.o [5]
-__cstart_call_dtors     0x080036e8         Data  Gb  cstart_call_dtors.o [5]
-__cxa_atexit            0x08002515   0x36  Code  Gb  cppinit.o [3]
+                        0x08006159   0xe0  Code  Lc  system_stm32f10x.o [1]
+[local to usb_core_c]::DataStageIn()
+                        0x08003725   0xce  Code  Lc  usb_core.o [1]
+[local to usb_core_c]::DataStageOut()
+                        0x08003667   0xbe  Code  Lc  usb_core.o [1]
+[local to usb_core_c]::Data_Setup0()
+                        0x08003957  0x2cc  Code  Lc  usb_core.o [1]
+[local to usb_core_c]::NoData_Setup0()
+                        0x080037f3  0x164  Code  Lc  usb_core.o [1]
+_GenldFullNoMb          0x080021e5  0x274  Code  Lc  xprintffull_nomb.o [3]
+_LdtobFullNoMb          0x08001db9  0x3fe  Code  Lc  xprintffull_nomb.o [3]
+_LitobFullNoMb          0x08001c61  0x112  Code  Lc  xprintffull_nomb.o [3]
+_Locale_lconv           0x200000d8   0x38  Data  Lc  xlocale_c.o [3]
+_PrintfFullNoMb         0x080016c5  0x1a4  Code  Gb  xprintffull_nomb.o [3]
+_Prout                  0x08006589   0x16  Code  Gb  xprout.o [3]
+_PutcharsFullNoMb       0x08002459   0x2e  Code  Lc  xprintffull_nomb.o [3]
+_PutfldFullNoMb         0x080018f1  0x264  Code  Lc  xprintffull_nomb.o [3]
+_PuttxtFullNoMb         0x08001b55  0x10c  Code  Lc  xprintffull_nomb.o [3]
+__aeabi_atexit          0x08004cd1    0xa  Code  Gb  cxxabi.o [4]
+__aeabi_cdcmple         0x08002ac9         Code  Gb  DblCmpLe.o [5]
+__aeabi_cdrcmple        0x08002af9         Code  Gb  DblCmpGe.o [5]
+__aeabi_d2iz            0x08002c65         Code  Gb  DblToS32.o [5]
+__aeabi_d2uiz           0x08002ff1         Code  Gb  DblToU32.o [5]
+__aeabi_ddiv            0x08002da9         Code  Gb  DblDiv.o [5]
+__aeabi_dmul            0x0800280d         Code  Gb  DblMul.o [5]
+__aeabi_dsub            0x08002cc5         Code  Gb  DblSub.o [5]
+__aeabi_i2d             0x08002ca1         Code  Gb  S32ToDbl.o [5]
+__aeabi_ldiv0           0x0800303d         Code  Gb  I64DivZer.o [6]
+__aeabi_memcpy          0x080029b1         Code  Gb  ABImemcpy.o [6]
+__aeabi_memcpy4         0x080029d1         Code  Gb  ABImemcpy.o [6]
+__aeabi_memcpy8         0x080029d1         Code  Gb  ABImemcpy.o [6]
+__aeabi_memset          0x08005359         Code  Gb  ABImemset.o [6]
+__aeabi_ui2d            0x08003019         Code  Gb  U32ToDbl.o [5]
+__aeabi_uldivmod        0x080025dd         Code  Gb  I64DivMod.o [6]
+__call_ctors            0x08005091   0x18  Code  Gb  cppinit.o [3]
+__call_dtors            0x080050df    0xc  Code  Gb  cppinit.o [3]
+__call_dtors0           0x080050eb   0x36  Code  Gb  cppinit.o [3]
+__cexit_call_dtors      0x08006547         Code  Gb  cexit.o [6]
+__cmain                 0x08006505         Code  Gb  cmain.o [6]
+__cstart_call_dtors     0x0800678c         Data  Gb  cstart_call_dtors.o [6]
+__cxa_atexit            0x080050a9   0x36  Code  Gb  cppinit.o [3]
 __data_GetMemChunk      0x08001685   0x2c  Code  Gb  xgetmemchunk.o [3]
 __data_GetMemChunk::start
-                        0x20000360    0x4  Data  Lc  xgetmemchunk.o [3]
-__dso_handle            0x20000358    0x4  Data  Gb  cppinit.o [3]
-__exit                  0x080016b1   0x14  Code  Gb  exit.o [6]
-__iar_Memset            0x08002699         Code  Gb  ABImemset.o [5]
-__iar_Memset_word       0x080026a1         Code  Gb  ABImemset.o [5]
+                        0x20000488    0x4  Data  Lc  xgetmemchunk.o [3]
+__dso_handle            0x2000047c    0x4  Data  Gb  cppinit.o [3]
+__exit                  0x080016b1   0x14  Code  Gb  exit.o [7]
+__iar_Fail_s            0x08002509   0x1c  Code  Gb  xfail_s.o [3]
+__iar_Memchr            0x08002585         Code  Gb  memchr.o [6]
+__iar_Memset            0x08005359         Code  Gb  ABImemset.o [6]
+__iar_Memset_word       0x08005361         Code  Gb  ABImemset.o [6]
+__iar_Stdout            0x20000110   0x48  Data  Gb  xfiles.o [3]
+__iar_Strchr            0x080024ed         Code  Gb  strchr.o [6]
 __iar_cstart_call_ctors
-                        0x0800350d   0x20  Code  Gb  cmain_call_ctors.o [5]
-__iar_data_init3        0x0800341d   0x28  Code  Gb  data_init.o [5]
-__iar_debug_exceptions  0x080024fa    0x1  Data  Gb  unwind_debug.o [6]
+                        0x080064e5   0x20  Code  Gb  cmain_call_ctors.o [6]
+__iar_dadd              0x08002cd5         Code  Gb  DblSub.o [5]
+__iar_data_init3        0x080063d5   0x28  Code  Gb  data_init.o [6]
+__iar_debug_exceptions  0x08002a56    0x1  Data  Gb  unwind_debug.o [7]
 __iar_dlfree            0x0800110b  0x4f6  Code  Gb  dlmalloc.o [3]
 __iar_dlmalloc          0x08000e55  0x2b6  Code  Gb  dlmalloc.o [3]
+__iar_dsub              0x08003041         Code  Gb  DblAdd.o [5]
+__iar_dsubStart         0x08003053         Code  Gb  DblAdd.o [5]
+__iar_frexp             0x08002a65         Code  Gb  frexp.o [5]
+__iar_frexp64           0x08002a59         Code  Gb  frexp.o [5]
+__iar_frexpl            0x08002a65         Code  Gb  frexp.o [5]
+__iar_ldexp64           0x08002b29         Code  Gb  ldexp.o [5]
 __iar_lz77_init_single3
-                        0x0800160b   0x7a  Code  Gb  lz77_init_single.o [5]
-__iar_program_start     0x080035e1         Code  Gb  cstartup_M.o [5]
+                        0x0800160b   0x7a  Code  Gb  lz77_init_single.o [6]
+__iar_program_start     0x0800663d         Code  Gb  cstartup_M.o [6]
+__iar_scalbln64         0x08002b29         Code  Gb  ldexp.o [5]
+__iar_scalbn64          0x08002b29         Code  Gb  ldexp.o [5]
 __iar_systems$$module {Abs}
                         0x00000001         Data  Gb  command line/config [2]
 __iar_tls$$INIT_ARRAY$$Base
-                        0x080035f4          --   Gb  - Linker created -
+                        0x08006698          --   Gb  - Linker created -
 __iar_tls$$INIT_ARRAY$$Limit
-                        0x080035f4          --   Gb  - Linker created -
-__iar_zero_init3        0x0800332d   0x40  Code  Gb  zero_init3.o [5]
-__low_level_init        0x0800354b    0x4  Code  Gb  low_level_init.o [3]
-__sti__routine          0x080021a5    0xa  Code  Lc  bsp_interface.o [1]
-__sti__routine          0x08001f91   0x12  Code  Lc  bsp_systimer.o [1]
+                        0x08006698          --   Gb  - Linker created -
+__iar_zero_init3        0x0800633d   0x40  Code  Gb  zero_init3.o [6]
+__low_level_init        0x08006523    0x4  Code  Gb  low_level_init.o [3]
+__sti__routine          0x08004cf5    0xa  Code  Lc  bsp_interface.o [1]
+__sti__routine          0x08004ae1   0x12  Code  Lc  bsp_systimer.o [1]
 __vector_table          0x08000000         Data  Gb  startup_stm32f10x_hd.o [1]
-_call_main              0x08003539         Code  Gb  cmain.o [5]
-_exit                   0x08003555         Code  Gb  cexit.o [5]
-_gm_                    0x200000b4  0x1d8  Data  Lc  dlmalloc.o [3]
-_main                   0x08003547         Code  Gb  cmain.o [5]
+_call_main              0x08006511         Code  Gb  cmain.o [6]
+_exit                   0x08006545         Code  Gb  cexit.o [6]
+_gm_                    0x2000015c  0x1d8  Data  Lc  dlmalloc.o [3]
+_main                   0x0800651f         Code  Gb  cmain.o [6]
 abort                   0x08001605    0x6  Code  Gb  abort.o [3]
 add_segment             0x080004f5  0x1f2  Code  Lc  dlmalloc.o [3]
-bDeviceState            0x20000350    0x4  Data  Gb  usb_pwr.o [1]
-bsp_active_drv()        0x080027e5    0x2  Code  Gb  bsp_system.o [1]
-bsp_clear_dog()         0x080027e3    0x2  Code  Gb  bsp_system.o [1]
-bsp_drv_type            0x20000367    0x1  Data  Gb  bsp_interface.o [1]
-bsp_events_dat          0x200002b8   0x28  Data  Gb  bsp_interface.o [1]
-bsp_init_dog()          0x080027e1    0x2  Code  Gb  bsp_system.o [1]
-bsp_sleep_drv()         0x080027e7    0x2  Code  Gb  bsp_system.o [1]
+bDeviceState            0x20000474    0x4  Data  Gb  usb_pwr.o [1]
+bIntPackSOF             0x200004a1    0x1  Data  Gb  usb_istr.o [1]
+bsp_active_drv()        0x080054bd    0x2  Code  Gb  bsp_system.o [1]
+bsp_clear_dog()         0x080054bb    0x2  Code  Gb  bsp_system.o [1]
+bsp_delay_nus(unsigned int)
+                        0x080054a1   0x18  Code  Gb  bsp_system.o [1]
+bsp_drv_type            0x20000499    0x1  Data  Gb  bsp_interface.o [1]
+bsp_events_dat          0x200003f0   0x28  Data  Gb  bsp_interface.o [1]
+bsp_init_dog()          0x080054b9    0x2  Code  Gb  bsp_system.o [1]
+bsp_sleep_drv()         0x080054bf    0x2  Code  Gb  bsp_system.o [1]
 const std::allocator<BSP_Sys_Timer_t>& && std::forward<const std::allocator<BSP_Sys_Timer_t>&>(std::remove_reference<const std::allocator<BSP_Sys_Timer_t>&>::type &)
-                        0x08002ec3    0x2  Code  Gb  bsp_systimer.o [1]
-exit                    0x0800354f    0x4  Code  Gb  exit.o [3]
-free                    0x08003061    0x4  Code  Gb  heaptramp0.o [3]
-g_bsp                   0x2000032c    0x4  Data  Gb  bsp_interface.o [1]
+                        0x08005f15    0x2  Code  Gb  bsp_systimer.o [1]
+exit                    0x08006541    0x4  Code  Gb  exit.o [3]
+fSuspendEnabled         0x2000015b    0x1  Data  Gb  usb_pwr.o [1]
+fputc                   0x080054c1   0x18  Code  Gb  dbg_log.o [1]
+free                    0x080060b1    0x4  Code  Gb  heaptramp0.o [3]
+frexp                   0x08002a59         Code  Gb  frexp.o [5]
+frexpl                  0x08002a59         Code  Gb  frexp.o [5]
+g_bsp                   0x20000448    0x4  Data  Gb  bsp_interface.o [1]
 init_mparams            0x0800014f   0x32  Code  Lc  dlmalloc.o [3]
 init_top                0x08000181   0x32  Code  Lc  dlmalloc.o [3]
-main                    0x080033c9   0x2c  Code  Gb  main.o [1]
-mparams                 0x200002fc   0x18  Data  Lc  dlmalloc.o [3]
-next_abi_dtor_rec       0x20000354    0x4  Data  Lc  cppinit.o [3]
+ldexp                   0x08002b29         Code  Gb  ldexp.o [5]
+ldexpl                  0x08002b29         Code  Gb  ldexp.o [5]
+localeconv              0x08003035    0x4  Code  Gb  xlocale_c.o [3]
+main                    0x08006529   0x18  Code  Gb  main.o [1]
+memchr                  0x08002585         Code  Gb  memchr.o [6]
+mparams                 0x20000418   0x18  Data  Lc  dlmalloc.o [3]
+next_abi_dtor_rec       0x20000478    0x4  Data  Lc  cppinit.o [3]
+obuf                    0x20000334   0x50  Data  Lc  xfiles.o [3]
 operator delete (void *)
-                        0x08003037    0xa  Code  Gb  delop_0.o [4]
+                        0x08006087    0xa  Code  Gb  delop_0.o [4]
 operator new (unsigned int)
-                        0x08002fe1   0x24  Code  Gb  newop_0.o [4]
+                        0x08006031   0x24  Code  Gb  newop_0.o [4]
 operator new (unsigned int, void *)
-                        0x08002f4d    0x4  Code  Gb  bsp_systimer.o [1]
-pInformation            0x20000340    0x4  Data  Gb  usb_init.o [1]
-pProperty               0x20000344    0x4  Data  Gb  usb_init.o [1]
+                        0x08005f9f    0x4  Code  Gb  bsp_systimer.o [1]
+pEpInt_IN               0x20000030   0x1c  Data  Gb  usb_istr.o [1]
+pEpInt_OUT              0x2000004c   0x1c  Data  Gb  usb_istr.o [1]
+pInformation            0x20000464    0x4  Data  Gb  usb_init.o [1]
+pProperty               0x20000468    0x4  Data  Gb  usb_init.o [1]
 pUser_Standard_Requests
-                        0x20000348    0x4  Data  Gb  usb_init.o [1]
-pre_sys_tick            0x20000334    0x4  Data  Lc  bsp_systimer.o [1]
+                        0x2000046c    0x4  Data  Gb  usb_init.o [1]
+pre_sys_tick            0x20000450    0x4  Data  Lc  bsp_systimer.o [1]
 prepend_alloc           0x080001b3  0x342  Code  Lc  dlmalloc.o [3]
+putchar                 0x080065a1    0xc  Code  Gb  putchar.o [3]
+scalbln                 0x08002b29         Code  Gb  ldexp.o [5]
+scalblnl                0x08002b29         Code  Gb  ldexp.o [5]
+scalbn                  0x08002b29         Code  Gb  ldexp.o [5]
+scalbnl                 0x08002b29         Code  Gb  ldexp.o [5]
+scale                   0x08001d73   0x46  Code  Lc  xprintffull_nomb.o [3]
+sec_hand                0x20000484    0x4  Data  Lc  xfail_s.o [3]
 segment_holding         0x08000131   0x1e  Code  Lc  dlmalloc.o [3]
 std::_Compressed_pair<std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>, std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>, (bool)1>::_Compressed_pair<const std::allocator<BSP_Sys_Timer_t>&, >(std::_One_then_variadic_args_t, const std::allocator<BSP_Sys_Timer_t>& &&,  &&...)
-                        0x08002cd7   0x1e  Code  Gb  bsp_systimer.o [1]
+                        0x08005dcf   0x1e  Code  Gb  bsp_systimer.o [1]
 std::_Compressed_pair<std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>, std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>, (bool)1>::_Get_first()
-                        0x08002c5b    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08005d53    0x2  Code  Gb  bsp_systimer.o [1]
 std::_Compressed_pair<std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>, std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>, (bool)1>::_Get_first() const
-                        0x08002ee1    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08005f33    0x2  Code  Gb  bsp_systimer.o [1]
 std::_Compressed_pair<std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>, std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>, (bool)1>::_Get_second()
-                        0x08002b2d    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08005c25    0x2  Code  Gb  bsp_systimer.o [1]
 std::_Compressed_pair<std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>, std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>, (bool)1>::_Get_second() const
-                        0x08002cf5    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08005ded    0x2  Code  Gb  bsp_systimer.o [1]
 std::_Container_base0::_Orphan_all()
-                        0x08002f4b    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08005f9d    0x2  Code  Gb  bsp_systimer.o [1]
 std::_Iterator_base0::_Adopt(void const *)
-                        0x08002edf    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08005f31    0x2  Code  Gb  bsp_systimer.o [1]
 std::_NomemoryNothrow()
-                        0x08003043    0x4  Code  Gb  nomemory.o [4]
+                        0x08006093    0x4  Code  Gb  nomemory.o [4]
 std::_Nonscalar_ptr_iterator_tag std::_Ptr_cat<BSP_Sys_Timer_t *, BSP_Sys_Timer_t *>(BSP_Sys_Timer_t * &, BSP_Sys_Timer_t * &)
-                        0x08002c95    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08005d8d    0x2  Code  Gb  bsp_systimer.o [1]
 std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Get_data()
-                        0x0800281f    0xc  Code  Gb  bsp_systimer.o [1]
+                        0x080055d7    0xc  Code  Gb  bsp_systimer.o [1]
 std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Get_data() const
-                        0x08002b21    0xc  Code  Gb  bsp_systimer.o [1]
+                        0x08005c19    0xc  Code  Gb  bsp_systimer.o [1]
 std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Getal()
-                        0x08002915    0xc  Code  Gb  bsp_systimer.o [1]
+                        0x080056cd    0xc  Code  Gb  bsp_systimer.o [1]
 std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Getal() const
-                        0x08002d1b    0xc  Code  Gb  bsp_systimer.o [1]
+                        0x08005e13    0xc  Code  Gb  bsp_systimer.o [1]
 std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Myend()
-                        0x080028c3    0xe  Code  Gb  bsp_systimer.o [1]
+                        0x0800567b    0xe  Code  Gb  bsp_systimer.o [1]
 std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Myend() const
-                        0x08002d0d    0xe  Code  Gb  bsp_systimer.o [1]
+                        0x08005e05    0xe  Code  Gb  bsp_systimer.o [1]
 std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Myfirst()
-                        0x0800282b    0xc  Code  Gb  bsp_systimer.o [1]
+                        0x080055e3    0xc  Code  Gb  bsp_systimer.o [1]
 std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Myfirst() const
-                        0x08002813    0xc  Code  Gb  bsp_systimer.o [1]
+                        0x080055cb    0xc  Code  Gb  bsp_systimer.o [1]
 std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Mylast()
-                        0x080028b5    0xe  Code  Gb  bsp_systimer.o [1]
+                        0x0800566d    0xe  Code  Gb  bsp_systimer.o [1]
 std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Mylast() const
-                        0x08002805    0xe  Code  Gb  bsp_systimer.o [1]
+                        0x080055bd    0xe  Code  Gb  bsp_systimer.o [1]
 std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Orphan_all()
-                        0x08002d93   0x10  Code  Gb  bsp_systimer.o [1]
+                        0x08005e8b   0x10  Code  Gb  bsp_systimer.o [1]
 std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Vector_alloc(const std::allocator<BSP_Sys_Timer_t>&)
-                        0x080029a3   0x14  Code  Gb  bsp_systimer.o [1]
+                        0x08005847   0x14  Code  Gb  bsp_systimer.o [1]
 std::_Vector_alloc<std::_Vec_base_types<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>>::_Vector_alloc(const std::allocator<BSP_Sys_Timer_t>&) [subobject]
-                        0x080024ef    0xc  Code  Gb  bsp_systimer.o [1]
+                        0x08005083    0xc  Code  Gb  bsp_systimer.o [1]
 std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::_Vector_const_iterator(BSP_Sys_Timer_t *, std::_Container_base0 const *)
-                        0x08002cf7   0x16  Code  Gb  bsp_systimer.o [1]
+                        0x08005def   0x16  Code  Gb  bsp_systimer.o [1]
 std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::_Vector_const_iterator(BSP_Sys_Timer_t *, std::_Container_base0 const *) [subobject]
-                        0x08002b2f    0xc  Code  Gb  bsp_systimer.o [1]
+                        0x08005c27    0xc  Code  Gb  bsp_systimer.o [1]
 std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::operator *() const
-                        0x08002b3b    0x4  Code  Gb  bsp_systimer.o [1]
+                        0x08005c33    0x4  Code  Gb  bsp_systimer.o [1]
 std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::operator ++()
-                        0x08002865    0x8  Code  Gb  bsp_systimer.o [1]
+                        0x0800561d    0x8  Code  Gb  bsp_systimer.o [1]
 std::_Vector_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::_Vector_iterator(BSP_Sys_Timer_t *, std::_Container_base0 const *)
-                        0x08002837   0x16  Code  Gb  bsp_systimer.o [1]
+                        0x080055ef   0x16  Code  Gb  bsp_systimer.o [1]
 std::_Vector_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::operator *() const
-                        0x0800284d    0xc  Code  Gb  bsp_systimer.o [1]
+                        0x08005605    0xc  Code  Gb  bsp_systimer.o [1]
 std::_Vector_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::operator ++()
-                        0x08002367    0xe  Code  Gb  bsp_systimer.o [1]
+                        0x08004ef3    0xe  Code  Gb  bsp_systimer.o [1]
 std::_Vector_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>::operator ->() const
-                        0x08002357   0x10  Code  Gb  bsp_systimer.o [1]
+                        0x08004ee3   0x10  Code  Gb  bsp_systimer.o [1]
 std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>::_Vector_val()
-                        0x08002ed1    0xe  Code  Gb  bsp_systimer.o [1]
+                        0x08005f23    0xe  Code  Gb  bsp_systimer.o [1]
 std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::_Wrap_alloc(const std::allocator<BSP_Sys_Timer_t>&)
-                        0x08002f61    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08005fb3    0x2  Code  Gb  bsp_systimer.o [1]
 std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::_Wrap_alloc(const std::allocator<BSP_Sys_Timer_t>&) [subobject]
-                        0x08002ec5    0xc  Code  Gb  bsp_systimer.o [1]
+                        0x08005f17    0xc  Code  Gb  bsp_systimer.o [1]
 std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::allocate(unsigned int)
-                        0x08002d51   0x10  Code  Gb  bsp_systimer.o [1]
+                        0x08005e49   0x10  Code  Gb  bsp_systimer.o [1]
 std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::deallocate(BSP_Sys_Timer_t *, unsigned int)
-                        0x08002d7f   0x14  Code  Gb  bsp_systimer.o [1]
+                        0x08005e77   0x14  Code  Gb  bsp_systimer.o [1]
 std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::max_size(std::_Nil) const
-                        0x08002d27    0xc  Code  Gb  bsp_systimer.o [1]
-std::__iar_New_hand     0x2000035c    0x4  Data  Gb  new.o [4]
+                        0x08005e1f    0xc  Code  Gb  bsp_systimer.o [1]
+std::__iar_New_hand     0x20000480    0x4  Data  Gb  new.o [4]
 std::allocator<BSP_Sys_Timer_t>::allocate(unsigned int)
-                        0x08002eef   0x12  Code  Gb  bsp_systimer.o [1]
+                        0x08005f41   0x12  Code  Gb  bsp_systimer.o [1]
 std::allocator<BSP_Sys_Timer_t>::deallocate(BSP_Sys_Timer_t *, unsigned int)
-                        0x08002f39   0x12  Code  Gb  bsp_systimer.o [1]
+                        0x08005f8b   0x12  Code  Gb  bsp_systimer.o [1]
 std::allocator<BSP_Sys_Timer_t>::max_size() const
-                        0x08002f63    0x8  Code  Gb  bsp_systimer.o [1]
+                        0x08005fb5    0x8  Code  Gb  bsp_systimer.o [1]
 std::allocator_traits<std::allocator<BSP_Sys_Timer_t>>::max_size(const std::allocator<BSP_Sys_Timer_t>&)
-                        0x08002ee3    0xc  Code  Gb  bsp_systimer.o [1]
+                        0x08005f35    0xc  Code  Gb  bsp_systimer.o [1]
 std::iterator_traits<BSP_Sys_Timer_t *>::value_type * std::_Val_type<BSP_Sys_Timer_t *>(BSP_Sys_Timer_t *)
-                        0x08003005    0x4  Code  Gb  bsp_systimer.o [1]
+                        0x08006055    0x4  Code  Gb  bsp_systimer.o [1]
 std::pointer_traits<BSP_Sys_Timer_t *>::pointer_to(BSP_Sys_Timer_t &)
-                        0x08002859    0xc  Code  Gb  bsp_systimer.o [1]
+                        0x08005611    0xc  Code  Gb  bsp_systimer.o [1]
 std::remove_reference<BSP_Sys_Timer_t &>::type && std::move<BSP_Sys_Timer_t &>(BSP_Sys_Timer_t & &&)
-                        0x08002dfb    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08005ef3    0x2  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Destroy(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *)
-                        0x0800296f   0x1a  Code  Gb  bsp_systimer.o [1]
+                        0x08005813   0x1a  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Grow_to(unsigned int) const
-                        0x08002b73   0x2e  Code  Gb  bsp_systimer.o [1]
+                        0x08005c6b   0x2e  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Inside(BSP_Sys_Timer_t const *) const
-                        0x08002879   0x30  Code  Gb  bsp_systimer.o [1]
+                        0x08005631   0x30  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Make_iter(std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>) const
-                        0x08002989   0x1a  Code  Gb  bsp_systimer.o [1]
+                        0x0800582d   0x1a  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Orphan_range(BSP_Sys_Timer_t *, BSP_Sys_Timer_t *) const
-                        0x08002913    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x080056cb    0x2  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Reallocate(unsigned int)
-                        0x08002ba1   0xba  Code  Gb  bsp_systimer.o [1]
+                        0x08005c99   0xba  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Reserve(unsigned int)
-                        0x080028d1   0x42  Code  Gb  bsp_systimer.o [1]
+                        0x08005689   0x42  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Tidy()
-                        0x08003205   0x7a  Code  Gb  bsp_systimer.o [1]
+                        0x08006255   0x7a  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::_Unused_capacity() const
-                        0x08002b43   0x1e  Code  Gb  bsp_systimer.o [1]
+                        0x08005c3b   0x1e  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::begin()
-                        0x08002337   0x20  Code  Gb  bsp_systimer.o [1]
+                        0x08004ec3   0x20  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::capacity() const
-                        0x08002d33   0x1e  Code  Gb  bsp_systimer.o [1]
+                        0x08005e2b   0x1e  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::erase(std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<BSP_Sys_Timer_t>>>)
-                        0x080024a5   0x4a  Code  Gb  bsp_systimer.o [1]
+                        0x08005039   0x4a  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::max_size() const
-                        0x08002b61   0x12  Code  Gb  bsp_systimer.o [1]
+                        0x08005c59   0x12  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::push_back(BSP_Sys_Timer_t const &)
-                        0x08002375  0x102  Code  Gb  bsp_systimer.o [1]
+                        0x08004f01  0x102  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::size() const
-                        0x08002319   0x1e  Code  Gb  bsp_systimer.o [1]
+                        0x08004ea5   0x1e  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::vector()
-                        0x08002171   0x10  Code  Gb  bsp_systimer.o [1]
+                        0x08004cc1   0x10  Code  Gb  bsp_systimer.o [1]
 std::vector<BSP_Sys_Timer_t, std::allocator<BSP_Sys_Timer_t>>::~vector()
-                        0x080035d3    0xe  Code  Gb  bsp_systimer.o [1]
+                        0x08006623    0xe  Code  Gb  bsp_systimer.o [1]
+strchr                  0x080024ed         Code  Gb  strchr.o [6]
+strlen                  0x08002549         Code  Gb  strlen.o [6]
 sys_alloc               0x080006ed  0x164  Code  Lc  dlmalloc.o [3]
-sys_sleep_fg            0x20000368    0x1  Data  Gb  bsp_sys_pwr.o [1]
+sys_sleep_fg            0x2000049a    0x1  Data  Gb  bsp_sys_pwr.o [1]
 sys_trim                0x08000851   0x66  Code  Lc  dlmalloc.o [3]
-time_count              0x2000033c    0x4  Data  Lc  stm32f10x_it.o [1]
+time_count              0x20000460    0x4  Data  Lc  stm32f10x_it.o [1]
 tmalloc_large           0x080008c5  0x384  Code  Lc  dlmalloc.o [3]
 tmalloc_small           0x08000c49  0x1fe  Code  Lc  dlmalloc.o [3]
 void std::_Deallocate<BSP_Sys_Timer_t>(BSP_Sys_Timer_t *, unsigned int)
-                        0x08002fc1    0xe  Code  Gb  bsp_systimer.o [1]
+                        0x08006013    0xe  Code  Gb  bsp_systimer.o [1]
 void std::_Destroy_range<std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>>(std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::pointer, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::pointer, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>&)
-                        0x08002cbd   0x1a  Code  Gb  bsp_systimer.o [1]
+                        0x08005db5   0x1a  Code  Gb  bsp_systimer.o [1]
 void std::_Destroy_range<std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>>(std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::pointer, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::pointer, std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>&, std::_Nonscalar_ptr_iterator_tag)
-                        0x08002ea3   0x20  Code  Gb  bsp_systimer.o [1]
+                        0x08005ef5   0x20  Code  Gb  bsp_systimer.o [1]
 void std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t &>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t & &&...)
-                        0x08002921   0x1a  Code  Gb  bsp_systimer.o [1]
+                        0x080056d9   0x1a  Code  Gb  bsp_systimer.o [1]
 void std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t const &>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t const & &&...)
-                        0x0800293b   0x1a  Code  Gb  bsp_systimer.o [1]
+                        0x080056f3   0x1a  Code  Gb  bsp_systimer.o [1]
 void std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t &&...)
-                        0x08003047   0x1a  Code  Gb  bsp_systimer.o [1]
+                        0x08006097   0x1a  Code  Gb  bsp_systimer.o [1]
 void std::_Wrap_alloc<std::allocator<BSP_Sys_Timer_t>>::destroy<BSP_Sys_Timer_t>(BSP_Sys_Timer_t *)
-                        0x08002f51   0x10  Code  Gb  bsp_systimer.o [1]
+                        0x08005fa3   0x10  Code  Gb  bsp_systimer.o [1]
 void std::allocator<BSP_Sys_Timer_t>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t &>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t & &&...)
-                        0x08002da3   0x2c  Code  Gb  bsp_systimer.o [1]
+                        0x08005e9b   0x2c  Code  Gb  bsp_systimer.o [1]
 void std::allocator<BSP_Sys_Timer_t>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t const &>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t const & &&...)
-                        0x08002dcf   0x2c  Code  Gb  bsp_systimer.o [1]
+                        0x08005ec7   0x2c  Code  Gb  bsp_systimer.o [1]
 void std::allocator<BSP_Sys_Timer_t>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t>(BSP_Sys_Timer_t *, BSP_Sys_Timer_t &&...)
-                        0x08003081   0x2c  Code  Gb  bsp_systimer.o [1]
+                        0x080060d1   0x2c  Code  Gb  bsp_systimer.o [1]
 void std::allocator<BSP_Sys_Timer_t>::destroy<BSP_Sys_Timer_t>(BSP_Sys_Timer_t *)
-                        0x08003041    0x2  Code  Gb  bsp_systimer.o [1]
+                        0x08006091    0x2  Code  Gb  bsp_systimer.o [1]
 void std::allocator_traits<std::allocator<BSP_Sys_Timer_t>>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t &>(std::allocator<BSP_Sys_Timer_t>&, BSP_Sys_Timer_t *, BSP_Sys_Timer_t & &&...)
-                        0x08002c5f   0x1a  Code  Gb  bsp_systimer.o [1]
+                        0x08005d57   0x1a  Code  Gb  bsp_systimer.o [1]
 void std::allocator_traits<std::allocator<BSP_Sys_Timer_t>>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t const &>(std::allocator<BSP_Sys_Timer_t>&, BSP_Sys_Timer_t *, BSP_Sys_Timer_t const & &&...)
-                        0x08002c7b   0x1a  Code  Gb  bsp_systimer.o [1]
+                        0x08005d73   0x1a  Code  Gb  bsp_systimer.o [1]
 void std::allocator_traits<std::allocator<BSP_Sys_Timer_t>>::construct<BSP_Sys_Timer_t, BSP_Sys_Timer_t>(std::allocator<BSP_Sys_Timer_t>&, BSP_Sys_Timer_t *, BSP_Sys_Timer_t &&...)
-                        0x08003067   0x1a  Code  Gb  bsp_systimer.o [1]
+                        0x080060b7   0x1a  Code  Gb  bsp_systimer.o [1]
 void std::allocator_traits<std::allocator<BSP_Sys_Timer_t>>::destroy<BSP_Sys_Timer_t>(std::allocator<BSP_Sys_Timer_t>&, BSP_Sys_Timer_t *)
-                        0x08002fcf   0x10  Code  Gb  bsp_systimer.o [1]
-wInterrupt_Mask         0x20000364    0x2  Data  Gb  usb_init.o [1]
+                        0x08006021   0x10  Code  Gb  bsp_systimer.o [1]
+vprintf                 0x08005bf9   0x20  Code  Gb  vprintf.o [3]
+wInterrupt_Mask         0x2000048e    0x2  Data  Gb  usb_init.o [1]
+wIstr                   0x20000494    0x2  Data  Gb  usb_istr.o [1]
 
 
-[1] = D:\QT\My_Qt_design\va_measuring\App\Debug\Obj
+[1] = F:\PrivateWork\stm32_va_measuring\App\Debug\Obj
 [2] = command line
 [3] = dl7M_tlf.a
 [4] = dlpp7M_tl_fc.a
-[5] = rt7M_tl.a
-[6] = shb_l.a
+[5] = m7M_tl.a
+[6] = rt7M_tl.a
+[7] = shb_l.a
 
-  13 715 bytes of readonly  code memory
-     463 bytes of readonly  data memory
-   9 498 bytes of readwrite data memory
+  25 989 bytes of readonly  code memory
+     711 bytes of readonly  data memory
+   9 822 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

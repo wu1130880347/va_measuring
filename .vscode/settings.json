@@ -12,6 +12,8 @@
         "bsp_head.h": "c",
         "stdint.h": "c",
         "bsp_hw_config.h": "c",
-        "dbg_log.h": "c"
+        "dbg_log.h": "c",
+        "stdio.h": "c",
+        "stm32f10x_usart.h": "c"
     }
 }

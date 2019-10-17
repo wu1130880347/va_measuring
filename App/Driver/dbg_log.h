@@ -12,9 +12,7 @@
 #define PINK 0x09
 #define CYAN 0x11
 #if ((defined USART_DEBUG) && (USART_DEBUG == __ON__))
-extern uint8_t dbg_dat[200];
-extern void Dsprintf(uint8_t enable_flag,const uint8_t *str);
-#define Dprintf(en,tag,...) do {sprintf((char *)dbg_dat,##__VA_ARGS__);Dsprintf(en,tag);} while(0);
+extern uint8_t Dprintf(uint8_t enable_flag, const char *tag, const char *format, ...);
 #else
 #define Dprintf(en,tag,...)
 #define EN_LOG 0

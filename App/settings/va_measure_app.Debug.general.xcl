@@ -1,14 +1,14 @@
-"E:\IAR_8_22\arm\bin\armproc.dll" 
+"D:\IAR8_0ARM\arm\bin\armproc.dll" 
 
-"E:\IAR_8_22\arm\bin\armjlink2.dll" 
+"D:\IAR8_0ARM\arm\bin\armjlink2.dll" 
 
-"D:\QT\My_Qt_design\va_measuring\App\Debug\Exe\va_measure_app.out" 
+"F:\PrivateWork\stm32_va_measuring\App\Debug\Exe\va_measure_app.out" 
 
---plugin "E:\IAR_8_22\arm\bin\armbat.dll" 
+--plugin "D:\IAR8_0ARM\arm\bin\armbat.dll" 
 
---device_macro "E:\IAR_8_22\arm\config\debugger\ST\STM32F1xx_XL.dmac" 
+--device_macro "D:\IAR8_0ARM\arm\config\debugger\ST\STM32F1xx_XL.dmac" 
 
---flash_loader "E:\IAR_8_22\arm\config\flashloader\ST\FlashSTM32F10xx8.board" 
+--flash_loader "D:\IAR8_0ARM\arm\config\flashloader\ST\FlashSTM32F10xx8.board" 
 
 
 

@@ -30,7 +30,7 @@ typedef enum
 
 typedef enum
 {
-    BSP_DRV_SW = 0, //操作门锁 2s内只操作一次
+    BSP_DRV_USBHID = 0, //UBSHID
     BSP_DRV_LED,    //操作LED
     BSP_DRV_BEEP,   //操作蜂鸣器
     BSP_DRV_FLASH,  //操作FLASH

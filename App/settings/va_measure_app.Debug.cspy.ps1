@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "E:\IAR_8_22\common\bin\cspybat" -f "D:\QT\My_Qt_design\va_measuring\App\settings\va_measure_app.Debug.general.xcl" --backend -f "D:\QT\My_Qt_design\va_measuring\App\settings\va_measure_app.Debug.driver.xcl" 
+& "D:\IAR8_0ARM\common\bin\cspybat" -f "F:\PrivateWork\stm32_va_measuring\App\settings\va_measure_app.Debug.general.xcl" --backend -f "F:\PrivateWork\stm32_va_measuring\App\settings\va_measure_app.Debug.driver.xcl" 
 }
 else
 {
-& "E:\IAR_8_22\common\bin\cspybat" -f "D:\QT\My_Qt_design\va_measuring\App\settings\va_measure_app.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\QT\My_Qt_design\va_measuring\App\settings\va_measure_app.Debug.driver.xcl" 
+& "D:\IAR8_0ARM\common\bin\cspybat" -f "F:\PrivateWork\stm32_va_measuring\App\settings\va_measure_app.Debug.general.xcl" --debug_file=$debugfile --backend -f "F:\PrivateWork\stm32_va_measuring\App\settings\va_measure_app.Debug.driver.xcl" 
 }

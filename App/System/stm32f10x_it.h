@@ -44,6 +44,8 @@ void DebugMon_Handler(void);
 void PendSV_Handler(void);
 void SysTick_Handler(void);
 uint32_t HAL_GetTick(void);
+void USB_LP_CAN1_RX0_IRQHandler(void);
+void OTG_FS_WKUP_IRQHandler(void);
 #ifdef __cplusplus
 }
 #endif

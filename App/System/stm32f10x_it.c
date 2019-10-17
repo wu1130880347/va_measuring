@@ -157,12 +157,11 @@ void SysTick_Handler(void)
   * @param  None
   * @retval None
   */
-#ifndef STM32F10X_CL
+
 void USB_LP_CAN1_RX0_IRQHandler(void)
 {
   USB_Istr();
 }
-#endif /* STM32F10X_CL */
 /**
   * @brief  This function handles OTG WakeUp interrupt request.
   * @note	None

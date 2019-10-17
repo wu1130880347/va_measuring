@@ -6,7 +6,7 @@
 #define __OFF__ 0
 //调试信息总开关
 #define DEBUG_TEST __OFF__
-#define USART_DEBUG __OFF__
+#define USART_DEBUG __ON__
 #define UNIT_TEST __OFF__
 
 //RTC I2C3
