@@ -57,6 +57,7 @@ bool BspSysTimer::bsp_events_handle(BSP_Events_Package_t const *p_pack)
     if (num > 0)
     {
         vector<BSP_Sys_Timer_t>::iterator iter = m_fun_timer.begin();
+        vector<BSP_Sys_Timer_t>::iterator temp_iter;
         while (num--)
         {
             iter->timeout = (iter->timeout>GET_SYS_TICK)?iter->timeout:GET_SYS_TICK;
@@ -65,9 +66,12 @@ bool BspSysTimer::bsp_events_handle(BSP_Events_Package_t const *p_pack)
             {
                 (iter)->p_fun();//此调用可能更新timeout的值
                 if(iter->timeout == 0)
-                  m_fun_timer.erase(iter);
-                pre_sys_tick = HAL_GetTick();
-                return true;
+                {
+                  temp_iter = iter;
+                  ++iter;
+                  m_fun_timer.erase(temp_iter);
+                  continue;
+                }  
             }
             ++iter;
         }

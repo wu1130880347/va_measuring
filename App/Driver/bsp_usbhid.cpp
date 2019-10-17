@@ -8,10 +8,10 @@ extern uint8_t USB_Received_Flag;
 #if ((defined USART_DEBUG) && (USART_DEBUG == __ON__))
 extern "C"
 {
-	//是否打开该文件内的调试LOG 
-	static const char EN_LOG = YELLOW;
-	//#define EN_CSystem FALSE 
-	static const char TAG[] = "IUsb: ";
+//	//是否打开该文件内的调试LOG 
+//	static const char EN_LOG = YELLOW;
+//	//#define EN_CSystem FALSE 
+//	static const char TAG[] = "IUsb: ";
 }
 #endif
 
@@ -36,11 +36,21 @@ extern "C"
         }
         return 0;
     }
-    static uint8_t Usb_write(uint8_t *data, uint8_t *len)
+    static uint8_t Usb_write(uint8_t *data, uint8_t len)
     {
-        USB_SendData(data, *len);
+        USB_SendData(data, len);
         return 0;
     }
+    static void Usb_send_data(void)
+    {
+      static uint32_t count_usb = 0;
+      uint8_t dat_buf[64] = {0};
+      sprintf((char *)dat_buf,"usb connect = %d\r\n",count_usb++);
+      
+      Usb_write(dat_buf,strlen((char const *)dat_buf));
+      BSP_ADD_TIMER(Usb_send_data,3000);//查询USB是否读到数据
+    }
+
     static void UsbReceiveCheck(void)
     {
         static uint8_t usb_buf[64];
@@ -68,5 +78,6 @@ void BspUsbhid::init(void)
     Set_USBClock();
     USB_Init();
     BSP_ADD_TIMER(UsbReceiveCheck,0);//查询USB是否读到数据
+    BSP_ADD_TIMER(Usb_send_data,3000);//查询USB是否读到数据
 }
 

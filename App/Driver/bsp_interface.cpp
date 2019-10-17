@@ -31,7 +31,7 @@ BspInterfaces* BspInterfaces::m_pdrv[(uint8_t)BSP_DRV_COUNTS] = {NULL};
 BspInterfaces::BspInterfaces()
 {
     // drivers registered
-    m_pdrv[(uint8_t)BSP_DRV_USBHID] = BspDefault::BspDefault_registered();
+    m_pdrv[(uint8_t)BSP_DRV_USBHID] = BspUsbhid::BspUsbhid_registered();
     m_pdrv[(uint8_t)BSP_DRV_LED] = BspDefault::BspDefault_registered();
     m_pdrv[(uint8_t)BSP_DRV_BEEP] = BspDefault::BspDefault_registered();
     m_pdrv[(uint8_t)BSP_DRV_FLASH] = BspDefault::BspDefault_registered();
