@@ -6,7 +6,7 @@ int fputc(int ch, FILE *f)
 {
     //while ((USART1->SR & 0X40) == 0)
         //;
-    bsp_delay_nus(10);
+    bsp_delay_nus(100);
     USART1->DR = (u8)ch;
     return ch;
 }
