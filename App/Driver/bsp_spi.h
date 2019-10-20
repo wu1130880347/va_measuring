@@ -5,4 +5,5 @@ extern void spi_init(void);
 extern uint8_t spi_read_write(uint8_t write_dat);
 extern void SPI_CS_ENABLE(uint8_t channel);
 extern void SPI_CS_DISABLE(uint8_t channel);
+extern void init_hc595(void);
 #endif

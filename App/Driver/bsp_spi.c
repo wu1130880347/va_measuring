@@ -6,10 +6,23 @@
 #define SPI_CS_EN  
 #define SPI_CS_DIS
 
+#define LED_SCL_H do{PBout(13) = 1;bsp_delay_nus(1);}while(0);
+#define LED_SCL_L do{PBout(13) = 0;bsp_delay_nus(1);}while(0);
+#define LED_SDA_H do{PBout(15) = 1;bsp_delay_nus(1);}while(0);
+#define LED_SDA_L do{PBout(15) = 0;bsp_delay_nus(1);}while(0);
+
+#define LED_EN_IC PAout(8) = 0;
+#define LED_DIS_IC PAout(8) = 1;
+
+#define LED595_LATCH_RESET PBout(12) = 0;
+#define LED595_LATCH_SET PBout(12) = 1;
+#define LED_UPDATE_IC do{LED595_LATCH_RESET;bsp_delay_nus(100); LED595_LATCH_SET;}while(0);
+
 void spi_init(void);
 uint8_t spi_read_write(uint8_t write_dat);
 void SPI_CS_ENABLE(uint8_t channel);
 void SPI_CS_DISABLE(uint8_t channel);
+void init_hc595(void);
 
 void spi_init(void)
 {
@@ -51,14 +64,10 @@ void spi_init(void)
     SPI_Init(SPI1, &SPI_InitStructure);
     SPI_Cmd(SPI1, ENABLE);
 
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_4;
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
-    GPIO_SetBits(GPIOA,GPIO_Pin_3);
-    //reset ic
-    // GPIO_ResetBits(GPIOA,GPIO_Pin_4);
-    // bsp_delay_nms(100);
     GPIO_SetBits(GPIOA,GPIO_Pin_4);
 }
 uint8_t spi_read_write(uint8_t write_dat)
@@ -84,11 +93,59 @@ uint8_t spi_read(void)
 {
     return SPI_I2S_ReceiveData(SPI1);
 }
+void init_hc595(void)
+{
+    GPIO_InitTypeDef GPIO_InitStructure;
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA|RCC_APB2Periph_GPIOB,ENABLE);
+    //init hc595 EN
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
+    GPIO_ResetBits(GPIOA,GPIO_Pin_8);//EN_IC
+    //init hc595 SDA
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_15;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+    GPIO_SetBits(GPIOB,GPIO_Pin_15);
+    //init hc595 SCL
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+    GPIO_SetBits(GPIOB,GPIO_Pin_13);
+    //init hc595 updata
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+    GPIO_SetBits(GPIOB, GPIO_Pin_12);
+    LED_EN_IC;
+    LED_SCL_L;
+    LED_SDA_L;
+}
+static void he595_send_update(uint8_t dat)
+{
+    uint8_t i = 0;
+    for (i = 0; i < 8; i++)
+    {
+        if ((dat & 0x80) == 0x80)
+        {
+            LED_SDA_H;
+        }
+        else
+        {
+            LED_SDA_L;
+        }
+
+        dat = dat << 1;
+        LED_SCL_L;
+        bsp_delay_nus(1);
+        LED_SCL_H;
+    }
+    //updata data to ic pin
+    LED_UPDATE_IC;
+}
 void SPI_CS_ENABLE(uint8_t channel)
 {
-    GPIO_ResetBits(GPIOA,GPIO_Pin_3);
+    he595_send_update(0xFD);
 }
 void SPI_CS_DISABLE(uint8_t channel)
 {
-    GPIO_SetBits(GPIOA,GPIO_Pin_3);
+    he595_send_update(0xFF);
 }

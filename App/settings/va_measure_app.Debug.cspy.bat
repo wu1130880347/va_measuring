@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"D:\IAR8_0ARM\common\bin\cspybat" -f "F:\PrivateWork\stm32_va_measuring\App\settings\va_measure_app.Debug.general.xcl" --backend -f "F:\PrivateWork\stm32_va_measuring\App\settings\va_measure_app.Debug.driver.xcl" 
+"E:\IAR_8_22\common\bin\cspybat" -f "D:\QT\My_Qt_design\va_measuring\App\settings\va_measure_app.Debug.general.xcl" --backend -f "D:\QT\My_Qt_design\va_measuring\App\settings\va_measure_app.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"D:\IAR8_0ARM\common\bin\cspybat" -f "F:\PrivateWork\stm32_va_measuring\App\settings\va_measure_app.Debug.general.xcl" "--debug_file=%~1" --backend -f "F:\PrivateWork\stm32_va_measuring\App\settings\va_measure_app.Debug.driver.xcl" 
+"E:\IAR_8_22\common\bin\cspybat" -f "D:\QT\My_Qt_design\va_measuring\App\settings\va_measure_app.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\QT\My_Qt_design\va_measuring\App\settings\va_measure_app.Debug.driver.xcl" 
 
 @echo off 
 :end

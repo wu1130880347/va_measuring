@@ -1,5 +1,6 @@
 #include "dbg_log.h"
 #include "bsp_system.h"
+#include "bsp_usbhid.h"
 
 #if ((defined USART_DEBUG) && (USART_DEBUG == __ON__))
 int fputc(int ch, FILE *f)

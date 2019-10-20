@@ -68,6 +68,8 @@
 #define CH1_GAIN_BIPOLAR_BUF (GAIN_1 | UNIPOLAR | BUF_NO)
 #define CH2_GAIN_BIPOLAR_BUF (GAIN_1 | UNIPOLAR | BUF_NO)
 
+uint8_t buf[2] = {0};
+
 extern "C"
 {
     void AD7705_CalibSelf(uint8_t ch)
@@ -124,8 +126,7 @@ extern "C"
     }
     static void bsp_tm7705_test(void)
     {
-        spi_read_write(0x38);
-        uint8_t buf[2] = {0};
+        spi_read_write(0x39);
         buf[1] = spi_read_write(0xff);
         buf[2] = spi_read_write(0xff);
         Dprintf(EN_LOG,TAG,"ch = 1 : 0x%02x  0x%02x\r\n",buf[1],buf[2]);
@@ -151,10 +152,11 @@ BspTm7705 *BspTm7705::BspTm7705_registered(void)
 void BspTm7705::init(void)
 {
     spi_init();
+    init_hc595();
     uint8_t ret = 0;
     uint8_t ret1 = 0;
     uint8_t ret2 = 0;
-    SPI_CS_ENABLE(1);
+    SPI_CS_ENABLE(2);
     Init_AD7705();
      bsp_delay_nms(300);
     // spi_read_write(0x38);
