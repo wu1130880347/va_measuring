@@ -16,7 +16,7 @@
 
 #define LED595_LATCH_RESET PBout(12) = 0;
 #define LED595_LATCH_SET PBout(12) = 1;
-#define LED_UPDATE_IC do{LED595_LATCH_RESET;bsp_delay_nus(100); LED595_LATCH_SET;}while(0);
+#define LED_UPDATE_IC do{LED595_LATCH_RESET;bsp_delay_nus(10); LED595_LATCH_SET;}while(0);
 
 void spi_init(void);
 uint8_t spi_read_write(uint8_t write_dat);
@@ -138,7 +138,7 @@ static void he595_send_update(uint8_t *dat,uint8_t ch_ic)
 
             dat[j] = dat[j] << 1;
             LED_SCL_L;
-            bsp_delay_nus(100);
+            bsp_delay_nus(10);
             LED_SCL_H;
         }
     }
@@ -151,6 +151,7 @@ void SPI_CS_ENABLE(uint8_t channel)
     memset(dat,0x0f,sizeof(dat));
     dat[4-channel/4] &= ~(((channel%4 == 0 || channel%4 == 1)?0x01:0x02));
     he595_send_update(dat,channel/4);
+    bsp_delay_nms(1);
 }
 void SPI_CS_DISABLE(uint8_t channel)
 {

@@ -107,6 +107,7 @@ extern "C"
         spi_read_write(0xFF);
         spi_read_write(0xFF);
         spi_read_write(0xFF);
+        spi_read_write(0xFF);
     }
     void reset_ic(void)
     {
@@ -141,7 +142,7 @@ extern "C"
 	    */
         /* 配置时钟寄存器 */
         spi_read_write(REG_CLOCK | WRITE | CH_0); /* 先写通信寄存器，下一步是写时钟寄存器 */ //0X00
-        spi_read_write(CLKDIS_0 | CLK_4_9152M | FS_50HZ); /*4.9152MHZ晶振 刷新速率50Hz */    //0X08
+        spi_read_write(CLKDIS_0 | CLK_4_9152M | FS_60HZ); /*4.9152MHZ晶振 刷新速率50Hz */    //0X08
 
         /* 每次上电进行一次自校准 */
         AD7705_CalibSelf(0); /* 内部自校准 CH0 */
@@ -149,38 +150,34 @@ extern "C"
 
         /* 配置时钟寄存器 */
         spi_read_write(REG_CLOCK | WRITE | CH_1); /* 先写通信寄存器，下一步是写时钟寄存器 */ //0X00
-        spi_read_write(CLKDIS_0 | CLK_4_9152M | FS_50HZ); /*4.9152MHZ晶振 刷新速率50Hz */    //0X08
+        spi_read_write(CLKDIS_0 | CLK_4_9152M | FS_60HZ); /*4.9152MHZ晶振 刷新速率50Hz */    //0X08
 
         AD7705_CalibSelf(1); /* 内部自校准 CH0 */
         bsp_delay_nms(5);  //延时10MS
     }
     static void bsp_tm7705_test(void)
     {
-        static uint8_t reverse_fg = 0;
-        for(uint8_t i = (reverse_fg == 0)?0:1;i<20;i+=2)
+        for(uint8_t i = 0;i<20;i+=2)
         {
             SPI_CS_ENABLE(i);
-            bsp_delay_nms(3);
             reset_spi_ic();
-            spi_read_write((reverse_fg == 0)?0x38:0x39);
+            spi_read_write(0x38);
+            bsp_delay_nms(50);
             buf[0] = spi_read_write(0xff);
             buf[1] = spi_read_write(0xff);
             uint16_t temp = (buf[0] << 8 | buf[1]);
             float val = temp * 3.3 * para_check_ch[i] / 65535;
-            ch_get_value[i] = uint32_t(val*1000);
+            ch_get_value[i] = uint32_t(val * 1000);
+
+            reset_spi_ic();
+            spi_read_write(0x39);
+            bsp_delay_nms(50);
+            buf[0] = spi_read_write(0xff);
+            buf[1] = spi_read_write(0xff);
+            temp = (buf[0] << 8 | buf[1]);
+            val = temp * 3.3 * para_check_ch[i+1] / 65535;
+            ch_get_value[i+1] = uint32_t(val * 1000);
         }
-        if(reverse_fg == 0)
-            reverse_fg = 1;
-        else
-            reverse_fg = 0;
-        
-        // bsp_delay_nms(3);
-        // spi_read_write(0x39);
-        
-        // Dprintf(EN_LOG,TAG,"ch = 1 : 0x%02x  0x%02x\r\n",buf[0],buf[1]);
-        // uint16_t temp = (buf[0]<<8 | buf[1]);
-        // float val = temp * 3.3 * 101 / 65535;
-        // Dprintf(EN_LOG,TAG,"ch = 1 : Vol :  %.3f\r\n",val);
         BSP_ADD_TIMER(bsp_tm7705_test, 1000); //开机5s后进入睡眠
     }
 }
