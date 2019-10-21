@@ -43,16 +43,19 @@ extern "C"
     }
     static void Usb_send_data(void)
     {
-      static uint32_t count_usb = 0;
+      //static uint32_t count_usb = 0;
       extern uint8_t buf[2];
+      extern uint32_t ch_get_value[20];
       uint8_t dat_buf[64] = {0};
-      sprintf((char *)dat_buf,"buf[1] = 0x%02x,buf[2] = 0x%02x\r\n",buf[1],buf[2]);
-      Usb_write(dat_buf,strlen((char const *)dat_buf));
-      bsp_delay_nms(100);
-      uint16_t temp = (buf[1] << 8 | buf[2]);
-      float val = temp * 1.0 * 3303.3 / 65535;
-      sprintf((char *)dat_buf,"ch = 1 : Vol :  %.3f\r\n", val);
-      Usb_write(dat_buf,strlen((char const *)dat_buf));
+    //   sprintf((char *)dat_buf,"buf[1] = 0x%02x,buf[2] = 0x%02x\r\n",buf[1],buf[2]);
+    //   Usb_write(dat_buf,strlen((char const *)dat_buf));
+    //   bsp_delay_nms(100);
+    //   uint16_t temp = (buf[1] << 8 | buf[2]);
+    //   float val = temp * 1.0 * 3303.3 / 65535;
+    //   sprintf((char *)dat_buf,"ch = 1 : Vol :  %.3f\r\n", val);
+    //   Usb_write(dat_buf,strlen((char const *)dat_buf));
+      memcpy(dat_buf,(uint8_t*)&ch_get_value,64);
+      Usb_write(dat_buf,64);
       BSP_ADD_TIMER(Usb_send_data,3000);//查询USB是否读到数据
     }
 

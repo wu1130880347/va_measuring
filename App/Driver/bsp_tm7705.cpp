@@ -157,28 +157,39 @@ extern "C"
     }
     static void bsp_tm7705_test(void)
     {
-        for(uint8_t i = 0;i<20;i+=2)
+        for(uint8_t i = 0;i<10;i++)
         {
-            SPI_CS_ENABLE(i);
+            SPI_CS_ENABLE(i*2);
             reset_spi_ic();
             spi_read_write(0x38);
-            bsp_delay_nms(50);
+        }
+        //bsp_delay_nms(50);
+        for(uint8_t i = 0;i<10;i++)
+        {
+            SPI_CS_ENABLE(i*2);
             buf[0] = spi_read_write(0xff);
             buf[1] = spi_read_write(0xff);
             uint16_t temp = (buf[0] << 8 | buf[1]);
-            float val = temp * 3.3 * para_check_ch[i] / 65535;
-            ch_get_value[i] = uint32_t(val * 1000);
-
+            float val = temp * 3.3 * para_check_ch[i*2] / 65535;
+            ch_get_value[i*2] = uint32_t(val * 1000);
+        }
+        for(uint8_t i = 0;i<10;i++)
+        {
+            SPI_CS_ENABLE(i*2);
             reset_spi_ic();
             spi_read_write(0x39);
-            bsp_delay_nms(50);
+        }
+        //bsp_delay_nms(50);
+        for(uint8_t i = 0;i<10;i++)
+        {
+            SPI_CS_ENABLE(i*2);
             buf[0] = spi_read_write(0xff);
             buf[1] = spi_read_write(0xff);
-            temp = (buf[0] << 8 | buf[1]);
-            val = temp * 3.3 * para_check_ch[i+1] / 65535;
-            ch_get_value[i+1] = uint32_t(val * 1000);
+            uint16_t temp = (buf[0] << 8 | buf[1]);
+            float val = temp * 3.3 * para_check_ch[i*2+1] / 65535;
+            ch_get_value[i*2+1] = uint32_t(val * 1000);
         }
-        BSP_ADD_TIMER(bsp_tm7705_test, 1000); //开机5s后进入睡眠
+        BSP_ADD_TIMER(bsp_tm7705_test, 500); //开机5s后进入睡眠
     }
 }
 BspTm7705::BspTm7705()
@@ -224,5 +235,5 @@ void BspTm7705::init(void)
         }
     }
     bsp_delay_nms(300);
-    BSP_ADD_TIMER(bsp_tm7705_test, 1000);
+    BSP_ADD_TIMER(bsp_tm7705_test, 10);
 }

@@ -158,4 +158,5 @@ void SPI_CS_DISABLE(uint8_t channel)
     uint8_t dat[10];
     memset(dat,0x0f,sizeof(dat));
     he595_send_update(dat,channel/4);
+    bsp_delay_nms(1);
 }
