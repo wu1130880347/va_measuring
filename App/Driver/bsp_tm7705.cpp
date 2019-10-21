@@ -6,6 +6,7 @@
 #define TAG "bsp_tm7705: "
 #define EN_LOG PINK
 #endif
+
 #define REG_COMM      0X00	 /* 通信寄存器 */
 #define REG_SETUP     0X10	 /* 设置寄存器 */
 #define REG_CLOCK     0X20	 /* 时钟寄存器 */
@@ -72,6 +73,51 @@ uint8_t buf[2] = {0};
 
 extern "C"
 {
+    uint32_t ch_get_value[20] = {0};
+    const uint16_t para_check_ch[20] = 
+    {
+        1001,
+        1001,
+        1000,
+        101,
+
+        1001,
+        1001,
+        1000,
+        101,
+
+        1001,
+        1001,
+        1000,
+        101,
+
+        1001,
+        1001,
+        1000,
+        101,
+
+        1001,
+        1001,
+        1000,
+        101,
+    };
+    void reset_spi_ic(void)
+    {
+        spi_read_write(0xFF);
+        spi_read_write(0xFF);
+        spi_read_write(0xFF);
+        spi_read_write(0xFF);
+    }
+    void reset_ic(void)
+    {
+        //硬件复位
+        GPIO_SetBits(GPIOA, GPIO_Pin_4);
+        bsp_delay_nms(10);
+        GPIO_ResetBits(GPIOA, GPIO_Pin_4);
+        bsp_delay_nms(10);
+        GPIO_SetBits(GPIOA, GPIO_Pin_4);
+        bsp_delay_nms(10);
+    }
     void AD7705_CalibSelf(uint8_t ch)
     {
         if (ch == 0)                                                                                      //选择通道0
@@ -89,20 +135,10 @@ extern "C"
     }
     void Init_AD7705(void)
     {
-        //	AD7705_CS = 0;
-        bsp_delay_nms(10); //延时10MS
-
         /*
 		在接口序列丢失的情况下，如果在DIN 高电平的写操作持续了足够长的时间（至少 32个串行时钟周期），
 		TM7705 将会回到默认状态。
-	*/
-        bsp_delay_nms(5); //延时10MS
-        spi_read_write(0XFF);
-        spi_read_write(0XFF);
-        spi_read_write(0XFF);
-        spi_read_write(0XFF);
-        bsp_delay_nms(5); //延时10MS
-
+	    */
         /* 配置时钟寄存器 */
         spi_read_write(REG_CLOCK | WRITE | CH_0); /* 先写通信寄存器，下一步是写时钟寄存器 */ //0X00
         spi_read_write(CLKDIS_0 | CLK_4_9152M | FS_50HZ); /*4.9152MHZ晶振 刷新速率50Hz */    //0X08
@@ -120,19 +156,31 @@ extern "C"
     }
     static void bsp_tm7705_test(void)
     {
-        SPI_CS_ENABLE(3);
-        bsp_delay_nms(3);
-        spi_read_write(0x39);
-        buf[0] = spi_read_write(0xff);
-        buf[1] = spi_read_write(0xff);
-        Dprintf(EN_LOG,TAG,"ch = 1 : 0x%02x  0x%02x\r\n",buf[0],buf[1]);
-        uint16_t temp = (buf[0]<<8 | buf[1]);
-        float val = temp * 3.3 * 101 / 65535;
-        Dprintf(EN_LOG,TAG,"ch = 1 : Vol :  %.3f\r\n",val);
+        static uint8_t reverse_fg = 0;
+        for(uint8_t i = (reverse_fg == 0)?0:1;i<20;i+=2)
+        {
+            SPI_CS_ENABLE(i);
+            bsp_delay_nms(3);
+            reset_spi_ic();
+            spi_read_write((reverse_fg == 0)?0x38:0x39);
+            buf[0] = spi_read_write(0xff);
+            buf[1] = spi_read_write(0xff);
+            uint16_t temp = (buf[0] << 8 | buf[1]);
+            float val = temp * 3.3 * para_check_ch[i] / 65535;
+            ch_get_value[i] = uint32_t(val*1000);
+        }
+        if(reverse_fg == 0)
+            reverse_fg = 1;
+        else
+            reverse_fg = 0;
+        
+        // bsp_delay_nms(3);
         // spi_read_write(0x39);
-        // buf[1] = spi_read_write(0xff);
-        // buf[2] = spi_read_write(0xff);
-        // Dprintf(EN_LOG,TAG,"ch = 2 : 0x%02x  0x%02x\r\n",buf[1],buf[2]);
+        
+        // Dprintf(EN_LOG,TAG,"ch = 1 : 0x%02x  0x%02x\r\n",buf[0],buf[1]);
+        // uint16_t temp = (buf[0]<<8 | buf[1]);
+        // float val = temp * 3.3 * 101 / 65535;
+        // Dprintf(EN_LOG,TAG,"ch = 1 : Vol :  %.3f\r\n",val);
         BSP_ADD_TIMER(bsp_tm7705_test, 1000); //开机5s后进入睡眠
     }
 }
@@ -145,42 +193,39 @@ BspTm7705 *BspTm7705::BspTm7705_registered(void)
     static BspTm7705 t_ms_this;
     return &t_ms_this;
 }
-void reset_spi_ic(void)
+
+bool check_tm7705(void)//校验芯片是否正常
 {
-    spi_read_write(0xFF);
-    spi_read_write(0xFF);
-    spi_read_write(0xFF);
-    spi_read_write(0xFF);
+    uint32_t ret_dat = 0;
+    uint8_t *p_dat = 0;
+    p_dat = (uint8_t *)&ret_dat;
+    reset_spi_ic();
+    p_dat[0] = spi_read_write(0x68);
+    p_dat[0] = spi_read_write(0xFF);
+    p_dat[1] = spi_read_write(0xFF);
+    p_dat[2] = spi_read_write(0xFF);
+    if(ret_dat == 0x0000401F)
+    {
+        return true;
+    }
+    return false;
 }
 void BspTm7705::init(void)
 {
     spi_init();
     init_hc595();
-    uint8_t ret = 0;
-    uint8_t ret1 = 0;
-    uint8_t ret2 = 0;
-    //硬件复位
-    GPIO_SetBits(GPIOA, GPIO_Pin_4);
-    bsp_delay_nms(10);
-    GPIO_ResetBits(GPIOA, GPIO_Pin_4);
-    bsp_delay_nms(10);
-    GPIO_SetBits(GPIOA, GPIO_Pin_4);
-    bsp_delay_nms(10);
+    uint32_t ret = 0;
+    reset_ic();
     for (uint8_t i = 0; i < 20; i+=2)
     {
-        
-      SPI_CS_ENABLE(i);
-        reset_spi_ic();
-        ret = spi_read_write(0x68);
-        ret = spi_read_write(0xFF);
-        ret1 = spi_read_write(0xFF);
-        ret2 = spi_read_write(0xFF);
-        reset_spi_ic();
-        Init_AD7705();
-        bsp_delay_nms(300);
-        
-
+        SPI_CS_ENABLE(i);
+        if(check_tm7705() == true)
+        {
+            reset_spi_ic();
+            Init_AD7705();
+            ret |= (0x01 << (i/2));
+        }
     }
-    BSP_ADD_TIMER(bsp_tm7705_test, 1000); 
+    bsp_delay_nms(300);
+    BSP_ADD_TIMER(bsp_tm7705_test, 1000);
 }
-
