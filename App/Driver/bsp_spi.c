@@ -119,33 +119,42 @@ void init_hc595(void)
     LED_SCL_L;
     LED_SDA_L;
 }
-static void he595_send_update(uint8_t dat)
+static void he595_send_update(uint8_t *dat,uint8_t ch_ic)
 {
     uint8_t i = 0;
-    for (i = 0; i < 8; i++)
+    uint8_t j = 0;
+    for (j = 0; j <= 4; j++)
     {
-        if ((dat & 0x80) == 0x80)
+        for (i = 0; i < 8; i++)
         {
-            LED_SDA_H;
-        }
-        else
-        {
-            LED_SDA_L;
-        }
+            if (dat[j] & 0x80)
+            {
+                LED_SDA_H;
+            }
+            else
+            {
+                LED_SDA_L;
+            }
 
-        dat = dat << 1;
-        LED_SCL_L;
-        bsp_delay_nus(1);
-        LED_SCL_H;
+            dat[j] = dat[j] << 1;
+            LED_SCL_L;
+            bsp_delay_nus(100);
+            LED_SCL_H;
+        }
     }
     //updata data to ic pin
     LED_UPDATE_IC;
 }
 void SPI_CS_ENABLE(uint8_t channel)
 {
-    he595_send_update(0xFD);
+    uint8_t dat[10];
+    memset(dat,0x0f,sizeof(dat));
+    dat[4-channel/4] &= ~(((channel%4 == 0 || channel%4 == 1)?0x01:0x02));
+    he595_send_update(dat,channel/4);
 }
 void SPI_CS_DISABLE(uint8_t channel)
 {
-    he595_send_update(0xFF);
+    uint8_t dat[10];
+    memset(dat,0x0f,sizeof(dat));
+    he595_send_update(dat,channel/4);
 }
