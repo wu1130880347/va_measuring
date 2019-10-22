@@ -31,7 +31,7 @@
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
     </JLinkDriver>
     <DebugChecksum>
-        <Checksum>520808112</Checksum>
+        <Checksum>2815333361</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -155,7 +155,7 @@
     <Breakpoints2>
         <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\System\stm32f10x_it.c}.100.3" 0 0 1 "" 0 "" 0</Bp0>
         <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\System\stm32f10x_it.c}.61.3" 0 0 1 "" 0 "" 0</Bp1>
-        <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\Driver\bsp_usbhid.cpp}.71.5" 0 0 1 "" 0 "" 0</Bp2>
+        <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\Driver\bsp_usbhid.cpp}.64.5" 0 0 1 "" 0 "" 0</Bp2>
         <Bp3>_ 0 "EMUL_CODE" "{$PROJ_DIR$\Driver\bsp_tm7705.cpp}.12.9" 0 0 1 "" 0 "" 0</Bp3>
         <Bp4>_ 1 "EMUL_CODE" "{$PROJ_DIR$\Driver\bsp_tm7705.cpp}.192.9" 0 0 1 "" 0 "" 0</Bp4>
         <Bp5>_ 1 "EMUL_CODE" "{$PROJ_DIR$\Driver\bsp_flash.cpp}.53.5" 0 0 1 "" 0 "" 0</Bp5>
