@@ -15,6 +15,8 @@
         "dbg_log.h": "c",
         "stdio.h": "c",
         "stm32f10x_usart.h": "c",
-        "bsp_spi.h": "c"
+        "bsp_spi.h": "c",
+        "stdbool.h": "c",
+        "stm32f10x_flash.h": "c"
     }
 }

@@ -2167,6 +2167,9 @@
             </group>
         </group>
         <file>
+            <name>$PROJ_DIR$\Driver\bsp_flash.cpp</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\Driver\bsp_interface.cpp</name>
         </file>
         <file>

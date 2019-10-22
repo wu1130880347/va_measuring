@@ -4,6 +4,7 @@
 #include "bsp_sys_pwr.h"
 #include "bsp_usbhid.h"
 #include "bsp_tm7705.h"
+#include "bsp_flash.h"
 extern "C"
 {
 #include "bsp_system.h"
@@ -35,7 +36,7 @@ BspInterfaces::BspInterfaces()
     m_pdrv[(uint8_t)BSP_DRV_USBHID] = BspUsbhid::BspUsbhid_registered();
     m_pdrv[(uint8_t)BSP_DRV_LED] = BspTm7705::BspTm7705_registered();
     m_pdrv[(uint8_t)BSP_DRV_BEEP] = BspDefault::BspDefault_registered();
-    m_pdrv[(uint8_t)BSP_DRV_FLASH] = BspDefault::BspDefault_registered();
+    m_pdrv[(uint8_t)BSP_DRV_FLASH] = BspFlash::BspFlash_registered();
     m_pdrv[(uint8_t)BSP_DRV_LORA] = BspDefault::BspDefault_registered();
     m_pdrv[(uint8_t)BSP_DRV_CARD] = BspDefault::BspDefault_registered();
     m_pdrv[(uint8_t)BSP_DRV_RTC] = BspDefault::BspDefault_registered();
