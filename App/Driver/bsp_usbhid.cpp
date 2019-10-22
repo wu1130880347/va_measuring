@@ -25,12 +25,6 @@ extern "C"
             USB_Received_Flag = 0;
             u8 ret = USB_GetData(data, 64);
             *len = ret;
-            // Dprintf(EN_LOG,TAG,"usb get data %d byte data\n\r", ret);
-            // for (u8 i = 0; i < ret; i++)
-            // {
-            //     Dprintf(EN_LOG,"","0x%02X ", data[i]);
-            // }
-            // Dprintf(EN_LOG,"","\r\n ");
             USB_SendData(data, *len);
             return 1;
         }
@@ -51,14 +45,30 @@ extern "C"
       Usb_write(dat_buf,64);
       BSP_ADD_TIMER(Usb_send_data,1000);//查询USB是否读到数据
     }
-
+    static uint8_t usb_buf[64];
+    static uint8_t len;
+    static uint32_t buf_std[20] = {0};
+    static uint32_t buf_tol[20] = {0};
     static void UsbReceiveCheck(void)
     {
-        static uint8_t usb_buf[64];
-        static uint8_t len;
         if(Usb_read(usb_buf,&len))
         {
-            ;//读到数据
+            if (*(uint32_t *)usb_buf == 0xaabbccdd)
+            {
+                // uint16_t start_inx = *(uint16_t*)(usb_buf+6);
+                // start_inx /= 10;
+                // if (start_inx < 3)
+                // {
+                //     memcpy((uint8_t *)(buf_std + 10*(start_inx-1)), usb_buf + 8, 40);
+                // }
+                // else
+                // {
+                //     memcpy((uint8_t *)(buf_tol + 10*(start_inx-3)), usb_buf + 8, 40);
+                // }
+                // if (start_inx == 4)
+                //     ;
+                //Usb_write(usb_buf,len);
+            }
         }
         BSP_ADD_TIMER(UsbReceiveCheck,0);//查询USB是否读到数据
     }
