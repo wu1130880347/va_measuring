@@ -9,12 +9,13 @@
 #endif
 extern "C"
 {
+    bool flash_write(uint32_t addr, BSP_FlashCh_Package_t *p_dat,uint8_t len);
     static bool flash_read(uint32_t addr,BSP_FlashCh_Package_t *ch_dat)
     {
         memcpy(ch_dat,(BSP_FlashCh_Package_t *)(addr),sizeof(BSP_FlashCh_Package_t));
         return true;
     }
-    static bool flash_write(uint32_t addr, BSP_FlashCh_Package_t *p_dat,uint8_t len)
+    bool flash_write(uint32_t addr, BSP_FlashCh_Package_t *p_dat,uint8_t len)
     {
         uint8_t para_buf[1024];
         uint8_t dat_len = sizeof(BSP_FlashCh_Package_t);

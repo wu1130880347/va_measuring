@@ -9,6 +9,7 @@
 #define FLASH_PARA_CH_ADDR(x) (FLASH_PARA_ADDE + 20*x) //每通道20Byte  4byte 标准值  4byte误差  4byte 系数 4byte有效性 备用
 
 #define CH_KAY_VALID 0xaabb5544
+
 #pragma pack(1)
 typedef struct 
 {
