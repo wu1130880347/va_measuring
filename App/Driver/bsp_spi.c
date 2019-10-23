@@ -27,7 +27,7 @@ void enable_ch_led(uint8_t ch);
 void disable_ch_led(uint8_t ch);
 void update_led_state(void);
 
-static uint8_t hc595_ram[10];
+uint8_t hc595_ram[10] = {0};
 void spi_init(void)
 {
     SPI_InitTypeDef SPI_InitStructure;

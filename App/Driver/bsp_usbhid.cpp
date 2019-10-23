@@ -83,12 +83,16 @@ extern "C"
     static void Usb_send_data(void)
     {
       static uint32_t count_usb = 0;
-      extern uint8_t buf[2];
       extern uint32_t ch_get_value[20];
+      extern uint8_t hc595_ram[10];
       if (normal_send_fg == true)
       {
           uint8_t dat_buf[64] = {0};
           memcpy(dat_buf, (uint8_t *)&ch_get_value, 64);
+          for(uint8_t i = 0;i<4;i++)
+          {
+              dat_buf[15 + 16*i] = hc595_ram[4-i];//带上通道状态
+          }
           Usb_write(dat_buf, 64);
       }
       else
