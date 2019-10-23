@@ -26,6 +26,7 @@ void init_hc595(void);
 void enable_ch_led(uint8_t ch);
 void disable_ch_led(uint8_t ch);
 void update_led_state(void);
+void set_all_status(uint8_t status);
 
 uint8_t hc595_ram[10] = {0};
 void spi_init(void)
@@ -165,6 +166,18 @@ void disable_ch_led(uint8_t ch)
     hc595_ram[4 - ch / 4] |= (0x04 << ((ch % 4) * 2));
     hc595_ram[4 - ch / 4] &= ~(0x04 << (((ch % 4) * 2)+1));
     
+}
+void set_all_status(uint8_t status)
+{
+    for(uint8_t i = 0;i<4;i++)
+    {
+        if(status)
+            hc595_ram[i] &=  0x03;
+        else
+            hc595_ram[i] |=  ~(0x03);
+    }
+    he595_send_update(hc595_ram,0);
+    bsp_delay_nms(1);
 }
 void update_led_state(void)
 {

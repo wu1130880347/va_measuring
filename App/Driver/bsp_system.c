@@ -95,10 +95,17 @@ void bsp_delay_nus(uint32_t n)
 }
 void bsp_init_dog(void)
 {
+	//看门狗的时钟源 40KHz
+	IWDG->KR  = 0x5555;
+	IWDG->PR  = 0x04;	// 64分频
+	IWDG->RLR = 0xC41;
+	IWDG->KR  = 0xCCCC;	//启动看门狗
+	IWDG->KR  = 0xAAAA;	//喂狗
     return;
 }
 void bsp_clear_dog(void)
 {
+    IWDG->KR  = 0xAAAA;	//喂狗
     return;
 }
 void bsp_active_drv(void)

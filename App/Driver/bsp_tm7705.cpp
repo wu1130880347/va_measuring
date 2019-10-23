@@ -209,6 +209,34 @@ extern "C"
         update_led_state();
         BSP_ADD_TIMER(bsp_tm7705_check_yes, 1000);
     }
+    static void bsp_start_test(void)
+    {
+       static uint8_t once_fg = 0;
+       static uint8_t count_fg = 0;
+       once_fg ^= 0x01;
+       for(uint8_t i = 0;i<20;i++)
+       {
+           if(once_fg & 0x01)
+           {
+               disable_ch_led(i);
+           }
+           else
+           {
+               enable_ch_led(i);
+           }
+           
+       }
+        if(count_fg++ < 3 )
+        {
+            count_fg = 0;
+            set_all_status(0);
+            bsp_delay_nms(100);
+            set_all_status(1);
+            return ;
+        }
+        BSP_ADD_TIMER(bsp_start_test, 500);
+        update_led_state();
+    }
 }
 BspTm7705::BspTm7705()
 {}
@@ -255,4 +283,5 @@ void BspTm7705::init(void)
     bsp_delay_nms(300);
     BSP_ADD_TIMER(bsp_tm7705_test, 10);
     BSP_ADD_TIMER(bsp_tm7705_check_yes, 1000);
+    //BSP_ADD_TIMER(bsp_start_test, 10);
 }

@@ -9,4 +9,5 @@ extern void init_hc595(void);
 extern void enable_ch_led(uint8_t ch);
 extern void disable_ch_led(uint8_t ch);
 extern void update_led_state(void);
+extern void set_all_status(uint8_t status);
 #endif
