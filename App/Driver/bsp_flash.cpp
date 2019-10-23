@@ -10,7 +10,8 @@
 extern "C"
 {
     bool flash_write(uint32_t addr, BSP_FlashCh_Package_t *p_dat,uint8_t len);
-    static bool flash_read(uint32_t addr,BSP_FlashCh_Package_t *ch_dat)
+    bool flash_read(uint32_t addr,BSP_FlashCh_Package_t *ch_dat);
+    bool flash_read(uint32_t addr,BSP_FlashCh_Package_t *ch_dat)
     {
         memcpy(ch_dat,(BSP_FlashCh_Package_t *)(addr),sizeof(BSP_FlashCh_Package_t));
         return true;

@@ -19,6 +19,10 @@ extern "C"
 extern "C"
 {
     extern bool flash_write(uint32_t addr, BSP_FlashCh_Package_t *p_dat,uint8_t len);
+    extern bool flash_read(uint32_t addr, BSP_FlashCh_Package_t *ch_dat);
+    static uint32_t buf_std[20] = {0};
+    static uint32_t buf_tol[20] = {0};
+    static bool normal_send_fg = true;
     static void write_dat_to_flash(uint32_t *p_std,uint32_t *p_tol,uint8_t len)
     {
         BSP_FlashCh_Package_t t_dat;
@@ -41,7 +45,30 @@ extern "C"
             *len = ret;
             if (*(uint32_t *)data == 0xaabbccdd)
             {
+                normal_send_fg = false;
                 *(uint32_t *)data = 0xabcdabcd;
+            }
+            if(*(uint32_t *)data == 0xaabbccee)
+            {
+                normal_send_fg = false;
+                *(uint32_t *)data = 0xabceabce;
+                if(*(uint32_t *)(data+4) == 1)
+                {
+                    memcpy(data+8,(uint8_t *)buf_std,40);
+                }
+                else if(*(uint32_t *)(data+4) == 2)
+                {
+                    memcpy(data+8,(uint8_t *)(buf_std+10),40);
+                }
+                else if(*(uint32_t *)(data+4) == 3)
+                {
+                    memcpy(data+8,(uint8_t *)buf_tol,40);
+                }
+                else if(*(uint32_t *)(data+4) == 4)
+                {
+                    normal_send_fg = true;
+                    memcpy(data+8,(uint8_t *)(buf_tol+10),40);
+                }
             }
             USB_SendData(data, *len);
             return 1;
@@ -55,16 +82,26 @@ extern "C"
     }
     static void Usb_send_data(void)
     {
-      //static uint32_t count_usb = 0;
+      static uint32_t count_usb = 0;
       extern uint8_t buf[2];
       extern uint32_t ch_get_value[20];
-      uint8_t dat_buf[64] = {0};
-      memcpy(dat_buf,(uint8_t*)&ch_get_value,64);
-      Usb_write(dat_buf,64);
-      BSP_ADD_TIMER(Usb_send_data,1000);//查询USB是否读到数据
+      if (normal_send_fg == true)
+      {
+          uint8_t dat_buf[64] = {0};
+          memcpy(dat_buf, (uint8_t *)&ch_get_value, 64);
+          Usb_write(dat_buf, 64);
+      }
+      else
+      {
+          if(count_usb++ >= 10)
+          {
+              normal_send_fg = true;
+              count_usb = 0;
+          }
+      }
+      BSP_ADD_TIMER(Usb_send_data, 1000); //查询USB是否读到数据
     }
-    static uint32_t buf_std[20] = {0};
-    static uint32_t buf_tol[20] = {0};
+
     static void UsbReceiveCheck(void)
     {
       static uint8_t usb_buf[64];
@@ -85,11 +122,22 @@ extern "C"
                 }
                 if(start_inx == 4)
                 {
+                    normal_send_fg = true;
                     write_dat_to_flash(buf_std,buf_tol,20);
                 }
             }
         }
         BSP_ADD_TIMER(UsbReceiveCheck,0);//查询USB是否读到数据
+    }
+    static void init_para_std_tol(void)
+    {
+        BSP_FlashCh_Package_t t_dat;
+        for(uint8_t i = 0;i<20;i++)
+        {
+            flash_read(FLASH_PARA_CH_ADDR(i), &t_dat);
+            buf_std[i] = t_dat.standard_para;
+            buf_tol[i] = t_dat.tolerance_para;
+        }
     }
 }
 
@@ -104,10 +152,11 @@ BspUsbhid *BspUsbhid::BspUsbhid_registered(void)
 }
 void BspUsbhid::init(void)
 {
+    init_para_std_tol();
     USB_Interrupts_Config();
     Set_USBClock();
     USB_Init();
     BSP_ADD_TIMER(UsbReceiveCheck,0);//查询USB是否读到数据
-    //BSP_ADD_TIMER(Usb_send_data,3000);//查询USB是否读到数据
+    BSP_ADD_TIMER(Usb_send_data,3000);//查询USB是否读到数据
 }
 
