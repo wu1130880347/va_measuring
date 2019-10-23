@@ -20,8 +20,8 @@ extern "C"
 {
     extern bool flash_write(uint32_t addr, BSP_FlashCh_Package_t *p_dat,uint8_t len);
     extern bool flash_read(uint32_t addr, BSP_FlashCh_Package_t *ch_dat);
-    static uint32_t buf_std[20] = {0};
-    static uint32_t buf_tol[20] = {0};
+    uint32_t buf_std[20] = {0};
+    uint32_t buf_tol[20] = {0};
     static bool normal_send_fg = true;
     static void write_dat_to_flash(uint32_t *p_std,uint32_t *p_tol,uint8_t len)
     {

@@ -191,6 +191,24 @@ extern "C"
         }
         BSP_ADD_TIMER(bsp_tm7705_test, 500); //开机5s后进入睡眠
     }
+    extern uint32_t buf_std[20];
+    extern uint32_t buf_tol[20];
+    static void bsp_tm7705_check_yes(void)
+    {
+        for(uint8_t i = 0;i<20;i++)
+        {
+            if(ch_get_value[i] > (buf_std[i] + buf_tol[i]) || ch_get_value[i] < ((buf_std[i] <  buf_tol[i])?0:(buf_std[i] - buf_tol[i])))
+            {
+                disable_ch_led(i);
+            }
+            else
+            {
+                enable_ch_led(i);
+            }
+        }
+        update_led_state();
+        BSP_ADD_TIMER(bsp_tm7705_check_yes, 1000);
+    }
 }
 BspTm7705::BspTm7705()
 {}
@@ -236,4 +254,5 @@ void BspTm7705::init(void)
     }
     bsp_delay_nms(300);
     BSP_ADD_TIMER(bsp_tm7705_test, 10);
+    BSP_ADD_TIMER(bsp_tm7705_check_yes, 1000);
 }

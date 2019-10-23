@@ -23,7 +23,11 @@ uint8_t spi_read_write(uint8_t write_dat);
 void SPI_CS_ENABLE(uint8_t channel);
 void SPI_CS_DISABLE(uint8_t channel);
 void init_hc595(void);
+void enable_ch_led(uint8_t ch);
+void disable_ch_led(uint8_t ch);
+void update_led_state(void);
 
+static uint8_t hc595_ram[10];
 void spi_init(void)
 {
     SPI_InitTypeDef SPI_InitStructure;
@@ -69,6 +73,7 @@ void spi_init(void)
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
     GPIO_SetBits(GPIOA,GPIO_Pin_4);
+    memset(hc595_ram,0xff,sizeof(hc595_ram));
 }
 uint8_t spi_read_write(uint8_t write_dat)
 {
@@ -123,11 +128,13 @@ static void he595_send_update(uint8_t *dat,uint8_t ch_ic)
 {
     uint8_t i = 0;
     uint8_t j = 0;
+    uint8_t temp = 0;;
     for (j = 0; j <= 4; j++)
     {
+        temp = dat[j];
         for (i = 0; i < 8; i++)
         {
-            if (dat[j] & 0x80)
+            if (temp & 0x80)
             {
                 LED_SDA_H;
             }
@@ -136,7 +143,7 @@ static void he595_send_update(uint8_t *dat,uint8_t ch_ic)
                 LED_SDA_L;
             }
 
-            dat[j] = dat[j] << 1;
+            temp = temp << 1;
             LED_SCL_L;
             bsp_delay_nus(10);
             LED_SCL_H;
@@ -145,18 +152,37 @@ static void he595_send_update(uint8_t *dat,uint8_t ch_ic)
     //updata data to ic pin
     LED_UPDATE_IC;
 }
+
+void enable_ch_led(uint8_t ch)
+{
+    if(ch%4 == 3)return ;
+    hc595_ram[4 - ch / 4] &= ~(0x04 << ((ch % 4) * 2));
+    hc595_ram[4 - ch / 4] |= (0x04 << (((ch % 4) * 2)+1));
+}
+void disable_ch_led(uint8_t ch)
+{
+    if(ch%4 == 3)return ;
+    hc595_ram[4 - ch / 4] |= (0x04 << ((ch % 4) * 2));
+    hc595_ram[4 - ch / 4] &= ~(0x04 << (((ch % 4) * 2)+1));
+    
+}
+void update_led_state(void)
+{
+    he595_send_update(hc595_ram, 0);
+    bsp_delay_nms(1);
+}
 void SPI_CS_ENABLE(uint8_t channel)
 {
-    uint8_t dat[10];
-    memset(dat,0x0f,sizeof(dat));
-    dat[4-channel/4] &= ~(((channel%4 == 0 || channel%4 == 1)?0x01:0x02));
-    he595_send_update(dat,channel/4);
+    for(uint8_t i = 0;i<10;i++)
+        hc595_ram[i] |= 0x03;
+    hc595_ram[4-channel/4] &= ~(((channel%4 == 0 || channel%4 == 1)?0x01:0x02));
+    he595_send_update(hc595_ram,channel/4);
     bsp_delay_nms(1);
 }
 void SPI_CS_DISABLE(uint8_t channel)
 {
-    uint8_t dat[10];
-    memset(dat,0x0f,sizeof(dat));
-    he595_send_update(dat,channel/4);
+    for(uint8_t i = 0;i<10;i++)
+        hc595_ram[i] |= 0x03;
+    he595_send_update(hc595_ram,channel/4);
     bsp_delay_nms(1);
 }
