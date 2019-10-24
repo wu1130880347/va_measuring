@@ -174,13 +174,25 @@ void set_all_status(uint8_t status)
         if(status)
             hc595_ram[i] &=  0x03;
         else
-            hc595_ram[i] |=  ~(0x03);
+            hc595_ram[i] |=  0xFC;
     }
-    he595_send_update(hc595_ram,0);
-    bsp_delay_nms(1);
 }
 void update_led_state(void)
 {
+    if((hc595_ram[3] & 0x05)&&(!(hc595_ram[3] & 0x04)))
+    {
+        static uint8_t once_fg = 0;
+        if(once_fg)
+        {
+            once_fg = 0;
+            set_all_status(once_fg);
+        }
+        else
+        {
+            once_fg = 1;
+            set_all_status(once_fg);
+        }
+    }
     he595_send_update(hc595_ram, 0);
     bsp_delay_nms(1);
 }
