@@ -70,7 +70,7 @@
 #define CH2_GAIN_BIPOLAR_BUF (GAIN_1 | UNIPOLAR | BUF_NO)
 
 uint8_t buf[2] = {0};
-
+uint32_t ic_status_ret = 0;
 extern "C"
 {
     uint32_t ch_get_value[20] = {0};
@@ -189,6 +189,14 @@ extern "C"
             float val = (temp * 3.3 * para_check_ch[i*2+1])/65535;
             ch_get_value[i*2+1] = uint32_t(val * 1000);
         }
+        for(uint8_t i = 0;i<10;i++)
+        {
+            if(!(ic_status_ret & (0x01<<i)))
+            {
+                ch_get_value[2*i] = 0;
+                ch_get_value[2*i + 1] = 0;
+            }
+        }
         BSP_ADD_TIMER(bsp_tm7705_test, 500); //开机5s后进入睡眠
     }
     extern uint32_t buf_std[20];
@@ -268,7 +276,6 @@ void BspTm7705::init(void)
 {
     spi_init();
     init_hc595();
-    uint32_t ret = 0;
     reset_ic();
     for (uint8_t i = 0; i < 20; i+=2)
     {
@@ -277,7 +284,7 @@ void BspTm7705::init(void)
         {
             reset_spi_ic();
             Init_AD7705();
-            ret |= (0x01 << (i/2));
+            ic_status_ret |= (0x01 << (i/2));
         }
     }
     bsp_delay_nms(300);

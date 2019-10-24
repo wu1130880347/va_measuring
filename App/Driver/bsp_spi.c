@@ -169,7 +169,7 @@ void disable_ch_led(uint8_t ch)
 }
 void set_all_status(uint8_t status)
 {
-    for(uint8_t i = 0;i<4;i++)
+    for(uint8_t i = 0;i<=4;i++)
     {
         if(status)
             hc595_ram[i] &=  0x03;
@@ -179,7 +179,7 @@ void set_all_status(uint8_t status)
 }
 void update_led_state(void)
 {
-    if((hc595_ram[3] & 0x05)&&(!(hc595_ram[3] & 0x04)))
+    if((hc595_ram[4] & 0x08)&&(!(hc595_ram[4] & 0x04)))
     {
         static uint8_t once_fg = 0;
         if(once_fg)
