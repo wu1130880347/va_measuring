@@ -76,28 +76,28 @@ extern "C"
     uint32_t ch_get_value[20] = {0};
     const uint16_t para_check_ch[20] = 
     {
-        101,
+        1001,
         101,
         100,
         101,
 
         1001,
-        1001,
-        1000,
+        101,
+        100,
         101,
 
         1001,
-        1001,
-        1000,
+        101,
+        100,
         101,
 
         1001,
-        1001,
-        1000,
+        101,
+        100,
         101,
 
         1001,
-        1001,
+        101,
         100,
         101,
     };
@@ -170,7 +170,7 @@ extern "C"
             buf[0] = spi_read_write(0xff);
             buf[1] = spi_read_write(0xff);
             uint16_t temp = (buf[0] << 8 | buf[1]);
-            float val = temp * 3.3 * para_check_ch[i*2] / 65535;
+            float val = temp * 2.5 * para_check_ch[i*2] / 65535;
             ch_get_value[i*2] = uint32_t(val * 1000);
         }
         for(uint8_t i = 0;i<10;i++)
@@ -186,7 +186,7 @@ extern "C"
             buf[0] = spi_read_write(0xff);
             buf[1] = spi_read_write(0xff);
             uint16_t temp = (buf[0] << 8 | buf[1]);
-            float val = (temp * 3.3 * para_check_ch[i*2+1])/65535;
+            float val = (temp * 2.5 * para_check_ch[i*2+1])/65535;
             ch_get_value[i*2+1] = uint32_t(val * 1000);
         }
         for(uint8_t i = 0;i<10;i++)
