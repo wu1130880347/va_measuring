@@ -153,16 +153,27 @@ static void he595_send_update(uint8_t *dat,uint8_t ch_ic)
     //updata data to ic pin
     LED_UPDATE_IC;
 }
-
+static uint8_t error_data_fg = 0;
 void enable_ch_led(uint8_t ch)
 {
-    if(ch%4 == 3)return ;
+    if (ch == 0) //每次刷新状态清错误标志
+        error_data_fg = 0;
+    if (ch % 4 == 3)
+        return;
     hc595_ram[4 - ch / 4] &= ~(0x04 << ((ch % 4) * 2));
     hc595_ram[4 - ch / 4] |= (0x04 << (((ch % 4) * 2)+1));
 }
+extern uint32_t ch_get_value[20];
 void disable_ch_led(uint8_t ch)
 {
-    if(ch%4 == 3)return ;
+    if (ch == 0)//每次刷新状态清错误标志
+        error_data_fg = 0;
+    if (ch % 4 == 3)
+    {
+        if (ch_get_value[ch] != 0)
+            error_data_fg = 1;
+        return;
+    } 
     hc595_ram[4 - ch / 4] |= (0x04 << ((ch % 4) * 2));
     hc595_ram[4 - ch / 4] &= ~(0x04 << (((ch % 4) * 2)+1));
     
@@ -179,7 +190,7 @@ void set_all_status(uint8_t status)
 }
 void update_led_state(void)
 {
-    if((hc595_ram[4] & 0x08)&&(!(hc595_ram[4] & 0x04)))
+    if(((hc595_ram[4] & 0x08)&&(!(hc595_ram[4] & 0x04)))|| error_data_fg)
     {
         static uint8_t once_fg = 0;
         if(once_fg)

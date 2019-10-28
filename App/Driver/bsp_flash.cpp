@@ -56,7 +56,7 @@ void BspFlash::init(void)
     if (t_dat[0].check_valid != CH_KAY_VALID)
     {
         BSP_FlashCh_Package_t ref_dat;
-        ref_dat.adjustment_para = 1001;
+        ref_dat.adjustment_para = 1000;
         ref_dat.standard_para = 3300;
         ref_dat.tolerance_para = 100;
         ref_dat.check_valid = CH_KAY_VALID;

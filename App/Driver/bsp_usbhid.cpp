@@ -22,6 +22,7 @@ extern "C"
     extern bool flash_read(uint32_t addr, BSP_FlashCh_Package_t *ch_dat);
     uint32_t buf_std[20] = {0};
     uint32_t buf_tol[20] = {0};
+    uint32_t buf_para[20] = {0};//校准系数
     static bool normal_send_fg = true;
     static void write_dat_to_flash(uint32_t *p_std,uint32_t *p_tol,uint8_t len)
     {
@@ -30,7 +31,7 @@ extern "C"
         {
             t_dat.standard_para = p_std[i];
             t_dat.tolerance_para = p_tol[i];
-            t_dat.adjustment_para = 3300;
+            t_dat.adjustment_para = buf_para[i];
             t_dat.check_valid = CH_KAY_VALID;
             t_dat.backup2 = 0xffffffff;
             flash_write(FLASH_PARA_CH_ADDR(i),&t_dat,1);
@@ -63,11 +64,15 @@ extern "C"
                 else if(*(uint32_t *)(data+4) == 3)
                 {
                     memcpy(data+8,(uint8_t *)buf_tol,40);
+                    if(buf_tol[0] == 1000)
+                        memcpy(data+8,(uint8_t *)buf_para,40);
                 }
                 else if(*(uint32_t *)(data+4) == 4)
                 {
                     normal_send_fg = true;
                     memcpy(data+8,(uint8_t *)(buf_tol+10),40);
+                    if(buf_tol[0] == 1000)
+                        memcpy(data+8,(uint8_t *)(buf_para+10),40);
                 }
             }
             USB_SendData(data, *len);
@@ -123,6 +128,8 @@ extern "C"
                 else
                 {
                     memcpy((uint8_t *)(buf_tol + 10*(start_inx-3)), usb_buf + 8, 40);
+                    if(buf_tol[0] == 1000)
+                        memcpy((uint8_t *)(buf_para + 10*(start_inx-3)), usb_buf + 8, 40);
                 }
                 if(start_inx == 4)
                 {
@@ -141,6 +148,7 @@ extern "C"
             flash_read(FLASH_PARA_CH_ADDR(i), &t_dat);
             buf_std[i] = t_dat.standard_para;
             buf_tol[i] = t_dat.tolerance_para;
+            buf_para[i] = t_dat.adjustment_para;
         }
     }
 }

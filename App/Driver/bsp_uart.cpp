@@ -51,7 +51,7 @@ BspUart::~BspUart()
 }
 void BspUart::init(void)
 {
-    USART_Config(921600);
+    USART_Config(115200);
 #if ((defined USART_DEBUG) && (USART_DEBUG == __ON__))
     static uint32_t count_wake = 0;
 #endif
