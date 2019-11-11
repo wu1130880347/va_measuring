@@ -14,6 +14,9 @@
 #define LED_EN_IC PAout(8) = 0;
 #define LED_DIS_IC PAout(8) = 1;
 
+#define PANEL_EN_IC PBout(14) = 1;
+#define PANEL_DIS_IC PBout(14) = 0;
+
 #define LED595_LATCH_RESET PBout(12) = 0;
 #define LED595_LATCH_SET PBout(12) = 1;
 #define LED_UPDATE_IC do{LED595_LATCH_RESET;bsp_delay_nus(10); LED595_LATCH_SET;}while(0);
@@ -27,8 +30,10 @@ void enable_ch_led(uint8_t ch);
 void disable_ch_led(uint8_t ch);
 void update_led_state(void);
 void set_all_status(uint8_t status);
+void pull_downup_panel(uint8_t status);
 
 uint8_t hc595_ram[10] = {0};
+uint8_t m_panel_status = 0;
 void spi_init(void)
 {
     SPI_InitTypeDef SPI_InitStructure;
@@ -121,6 +126,10 @@ void init_hc595(void)
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12;
     GPIO_Init(GPIOB, &GPIO_InitStructure);
     GPIO_SetBits(GPIOB, GPIO_Pin_12);
+    //init panel status
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_14;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+    GPIO_ResetBits(GPIOB, GPIO_Pin_14);
     LED_EN_IC;
     LED_SCL_L;
     LED_SDA_L;
@@ -188,11 +197,24 @@ void set_all_status(uint8_t status)
             hc595_ram[i] |=  0xFC;
     }
 }
+
+void pull_downup_panel(uint8_t status)
+{
+  if(status == 0)
+  {
+    PANEL_DIS_IC;
+  }
+  else
+  {
+    PANEL_EN_IC;
+  }
+}
 void update_led_state(void)
 {
     if(((hc595_ram[4] & 0x08)&&(!(hc595_ram[4] & 0x04)))|| error_data_fg)
     {
         static uint8_t once_fg = 0;
+        pull_downup_panel(0);//保证两个气缸同时上升
         if(once_fg)
         {
             once_fg = 0;
@@ -203,6 +225,10 @@ void update_led_state(void)
             once_fg = 1;
             set_all_status(once_fg);
         }
+    }
+    else
+    {
+        pull_downup_panel(m_panel_status);
     }
     he595_send_update(hc595_ram, 0);
     bsp_delay_nms(1);

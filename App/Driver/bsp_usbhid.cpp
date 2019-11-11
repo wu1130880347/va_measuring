@@ -20,6 +20,7 @@ extern "C"
 {
     extern bool flash_write(uint32_t addr, BSP_FlashCh_Package_t *p_dat,uint8_t len);
     extern bool flash_read(uint32_t addr, BSP_FlashCh_Package_t *ch_dat);
+    extern uint8_t m_panel_status;
     uint32_t buf_std[20] = {0};
     uint32_t buf_tol[20] = {0};
     uint32_t buf_para[20] = {0};//校准系数
@@ -48,6 +49,10 @@ extern "C"
             {
                 normal_send_fg = false;
                 *(uint32_t *)data = 0xabcdabcd;
+            }
+            if (*(uint32_t *)data == 0xaabbccff)
+            {
+                m_panel_status = (u8)*(uint32_t *)(data+4);
             }
             if(*(uint32_t *)data == 0xaabbccee)
             {
@@ -98,6 +103,7 @@ extern "C"
           {
               dat_buf[15 + 16*i] = hc595_ram[4-i];//带上通道状态
           }
+          dat_buf[3] = m_panel_status;//气缸状态赋值于第一通道的高24位到32位上 1下压 0上升
           Usb_write(dat_buf, 64);
       }
       else
